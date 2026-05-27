@@ -677,6 +677,8 @@ ul {
     color: #94A3B8;
     margin-bottom: 2rem;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .social-links {
@@ -772,7 +774,11 @@ ul {
 
     img {
         max-width: 100%;
-        height: auto;
+    }
+    
+    .footer-logo, .logo-img {
+        height: 50px !important;
+        width: auto !important;
     }
 
     .menu-toggle {
