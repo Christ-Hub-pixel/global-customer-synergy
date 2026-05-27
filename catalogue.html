@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo_cercle.jpg">
+    <title>Catalogue & Équipements | Global Customer Synergy (GCS)</title>
+    <meta name="description" content="Découvrez le catalogue d'équipements de sécurité de Global Customer Synergy Sarl : extincteurs, alarmes, EPI, et détecteurs de gaz en Côte d'Ivoire.">
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Catalogue - Global Customer Synergy">
+    <meta property="og:description" content="Catalogue d'équipements de sécurité de haute qualité.">
+    <meta property="og:image" content="assets/logo_cercle.jpg">
+    <meta property="og:type" content="website">
+    <!-- Sécurité Front-End -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src 'self' https://formsubmit.co https://nnywksxkslyzpxowtsys.supabase.co; frame-src 'none'; object-src 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_cercle.jpg" alt="Logo GCS">
+                <span class="logo-text">Global Customer Synergy</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="catalogue.html" class="active">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="searchBtn" class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de recherche -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-content">
+            <span class="close-search">&times;</span>
+            <input type="text" id="searchInput" placeholder="Que recherchez-vous ?">
+            <button class="btn btn-primary" id="performSearch">Rechercher</button>
+        </div>
+    </div>
+
+    <!-- Hero Section Catalogue -->
+    <section class="hero secondary-hero">
+        <div class="hero-content">
+            <span class="badge">Équipements Premium</span>
+            <h1>Notre <span class="highlight">Catalogue</span></h1>
+            <p>Découvrez notre gamme complète d'équipements certifiés pour la sécurité incendie, la protection individuelle et la détection de gaz. Demandez un devis instantané en ligne.</p>
+        </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section class="catalogue-section section-padding">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="catalogue-filters">
+                <button class="filter-btn active" data-filter="all">Tous les produits</button>
+                <button class="filter-btn" data-filter="incendie">Incendie</button>
+                <button class="filter-btn" data-filter="epi">EPI</button>
+                <button class="filter-btn" data-filter="gaz">Détection Gaz</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/extincteur.png" alt="Extincteur Poudre ABC 6kg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteur Poudre ABC 6kg</h3>
+                        <p>Extincteur polyvalent haute performance pour tout type de feu. Certifié CE.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteur Poudre ABC 6kg">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/casque.png" alt="Casque de Sécurité Chantier">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque de Sécurité Premium</h3>
+                        <p>Casque de chantier haute résistance avec aérations et réglage molette.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque de Sécurité Premium">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gants.png" alt="Gants de Protection Mécanique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants de Protection Industrielle</h3>
+                        <p>Gants en cuir renforcé pour la manutention lourde et la protection mécanique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants de Protection Industrielle">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/chaussures.png" alt="Chaussures de Sécurité Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures de Sécurité Pro</h3>
+                        <p>Bottes en cuir noir avec embout en acier, semelle anti-perforation.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures de Sécurité Pro">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/detecteur.png" alt="Détecteur Multigaz Portable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur Multigaz Portable</h3>
+                        <p>Appareil de détection 4 gaz avec écran numérique et alarmes sonores.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur Multigaz Portable">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/alarme.png" alt="Déclencheur Manuel Alarme Incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur Manuel Alarme</h3>
+                        <p>Bouton d'alarme incendie mural rouge, réarmable, design moderne.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur Manuel Alarme">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Cart Widget -->
+    <a href="contact.html" class="floating-cart" id="floatingCart">
+        <div class="cart-icon">
+            <i class="fas fa-file-invoice"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+        <span class="cart-text">Valider le Devis</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="assets/logo_cercle.jpg" alt="Logo GCS">
+                    <span>GCS Sarl</span>
+                </div>
+                <p>Votre partenaire de confiance en ingénierie sécurité et formation en Côte d'Ivoire.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</li>
+                    <li><i class="fas fa-phone"></i> +225 00 00 00 00 00</li>
+                    <li><i class="fas fa-envelope"></i> contact@globalcustomersynergy.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Global Customer Synergy Sarl. Tous droits réservés. | <a href="mentions-legales.html" style="color: var(--text-light);">Mentions Légales</a></p>
+        </div>
+    </footer>
+
+    <!-- Supabase SDK & App Script -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

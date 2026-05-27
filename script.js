@@ -288,3 +288,102 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') closeSearch();
     });
 });
+
+/* =========================================
+   CATALOGUE DE PRODUITS & DEVIS LOGIC
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialiser le panier depuis le localStorage
+    let quoteCart = JSON.parse(localStorage.getItem('gcs_quote_cart')) || [];
+    
+    const cartCountEl = document.getElementById('cartCount');
+    const floatingCart = document.getElementById('floatingCart');
+    
+    // Fonction pour mettre à jour l'affichage du panier
+    function updateCartDisplay() {
+        if (!cartCountEl || !floatingCart) return;
+        
+        cartCountEl.textContent = quoteCart.length;
+        
+        if (quoteCart.length > 0) {
+            floatingCart.classList.add('visible');
+        } else {
+            floatingCart.classList.remove('visible');
+        }
+    }
+    
+    updateCartDisplay();
+    
+    // Gestion des clics sur "Ajouter au devis"
+    const addQuoteBtns = document.querySelectorAll('.btn-add-quote');
+    addQuoteBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productName = this.getAttribute('data-product');
+            
+            // Animation du bouton
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Ajouté !';
+            this.classList.add('btn-primary');
+            this.classList.remove('btn-outline');
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.classList.remove('btn-primary');
+                this.classList.add('btn-outline');
+            }, 1500);
+            
+            // Ajouter au panier
+            quoteCart.push(productName);
+            localStorage.setItem('gcs_quote_cart', JSON.stringify(quoteCart));
+            
+            updateCartDisplay();
+        });
+    });
+    
+    // Filtres du catalogue
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Retirer l'état actif de tous les boutons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Ajouter l'état actif au bouton cliqué
+            btn.classList.add('active');
+            
+            const filterValue = btn.getAttribute('data-filter');
+            
+            productCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Auto-remplissage du formulaire de contact si on vient du panier
+    const messageField = document.getElementById('message');
+    if (messageField && quoteCart.length > 0) {
+        // Seulement si le champ est vide
+        if (messageField.value.trim() === '') {
+            let messageText = "Bonjour, je souhaite obtenir un devis pour les équipements suivants :\n\n";
+            quoteCart.forEach((item, index) => {
+                messageText += `- ${item}\n`;
+            });
+            messageText += "\nMerci de me recontacter.";
+            messageField.value = messageText;
+        }
+    }
+    
+    // Vider le panier après soumission réussie du formulaire (optionnel)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+            // On peut vider le panier une fois envoyé
+            // localStorage.removeItem('gcs_quote_cart');
+        });
+    }
+});
