@@ -1454,3 +1454,85 @@ ul {
 .cart-text {
     font-weight: 600;
 }
+
+/* =========================================
+   CATÉGORIES VEDETTES (STYLE EPCI)
+   ========================================= */
+.featured-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+.featured-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+.category-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+    transition: 0.3s;
+}
+.category-card:hover::before {
+    background: rgba(0,0,0,0.2);
+}
+.category-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+.category-card:hover .category-img {
+    transform: scale(1.05);
+}
+.category-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+}
+.category-content h3 {
+    color: var(--white);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.btn-explorer {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn-explorer:hover {
+    background: var(--primary-dark);
+}
