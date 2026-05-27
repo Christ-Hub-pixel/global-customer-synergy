@@ -132,43 +132,150 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <img src="assets/logo.jpg" alt="GCS Logo" class="footer-logo">
-                <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur mesure.</p>
+                <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur
+                    mesure.</p>
                 <div class="company-info" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
-                    <p><strong>Siège Social :</strong> ABIDJAN (Côte d'Ivoire)<br>Marcory Hibiscus Boulevard du Gabon<br>Immeuble La Madone<br>01 B.P. 3183 ABIDJAN 01</p>
+                    <p style="margin-bottom: 0.5rem; color: #94A3B8;"><strong>Société agréée en Sécurité
+                            Incendie</strong><br>Arrêté n°0623/MIS/ONPC du 02 juillet 2022</p>
+                    <p style="margin-bottom: 0; color: #94A3B8;">Capital : 1 000 000 F CFA<br>N° RCCM :
+                        CI-ABJ-2020-B-08677 | CC 2026453P</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h3>Liens Rapides</h3>
+                <h4>Liens Rapides</h4>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="services.html">Nos Services</a></li>
-                    <li><a href="about.html">À Propos de nous</a></li>
-                    <li><a href="contact.html">Demander un devis</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Légal</h3>
-                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#" class="open-modal" data-modal="modal-formations">Formations</a></li>
+                    <li><a href="#" class="open-modal" data-modal="modal-courtage">Courtage d'affaires</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Soumission</a></li>
                     <li><a href="mentions-legales.html">Mentions Légales</a></li>
-                    <li><a href="#">Politique de Confidentialité</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Nous contacter</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                </div>
+                <h4>Nos Services</h4>
+                <ul>
+                    <li><a href="#" class="open-modal" data-modal="modal-extincteurs">Extincteurs</a></li>
+                    <li><a href="#" class="open-modal" data-modal="modal-alarme">Systèmes d'alarme</a></li>
+                    <li><a href="#" class="open-modal" data-modal="modal-formations">Formations</a></li>
+                    <li><a href="#" class="open-modal" data-modal="modal-courtage">Courtage d'affaires</a></li>
+                </ul>
             </div>
-        </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026Global Customer Synergy. Tous droits réservés.</p>
+                <p>&copy; 2026 Global Customer Synergy Sarl. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Modal Extincteurs -->
+    <div class="modal" id="modal-extincteurs">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image1.png" alt="Extincteurs" class="modal-img">
+        <div class="modal-body">
+            <h3>Extincteurs et Arroseurs Automatiques</h3>
+            <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une gamme complète de solutions de protection incendie,
+                incluant :</p>
+            <h4>Fourniture d'Extincteurs et d'Arroseurs Automatiques :</h4>
+            <p>Nos systèmes d'arroseurs automatiques peuvent varier en fonction de vos besoins :</p>
+            <ul>
+                <li><strong>Arroseurs automatiques à fonctionnement classique</strong> : Idéaux pour diverses
+                    applications</li>
+                <li><strong>Arroseurs à détection précoce</strong> : Conçus pour une réaction rapide</li>
+                <li><strong>Systèmes de gicleurs spécialisés</strong> : Adaptés à des environnements particuliers</li>
+            </ul>
+            <p>Nous fournissons également une sélection d'extincteurs de différents types.</p>
+            <h4>Fourniture d'Extincteurs et de Tuyaux d'Incendie :</h4>
+            <img src="assets/hose_reel.jpg" alt="Tuyaux d'Incendie" class="modal-inline-img">
+            <p>Notre équipe de professionnels vous aide à choisir l'équipement de prévention incendie adapté à vos
+                besoins et à votre budget. Nous offrons une gamme d'extincteurs, de tuyaux d'incendie, et d'accessoires
+                garantissant une protection optimale.</p>
+            <p>Tous nos produits s'accompagnent d'un programme de maintenance pour assurer leur efficacité à long terme,
+                et nos spécialistes sont là pour vous aider à trouver la solution la plus appropriée à votre situation.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal Alarme -->
+    <div class="modal" id="modal-alarme">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image2.jpg" alt="Systèmes d'alarme" class="modal-img">
+        <div class="modal-body">
+            <h3>Systèmes d'alarme</h3>
+            <p>Nous concevons et déployons des systèmes d'alarme incendie et d'extinction automatique à la pointe de la
+                technologie pour assurer la protection optimale de vos installations.</p>
+            <p>Chaque système est pensé sur-mesure pour s'adapter à la configuration de vos locaux, garantissant une
+                détection rapide et fiable face à tout début d'incendie.</p>
+        </div>
+    </div>
+
+    <!-- Modal Formations -->
+    <div class="modal" id="modal-formations">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image3.jpg" alt="Formations" class="modal-img">
+        <div class="modal-body">
+            <h3>Formations en prévention d'Incendie</h3>
+            <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une formation complète en prévention d'incendie, couvrant
+                tous les aspects essentiels de la sécurité. Notre programme est conçu pour former efficacement votre
+                personnel et vos intervenants, assurant ainsi une préparation optimale face aux risques d'incendie.</p>
+            <h4>Nos Programmes de Formation :</h4>
+            <ul>
+                <li><strong>1. Exercices d'Évacuation</strong>
+                    <ul>
+                        <li>Organisation et réalisation d'exercices pratiques</li>
+                        <li>Supervision professionnelle durant l'exercice</li>
+                        <li>Analyse et recommandations post-exercice</li>
+                    </ul>
+                </li>
+                <li><strong>2. Utilisation des Extincteurs Portatifs</strong>
+                    <ul>
+                        <li>Formation pratique sur l'utilisation sécuritaire des extincteurs</li>
+                        <li>Techniques d'extinction adaptées à différents types de feux</li>
+                    </ul>
+                </li>
+                <li><strong>3. Connaissance des Agents Extincteurs</strong>
+                    <ul>
+                        <li>Identification des différents types d'agents extincteurs</li>
+                        <li>Choix de l'agent approprié selon le type d'incendie</li>
+                    </ul>
+                </li>
+                <li><strong>4. Notions Fondamentales sur le Feu</strong>
+                    <ul>
+                        <li>Compréhension du triangle du feu</li>
+                        <li>Étude des différentes phases d'un incendie</li>
+                    </ul>
+                </li>
+                <li><strong>5. Identification des Combustibles</strong>
+                    <ul>
+                        <li>Reconnaissance des matériaux combustibles courants</li>
+                        <li>Évaluation des risques liés à différents types de combustibles</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Courtage -->
+    <div class="modal" id="modal-courtage">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image4.png" alt="Courtage d'affaires" class="modal-img">
+        <div class="modal-body">
+            <h3>Courtage d'affaires</h3>
+            <p>Facilitez vos transactions commerciales grâce à notre expertise et notre réseau étendu de partenaires.
+            </p>
+            <p>Notre service de courtage d'affaires vous accompagne dans le développement stratégique de votre
+                entreprise en vous mettant en relation avec les bons acteurs économiques. Confiez-nous vos recherches de
+                partenariats, nous nous occupons de trouver les meilleures opportunités pour vous.</p>
+        </div>
+    </div>
 
     <!-- Search Modal -->
     <div class="search-modal" id="search-modal">
