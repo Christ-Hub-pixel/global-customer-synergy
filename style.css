@@ -766,6 +766,15 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -779,7 +788,8 @@ ul {
         background: white;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
         transition: var(--transition);
         overflow-y: auto;
         padding-bottom: 2rem;
@@ -792,32 +802,37 @@ ul {
     .nav-list {
         flex-direction: column;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         gap: 1.5rem;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.1;
+        margin-bottom: 1rem;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .section-title {
-        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
     }
     
     .section {
-        padding: 4rem 0;
+        padding: 3rem 0;
     }
     
     .contact-form-wrapper {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
+        border-radius: 15px;
     }
     
     .services-grid, .rep-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .footer-col {
@@ -832,36 +847,48 @@ ul {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 1rem;
+    }
+
+    .modal {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    .container {
+        padding: 0 1rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
     .btn {
         width: 100%;
         text-align: center;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
+        padding: 1rem;
     }
     
     .page-header {
-        padding-top: 120px !important;
-        padding-bottom: 40px !important;
+        padding-top: 100px !important;
+        padding-bottom: 30px !important;
     }
     
     .about-features li {
         font-size: 0.95rem;
+        word-break: break-word;
+    }
+
+    .footer-container {
+        gap: 1.5rem;
     }
 }
 
