@@ -130,8 +130,9 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     z-index: 1000;
     transition: var(--transition);
     border-bottom: 1px solid transparent;
@@ -247,6 +248,21 @@ ul {
     max-width: 600px;
 }
 
+.secondary-hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.secondary-hero .hero-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -358,7 +374,9 @@ ul {
 }
 
 .service-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
@@ -482,7 +500,9 @@ ul {
 }
 
 .rep-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: var(--shadow-md);
@@ -613,7 +633,9 @@ ul {
 
 .contact-form-wrapper {
     flex: 1;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
@@ -753,7 +775,9 @@ ul {
 }
 
 .legal-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: var(--shadow-md);
@@ -1048,7 +1072,10 @@ ul {
     width: 90%;
     max-width: 800px;
     max-height: 90vh;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     z-index: 1001;
     opacity: 0;
@@ -1304,155 +1331,243 @@ ul {
 .catalogue-filters {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
     flex-wrap: wrap;
 }
 
 .filter-btn {
-    padding: 0.8rem 1.5rem;
-    background: transparent;
-    border: 2px solid var(--primary-light);
-    color: var(--primary-dark);
+    padding: 0.8rem 2rem;
+    background: var(--bg-main);
+    border: 2px solid var(--border-color);
+    color: var(--text-muted);
     border-radius: 50px;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
-.filter-btn:hover, .filter-btn.active {
-    background: var(--primary-dark);
-    color: var(--white);
-    border-color: var(--primary-dark);
+.filter-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    color: var(--bg-main);
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(10, 88, 202, 0.3);
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
 .product-card {
-    background: var(--white);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 1;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(11, 43, 90, 0.1);
+    box-shadow: 0 20px 40px rgba(10, 88, 202, 0.12);
+    border-color: var(--primary-light);
+    z-index: 2;
 }
 
 .product-image {
     width: 100%;
-    height: 250px;
-    background: var(--white);
+    height: 260px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(10,88,202,0.05) 0%, rgba(255,255,255,0) 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .product-image img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    /* removed mix-blend-mode for cleaner look */
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
 }
 
 .product-info {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .product-info h3 {
-    color: var(--primary-dark);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    color: #0F172A;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
 .product-info p {
-    color: var(--text-color);
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    line-height: 1.6;
 }
 
 .btn-add-quote {
     width: 100%;
     justify-content: center;
-    padding: 0.8rem;
-    font-size: 0.95rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border-width: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
 .btn-add-quote i {
     margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-add-quote:hover i {
+    transform: scale(1.2) rotate(-5deg);
 }
 
 /* Floating Cart */
-.floating-cart {
+/* Floating Cart Widget Container */
+.floating-widget-container {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: var(--accent-color);
-    color: var(--white);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+    gap: 0.8rem;
     z-index: 1000;
-    text-decoration: none;
-    transition: var(--transition);
     transform: translateY(100px);
     opacity: 0;
     pointer-events: none;
+    transition: var(--transition);
 }
 
-.floating-cart.visible {
+.floating-widget-container.visible {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
 }
 
+.clear-cart-btn {
+    background: var(--bg-main);
+    color: var(--accent);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.clear-cart-btn:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Floating Cart Link */
+.floating-cart {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    color: var(--bg-main);
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 25px rgba(10, 88, 202, 0.4);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
 .floating-cart:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(255, 107, 0, 0.5);
-    color: var(--white);
+    box-shadow: 0 15px 35px rgba(10, 88, 202, 0.6);
+    color: var(--bg-main);
 }
 
 .cart-icon {
     position: relative;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .cart-count {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    background: var(--primary-dark);
-    color: var(--white);
+    top: -12px;
+    right: -12px;
+    background: var(--accent);
+    color: var(--bg-main);
     font-size: 0.8rem;
-    font-weight: 700;
-    height: 22px;
-    width: 22px;
+    font-weight: 800;
+    height: 24px;
+    width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--primary-dark);
+    box-shadow: 0 4px 10px rgba(255, 90, 95, 0.4);
 }
 
 .cart-text {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
 }
 
 /* =========================================
@@ -1529,7 +1644,7 @@ ul {
     padding: 2rem;
 }
 .category-content h3 {
-    color: var(--white);
+    color: #ffffff;
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 800;
@@ -1537,8 +1652,9 @@ ul {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 .btn-explorer {
-    background: var(--accent-color);
-    color: var(--white);
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
@@ -1547,9 +1663,107 @@ ul {
     gap: 0.5rem;
     font-size: 0.9rem;
     transition: 0.3s;
-    border: none;
     cursor: pointer;
 }
 .btn-explorer:hover {
     background: var(--primary-dark);
+}
+
+/* --- Image Lightbox / Zoom --- */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    background: #ffffff; /* Pour que les images détourées (png transparent) s'affichent bien */
+    padding: 20px;
+    object-fit: contain;
+}
+
+.lightbox-modal.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--primary-blue);
+}
+
+/* Curseur sur les images pour indiquer qu'on peut cliquer */
+.product-image img {
+    cursor: zoom-in;
+}
+
+/* Icône de loupe superposée sur l'image au survol */
+.product-image::before {
+    content: '\f00e'; /* fa-search-plus dans FontAwesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-blue);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: none; /* Laisse le clic passer à travers jusqu'à l'image */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card:hover .product-image::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }

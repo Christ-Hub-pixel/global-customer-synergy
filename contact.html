@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/logo_cercle.jpg">
     <title>Contact & Soumission | Global Customer Synergy (GCS)</title>
-    <meta name="description" content="Contactez Global Customer Synergy à Abidjan pour une demande de soumission, un audit de sécurité incendie ou une formation professionnelle.">
+    <meta name="description"
+        content="Contactez Global Customer Synergy à Abidjan pour une demande de soumission, un audit de sécurité incendie ou une formation professionnelle.">
     <!-- Open Graph SEO -->
     <meta property="og:title" content="Contactez Global Customer Synergy">
     <meta property="og:description" content="Demandez un devis gratuit pour votre protection incendie.">
     <meta property="og:image" content="assets/logo_cercle.jpg">
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -26,10 +28,13 @@
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Supabase JS Client -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -45,9 +50,6 @@
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
                     <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
-                    <li><a href="#" class="nav-link open-modal" data-modal="modal-extincteurs">Extincteurs</a></li>
-                    <li><a href="#" class="nav-link open-modal" data-modal="modal-formations">Formations</a></li>
-                    <li><a href="#" class="nav-link open-modal" data-modal="modal-courtage">Courtage d'affaires</a></li>
                     <li><a href="about.html" class="nav-link">À Propos</a></li>
                     <li><a href="contact.html" class="nav-link active">Soumission</a></li>
                 </ul>
@@ -91,8 +93,12 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Adresse</h4>
-                            <a href="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; display: block; transition: color 0.3s;" onmouseover="this.style.color='#E63946'" onmouseout="this.style.color='inherit'">
-                                <span>Siège Social : ABIDJAN (Côte d'Ivoire)<br>Marcory Hibiscus Boulevard du Gabon<br>Immeuble La Madone<br>01 B.P. 3183 ABIDJAN 01</span>
+                            <a href="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan" target="_blank"
+                                rel="noopener noreferrer"
+                                style="color: inherit; text-decoration: none; display: block; transition: color 0.3s;"
+                                onmouseover="this.style.color='#E63946'" onmouseout="this.style.color='inherit'">
+                                <span>Siège Social : ABIDJAN (Côte d'Ivoire)<br>Marcory Hibiscus Boulevard du
+                                    Gabon<br>Immeuble La Madone<br>01 B.P. 3183 ABIDJAN 01</span>
                             </a>
                         </div>
                     </div>
@@ -108,7 +114,7 @@
             <div class="contact-form-wrapper" id="soumission" data-reveal="right">
                 <form id="contact-form" class="contact-form" onsubmit="return false;">
                     <h3>Demande de Soumission</h3>
-                    
+
                     <!-- Anti-Spam Honeypot (Custom for Supabase validation) -->
                     <div class="form-group" style="display:none;" aria-hidden="true">
                         <label for="bot-check">Laissez ce champ vide si vous êtes humain</label>
@@ -116,11 +122,14 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Téléphone *</label>
-                        <input type="tel" id="phone" name="Téléphone" placeholder="Votre numéro" pattern="[0-9\+\s\-]{8,20}" maxlength="20" required title="Numéro de téléphone valide (8 à 20 caractères)">
+                        <input type="tel" id="phone" name="Téléphone" placeholder="Votre numéro"
+                            pattern="[0-9\+\s\-]{8,20}" maxlength="20" required
+                            title="Numéro de téléphone valide (8 à 20 caractères)">
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="Email" placeholder="votre@email.com" maxlength="100" required>
+                        <input type="email" id="email" name="Email" placeholder="votre@email.com" maxlength="100"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="type-besoin">Type de besoin *</label>
@@ -144,12 +153,18 @@
                     </div>
                     <div class="form-group">
                         <label for="emplacement">Emplacement du bâtiment</label>
-                        <input type="text" id="emplacement" name="Emplacement" placeholder="Ville, quartier..." maxlength="150">
+                        <input type="text" id="emplacement" name="Emplacement" placeholder="Ville, quartier..."
+                            maxlength="150">
                     </div>
                     <div class="form-group">
                         <label for="message">Autres détails</label>
-                        <textarea id="message" name="Details" rows="4" placeholder="Précisez votre demande..." maxlength="1000"></textarea>
+                        <textarea id="message" name="Details" rows="4" placeholder="Précisez votre demande..."
+                            maxlength="1000"></textarea>
                     </div>
+                    
+                    <!-- Cloudflare Turnstile Widget -->
+                    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" style="margin-bottom: 1.5rem;"></div>
+                    
                     <button type="submit" class="btn btn-primary btn-block">ENVOYER</button>
                 </form>
             </div>
@@ -158,13 +173,8 @@
 
     <!-- Map Section -->
     <section class="map-section" style="width: 100%; height: 450px; margin-bottom: -10px;">
-        <iframe 
-            src="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan&output=embed" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
+        <iframe src="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan&output=embed" width="100%"
+            height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </section>
@@ -183,8 +193,10 @@
                         CI-ABJ-2020-B-08677 | CC 2026453P</p>
                 </div>
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1EVeEDYS7y/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -326,7 +338,8 @@
         <div class="search-modal-content">
             <div class="search-input-wrapper">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" id="search-input" placeholder="Rechercher (ex: Extincteurs, Formations...)" autocomplete="off">
+                <input type="text" id="search-input" placeholder="Rechercher (ex: Extincteurs, Formations...)"
+                    autocomplete="off">
             </div>
             <div class="search-results" id="search-results">
                 <!-- Results will be injected here via JS -->

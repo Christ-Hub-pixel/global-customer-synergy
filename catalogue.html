@@ -6,96 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/logo_cercle.jpg">
     <title>Catalogue & Équipements | Global Customer Synergy (GCS)</title>
-    <meta name="description" content="Découvrez le catalogue d'équipements de sécurité de Global Customer Synergy Sarl : extincteurs, alarmes, EPI, et détecteurs de gaz en Côte d'Ivoire.">
+    <meta name="description"
+        content="Découvrez le catalogue d'équipements de sécurité de Global Customer Synergy Sarl : extincteurs, alarmes, EPI, et détecteurs de gaz en Côte d'Ivoire.">
     <!-- Open Graph SEO -->
     <meta property="og:title" content="Catalogue - Global Customer Synergy">
     <meta property="og:description" content="Catalogue d'équipements de sécurité de haute qualité.">
     <meta property="og:image" content="assets/logo_cercle.jpg">
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src 'self' https://formsubmit.co https://nnywksxkslyzpxowtsys.supabase.co; frame-src 'none'; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src 'self' https://formsubmit.co https://nnywksxkslyzpxowtsys.supabase.co; frame-src 'none'; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo_cercle.jpg" alt="Logo GCS">
-                <span class="logo-text">Global Customer Synergy</span>
+                <img src="assets/logo.jpg" alt="Global Customer Synergy Logo" class="logo-img">
             </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À Propos</a></li>
-                    <li><a href="services.html">Nos Services</a></li>
-                    <li><a href="catalogue.html" class="active">Catalogue</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="catalogue.html" class="nav-link active">Catalogue</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Soumission</a></li>
                 </ul>
             </nav>
-            <div class="nav-actions">
-                <button id="searchBtn" class="icon-btn"><i class="fas fa-search"></i></button>
-                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-actions">
+                <a href="#" class="search-btn" aria-label="Recherche"><i class="fas fa-search"></i></a>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
-
-    <!-- Modal de recherche -->
-    <div id="searchModal" class="search-modal">
-        <div class="search-modal-content">
-            <span class="close-search">&times;</span>
-            <input type="text" id="searchInput" placeholder="Que recherchez-vous ?">
-            <button class="btn btn-primary" id="performSearch">Rechercher</button>
-        </div>
-    </div>
 
     <!-- Hero Section Catalogue -->
     <section class="hero secondary-hero">
         <div class="hero-content">
             <span class="badge">Équipements Premium</span>
             <h1>Notre <span class="highlight">Catalogue</span></h1>
-            <p>Découvrez notre gamme complète d'équipements certifiés pour la sécurité incendie, la protection individuelle et la détection de gaz. Demandez un devis instantané en ligne.</p>
+            <p>Découvrez notre gamme complète d'équipements certifiés pour la sécurité incendie, la protection
+                individuelle et la détection de gaz. Demandez un devis instantané en ligne.</p>
         </div>
     </section>
 
     <!-- Catalogue Section -->
     <section class="catalogue-section section-padding">
         <div class="container">
-            
-            
+
+
             <!-- Catégories Vedettes -->
             <h2 class="featured-title">Catégories Vedettes</h2>
             <div class="featured-categories">
                 <!-- Card 1 -->
-                <a href="#" class="category-card" onclick="document.querySelector('\''[data-filter=epi]'\'').click(); return false;">
+                <a href="#" class="category-card"
+                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
                     <img src="assets/lifestyle_chaussures.png" alt="Chaussures de sécurité" class="category-img">
                     <div class="category-content">
                         <h3>Chaussures de Sécurité</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                
+
                 <!-- Card 2 -->
-                <a href="#" class="category-card" onclick="document.querySelector('\''[data-filter=epi]'\'').click(); return false;">
+                <a href="#" class="category-card"
+                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
                     <img src="assets/lifestyle_vetements.png" alt="Vêtements de travail" class="category-img">
                     <div class="category-content">
                         <h3>Vêtements de Travail</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                
+
                 <!-- Card 3 -->
-                <a href="#" class="category-card" onclick="document.querySelector('\''[data-filter=epi]'\'').click(); return false;">
+                <a href="#" class="category-card"
+                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
                     <img src="assets/lifestyle_casque.png" alt="Casques" class="category-img">
                     <div class="category-content">
                         <h3>Casques</h3>
@@ -104,7 +103,8 @@
                 </a>
 
                 <!-- Card 4 -->
-                <a href="#" class="category-card" onclick="document.querySelector('\''[data-filter=epi]'\'').click(); return false;">
+                <a href="#" class="category-card"
+                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
                     <img src="assets/lifestyle_masque.png" alt="Protection Respiratoire" class="category-img">
                     <div class="category-content">
                         <h3>Protection Respiratoire</h3>
@@ -113,7 +113,8 @@
                 </a>
 
                 <!-- Card 5 -->
-                <a href="#" class="category-card" onclick="document.querySelector('\''[data-filter=incendie]'\'').click(); return false;">
+                <a href="#" class="category-card"
+                    onclick="document.querySelector('[data-filter=incendie]').click(); return false;">
                     <img src="assets/lifestyle_extincteur.png" alt="Extincteurs" class="category-img">
                     <div class="category-content">
                         <h3>Extincteurs</h3>
@@ -125,175 +126,934 @@
             <!-- Filters -->
             <div class="catalogue-filters">
                 <button class="filter-btn active" data-filter="all">Tous les produits</button>
-                <button class="filter-btn" data-filter="incendie">Incendie</button>
-                <button class="filter-btn" data-filter="epi">EPI</button>
-                <button class="filter-btn" data-filter="gaz">Détection Gaz</button>
+                <button class="filter-btn" data-filter="epi">Équipements de Protection (EPI)</button>
+                <button class="filter-btn" data-filter="gaz">Détection de Gaz</button>
+                <button class="filter-btn" data-filter="incendie">Lutte Incendie & Alarmes</button>
+                <button class="filter-btn" data-filter="secours">Secours & Signalisation</button>
             </div>
 
             <!-- Product Grid -->
             <div class="product-grid">
-                
-                <!-- Product 1 -->
+
+                <!-- === EPI === -->
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/casque_chantier.png" alt="Casque de chantier">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casques de sécurité</h3>
+                        <p>Casque de sécurité haute résistance en polycarbonate avec réglage à crémaillère, harnais
+                            textile et aération optimale. Certifié norme EN 397.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casques de sécurité">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/masque.png" alt="Masque Respiratoire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Protection respiratoire (masques, filtres)</h3>
+                        <p>Demi-masque et masque complet de protection respiratoire à haut confort avec filtres à
+                            baïonnette interchangeables contre gaz, vapeurs et poussières (norme EN 140 / EN 136).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Protection respiratoire (masques, filtres)">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/lunette.png" alt="Lunettes de Sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes et protections des yeux</h3>
+                        <p>Lunettes de protection oculaire avec oculaires anti-rayures, traitement anti-buée extrême et
+                            protection UV à 100%. Conforme à la norme EN 166.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes et protections des yeux">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/Protection auditive.png" alt="Casque Antibruit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Protection auditive</h3>
+                        <p>Serre-tête de protection auditive haute performance (SNR 31dB) pour environnements
+                            industriels à fort niveau sonore, arceau matelassé confortable. Norme EN 352-1.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Protection auditive">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/Un harnais certifié EN 361.png" alt="Harnais Antichute">
+                    </div>
+                    <div class="product-info">
+                        <h3>Équipements antichute (Harnais)</h3>
+                        <p>Harnais de sécurité 2 points d'ancrage (dorsal et sternal) pour travaux en hauteur, avec
+                            sangles sous-fessières élastiques et boucles rapides de fermeture. Norme EN 361.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Équipements antichute">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/Une longe avec absorbeur d'énergie (EN 355).png" alt="Longe avec absorbeur d'énergie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Équipements antichute (Longes)</h3>
+                        <p>Longe avec absorbeur d'énergie intégré pour l'arrêt sécurisé des chutes. Équipée de connecteurs haute résistance. Conforme à la norme EN 355.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Longe antichute EN 355">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/Un connectEN362.png" alt="Connecteur EN 362">
+                    </div>
+                    <div class="product-info">
+                        <h3>Équipements antichute (Connecteurs)</h3>
+                        <p>Mousqueton et connecteur de sécurité à verrouillage automatique ou manuel pour systèmes antichute. Haute résistance, norme EN 362.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Connecteur antichute EN 362">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/masque_soudure.png" alt="Masque de Soudure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Équipements de soudure</h3>
+                        <p>Cagoule de soudage automatique à cristaux liquides (teinte variable DIN 9-13) protégeant les
+                            yeux et le visage contre l'arc électrique et les projections de soudage. Norme EN 379.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Équipements de soudure">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/chaussure basse de securité.png" alt="Chaussures de Sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures basses de sécurité</h3>
+                        <p>Bottes et chaussures de protection basses et hautes avec embout composite 200J, semelle
+                            anti-perforation non métallique et tige hydrofuge. Norme EN ISO 20345 S3.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures basses de sécurité">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/chaussure haut de securité.png" alt="Bottes de Sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures hautes</h3>
+                        <p>Bottes professionnelles renforcées pour les milieux exigeants, offrant une excellente protection contre les chocs et les glissades. Norme EN ISO 20345.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures hautes">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/couvre_chaussure.png" alt="Couvre-chaussures">
+                    </div>
+                    <div class="product-info">
+                        <h3>Couvre-chaussures</h3>
+                        <p>Couvre-chaussures de sécurité jetables ou réutilisables, idéals pour les environnements propres, les laboratoires et les visites d'usines. Protègent les sols et les chaussures.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Couvre-chaussures">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/cuissage.png" alt="Cuissardes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cuissardes</h3>
+                        <p>Cuissardes de sécurité étanches, idéales pour les travaux en milieux très humides, inondés ou agricoles. Offrent une excellente protection jusqu'en haut des cuisses.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Cuissardes">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/botte de securité.png" alt="Bottes de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bottes de sécurité</h3>
+                        <p>Bottes de sécurité étanches en PVC ou PU avec embout de protection et semelle anti-perforation. Parfaites pour les chantiers humides et l'industrie lourde. Norme EN ISO 20345 S5.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bottes de sécurité">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant.png" alt="Gants de Protection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants de manutention</h3>
+                        <p>Large gamme de gants de manutention fine ou lourde : protection anti-coupure, chimique,
+                            thermique et gants isolants électricien. Normes EN 388 / EN 374 / EN 407.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants de manutention">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_anti_chaleur.png" alt="Gants Anti-chaleur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants anti-chaleur</h3>
+                        <p>Gants de protection thermique conçus pour résister aux hautes températures. Idéals pour la manipulation de pièces chaudes en toute sécurité. Conformes à la norme EN 407.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants anti-chaleur">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_anti-coupure.png" alt="Gants Anti-coupure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants anti-coupure</h3>
+                        <p>Gants tricotés haute résistance pour une protection optimale contre les risques mécaniques et les coupures. Idéals pour les travaux de précision. Conformes à la norme EN 388.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants anti-coupure">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gantantifroid.png" alt="Gants Anti-froid">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants anti-froid</h3>
+                        <p>Gants isolants conçus pour maintenir les mains au chaud tout en offrant une bonne préhension dans les environnements froids ou en extérieur. Conformes à la norme EN 511.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants anti-froid">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_anti-vibration.png" alt="Gants Anti-vibration">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants anti-vibration</h3>
+                        <p>Gants de protection avec coussinets absorbants pour réduire la transmission des vibrations lors de l'utilisation d'outils mécaniques. Conformes à la norme EN ISO 10819.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants anti-vibration">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_chimique.png" alt="Gants chimiques">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants chimiques</h3>
+                        <p>Gants étanches haute protection contre les produits chimiques agressifs et micro-organismes. Parfaits pour l'industrie chimique et les laboratoires. Conformes à la norme EN 374.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants chimiques">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_pour_soudeur.png" alt="Gants pour soudeurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants pour soudeurs</h3>
+                        <p>Gants en cuir épais avec manchette longue, conçus pour protéger contre les projections de métal fondu et la chaleur radiante lors des travaux de soudure. Conformes aux normes EN 407 et EN 12477.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants pour soudeurs">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_pvs.png" alt="Gants PVC">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants PVC</h3>
+                        <p>Gants enduits PVC offrant une excellente résistance à l'abrasion et une imperméabilité aux huiles, graisses et hydrocarbures. Idéals pour les travaux lourds en milieu humide.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants PVC">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_jetable.png" alt="Gants jetables">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants jetables</h3>
+                        <p>Gants à usage unique en nitrile ou latex, idéals pour le secteur médical, agroalimentaire ou pour les travaux nécessitant une hygiène stricte et une grande dextérité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants jetables">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gant_electricien.png" alt="Gants électriciens">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gants électriciens</h3>
+                        <p>Gants isolants en latex spécialement conçus pour les travaux sous tension. Ils offrent une haute protection électrique adaptée à différentes classes de tension (norme EN 60903).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gants électriciens">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/conbinaison de travail.png" alt="Combinaisons de travail">
+                    </div>
+                    <div class="product-info">
+                        <h3>Combinaisons de travail</h3>
+                        <p>Combinaisons double fermeture et tenues de travail complètes offrant une protection optimale contre les salissures et les risques mineurs. Idéales pour l'industrie et la mécanique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Combinaisons de travail">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/gilet_haut_visibilité.png" alt="Gilets haute visibilité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gilets haute visibilité</h3>
+                        <p>Gilets et vêtements de signalisation à bandes réfléchissantes pour assurer une visibilité maximale de jour comme de nuit. Conformes à la norme EN ISO 20471.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Gilets haute visibilité">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/manteaux de pluies.png" alt="Manteaux de pluie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Manteaux de pluie</h3>
+                        <p>Vêtements imperméables, ensembles de pluie et coupe-vents robustes pour une protection complète contre les intempéries sur les chantiers. Conformes à la norme EN 343.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Manteaux de pluie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/blouse de travail.png" alt="Blouses de travail">
+                    </div>
+                    <div class="product-info">
+                        <h3>Blouses de travail</h3>
+                        <p>Blouses d'atelier, médicales ou de laboratoire offrant confort et protection au quotidien. Faciles d'entretien et résistantes aux tâches courantes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Blouses de travail">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/pantalon de travail.png" alt="Pantalons de travail">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pantalons de travail</h3>
+                        <p>Pantalons multipoches robustes et ergonomiques, renforcés aux genoux pour résister à l'usure sur les chantiers. Confortables et fonctionnels pour les professionnels.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Pantalons de travail">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/tablier_pvc.png" alt="Tabliers PVC">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tabliers PVC</h3>
+                        <p>Tabliers de protection étanches en PVC lourd ou léger. Offrent une excellente protection contre les liquides, les produits chimiques et les salissures en milieu industriel ou agroalimentaire.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Tabliers PVC">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/veste de travail.png" alt="Vestes de travail">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vestes de travail</h3>
+                        <p>Vestes de travail multipoches et blousons professionnels. Offrent robustesse, liberté de mouvement et protection contre le froid ou les intempéries sur tous vos chantiers.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Vestes de travail">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/travail de travail.png" alt="Tenues de travail">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tenues de travail</h3>
+                        <p>Ensembles complets de vêtements professionnels (vestes et pantalons assortis). Conception ergonomique, tissu résistant à l'abrasion et multipoches pour un confort optimal.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Tenues de travail">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi">
+                    <div class="product-image">
+                        <img src="assets/vetement de pluies.png" alt="Vêtements de pluie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vêtements de pluie</h3>
+                        <p>Ensembles de pluie étanches, coupe-vents et tenues de protection complètes contre les intempéries. Assurent de rester au sec tout en conservant une grande liberté d'action.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Vêtements de pluie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === DETECTION GAZ === -->
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/gas_detector.png" alt="Détecteur Multi-Gaz Portable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteurs multi-gaz</h3>
+                        <p>Détecteur portable pour la surveillance continue de 1 à 4 gaz (gaz combustibles LEL, O2, CO,
+                            H2S). Capteurs haute sensibilité avec alarmes visuelle, sonore et vibratoire.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteurs multi-gaz">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/detecteur_monogaz_.png" alt="Détecteur Mono-Gaz">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteurs mono-gaz</h3>
+                        <p>Détecteur personnel ultra-robuste et sans maintenance pour surveiller de manière fiable un
+                            gaz toxique spécifique (O2, CO, H2S, SO2, CO2). Alarmes à 360° et enregistreur de données.
+                        </p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteurs mono-gaz">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/Detecteurfixe.png" alt="Détecteur de Gaz Fixe">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteurs fixes</h3>
+                        <p>Transmetteur fixe industriel pour la surveillance continue des gaz toxiques ou inflammables.
+                            Sortie 4-20 mA avec relais intégrés pour asservissement de ventilations ou sirènes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteurs fixes">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/Balise de detection.png" alt="Balise de détection de gaz">
+                    </div>
+                    <div class="product-info">
+                        <h3>Balises de détection</h3>
+                        <p>Balise de détection de zone multi-gaz pour la sécurisation temporaire de chantiers ou d'espaces confinés. Alarme visuelle et sonore très puissante avec grande autonomie.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Balises de détection">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/Capteurs gaz.png" alt="Capteurs de gaz">
+                    </div>
+                    <div class="product-info">
+                        <h3>Capteurs de gaz</h3>
+                        <p>Cellules et capteurs de rechange haute précision pour détecteurs fixes et portables. Compatibles avec une large gamme de gaz toxiques, explosibles ou asphyxiants.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Capteurs de gaz">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/Stations de test et d’étalonnage.png" alt="Stations de test et d'étalonnage">
+                    </div>
+                    <div class="product-info">
+                        <h3>Stations de test et d'étalonnage</h3>
+                        <p>Stations d'étalonnage automatiques pour vérifier, calibrer et recharger vos détecteurs de gaz portables rapidement et en toute sécurité avant chaque utilisation.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Stations de test et d'étalonnage">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/Accessoires détecteurs gaz.png" alt="Accessoires pour détecteurs de gaz">
+                    </div>
+                    <div class="product-info">
+                        <h3>Accessoires pour détecteurs</h3>
+                        <p>Large gamme d'accessoires pour détecteurs : pompes d'échantillonnage, sondes de prélèvement, filtres, batteries de rechange et chargeurs pour vos équipements.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Accessoires pour détecteurs">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gaz">
+                    <div class="product-image">
+                        <img src="assets/tubes_reactifs.png" alt="Tubes Réactifs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tubes réactifs Dräger</h3>
+                        <p>Système éprouvé de mesure ponctuelle et rapide de gaz avec pompe de prélèvement manuelle
+                            Accuro pour plus de 500 substances chimiques et gaz toxiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Tubes réactifs Dräger">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === INCENDIE === -->
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
-                        <img src="assets/extincteur.png" alt="Extincteur Poudre ABC 6kg">
+                        <img src="assets/extincteur_a_eau.png" alt="Extincteur à eau">
                     </div>
                     <div class="product-info">
-                        <h3>Extincteur Poudre ABC 6kg</h3>
-                        <p>Extincteur polyvalent haute performance pour tout type de feu. Certifié CE.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Extincteur Poudre ABC 6kg">
+                        <h3>Extincteurs à eau</h3>
+                        <p>Extincteurs à eau pulvérisée, idéals pour les feux de classe A (matériaux solides tels que le bois, le papier, le tissu). Simples et efficaces.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à eau">
                             <i class="fas fa-cart-plus"></i> Ajouter au devis
                         </button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="product-card" data-category="epi">
-                    <div class="product-image">
-                        <img src="assets/casque.png" alt="Casque de Sécurité Chantier">
-                    </div>
-                    <div class="product-info">
-                        <h3>Casque de Sécurité Premium</h3>
-                        <p>Casque de chantier haute résistance avec aérations et réglage molette.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Casque de Sécurité Premium">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-category="epi">
-                    <div class="product-image">
-                        <img src="assets/gants.png" alt="Gants de Protection Mécanique">
-                    </div>
-                    <div class="product-info">
-                        <h3>Gants de Protection Industrielle</h3>
-                        <p>Gants en cuir renforcé pour la manutention lourde et la protection mécanique.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Gants de Protection Industrielle">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-category="epi">
-                    <div class="product-image">
-                        <img src="assets/chaussures.png" alt="Chaussures de Sécurité Pro">
-                    </div>
-                    <div class="product-info">
-                        <h3>Chaussures de Sécurité Pro</h3>
-                        <p>Bottes en cuir noir avec embout en acier, semelle anti-perforation.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures de Sécurité Pro">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card" data-category="gaz">
-                    <div class="product-image">
-                        <img src="assets/detecteur.png" alt="Détecteur Multigaz Portable">
-                    </div>
-                    <div class="product-info">
-                        <h3>Détecteur Multigaz Portable</h3>
-                        <p>Appareil de détection 4 gaz avec écran numérique et alarmes sonores.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur Multigaz Portable">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
-                        <img src="assets/alarme.png" alt="Déclencheur Manuel Alarme Incendie">
+                        <img src="assets/Extincteur à eau + additif.png" alt="Extincteur à eau avec additif">
                     </div>
                     <div class="product-info">
-                        <h3>Déclencheur Manuel Alarme</h3>
-                        <p>Bouton d'alarme incendie mural rouge, réarmable, design moderne.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur Manuel Alarme">
+                        <h3>Extincteurs à eau + additif</h3>
+                        <p>Extincteurs à eau pulvérisée avec additif, redoutablement efficaces contre les feux de classe A (solides) et B (liquides inflammables). Parfaits pour les environnements mixtes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à eau + additif">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/Extincteur a poudre.png" alt="Extincteur à poudre">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs à poudre</h3>
+                        <p>Extincteurs à poudre polyvalente ABC. Le plus polyvalent du marché, il étouffe les flammes et est efficace sur presque tous les types de feux de départ.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à poudre">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/poudreBC.png" alt="Extincteur à poudre BC">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs à poudre BC</h3>
+                        <p>Extincteurs à poudre spécifiquement conçus pour les feux de liquides ou de solides liquéfiables (classe B) et de gaz (classe C). Idéals pour les hydrocarbures et produits chimiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à poudre BC">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/extincteurCO2.png" alt="Extincteur au CO2">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs au CO2</h3>
+                        <p>Extincteurs au dioxyde de carbone (CO2). Efficaces contre les feux d'origine électrique et les liquides inflammables. Agissent par étouffement et refroidissement sans laisser de résidus.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs au CO2">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/extincteur_a_mousse.png" alt="Extincteur à mousse">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs à mousse</h3>
+                        <p>Extincteurs à mousse, particulièrement recommandés pour les feux de classe B (liquides inflammables). La mousse isole les vapeurs inflammables et empêche toute reprise du feu.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à mousse">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/extincteurD.png" alt="Extincteur spécial classe D">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs spéciaux classe D</h3>
+                        <p>Extincteurs à poudre spéciale dédiés exclusivement aux feux de métaux (aluminium, magnésium, sodium, etc.). Indispensables pour les environnements industriels spécifiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs classe D">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/extincteurF.png" alt="Extincteur classe F">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteurs classe F</h3>
+                        <p>Extincteurs à agent chimique humide, spécialement conçus pour les feux liés aux auxiliaires de cuisson (huiles et graisses végétales ou animales). Indispensables en restauration.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteurs classe F">
                             <i class="fas fa-cart-plus"></i> Ajouter au devis
                         </button>
                     </div>
                 </div>
 
 
-                <!-- Product: Pompe Accuro -->
-                <div class="product-card" data-category="gaz">
-                    <div class="product-image">
-                        <img src="assets/pompe_accuro.png" alt="Pompe Dräger Accuro">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Détection de Gaz</div>
-                        <h3 class="product-title">Pompe Dräger Accuro</h3>
-                        <p class="product-desc">Pompe manuelle de prélèvement pour tubes réactifs courte durée.</p>
-                        <button class="add-to-quote" data-name="Pompe Dräger Accuro"><i class="fas fa-plus"></i> Ajouter au devis</button>
-                    </div>
-                </div>
-
-                <!-- Product: Tubes Réactifs -->
-                <div class="product-card" data-category="gaz">
-                    <div class="product-image">
-                        <img src="assets/tubes_reactifs.png" alt="Tubes Réactifs Dräger">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Détection de Gaz</div>
-                        <h3 class="product-title">Tubes Réactifs Dräger</h3>
-                        <p class="product-desc">Mesure précise et rapide d'une grande variété de gaz industriels.</p>
-                        <button class="add-to-quote" data-name="Tubes Réactifs Dräger"><i class="fas fa-plus"></i> Ajouter au devis</button>
-                    </div>
-                </div>
-
-                <!-- Product: Boîte Tubes -->
-                <div class="product-card" data-category="gaz">
-                    <div class="product-image">
-                        <img src="assets/boite_tubes.png" alt="Lot de Tubes Dräger">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Détection de Gaz</div>
-                        <h3 class="product-title">Lot de Tubes Dräger</h3>
-                        <p class="product-desc">Conditionnement standard de 10 tubes réactifs spécifiques.</p>
-                        <button class="add-to-quote" data-name="Lot de Tubes Dräger"><i class="fas fa-plus"></i> Ajouter au devis</button>
-                    </div>
-                </div>
-
-                <!-- Product: Support Adaptateur -->
-                <div class="product-card" data-category="gaz">
-                    <div class="product-image">
-                        <img src="assets/support_mural.png" alt="Accessoire de Détection">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Détection de Gaz</div>
-                        <h3 class="product-title">Support / Accessoire Dräger</h3>
-                        <p class="product-desc">Accessoire de fixation et d'adaptation pour détecteurs portables.</p>
-                        <button class="add-to-quote" data-name="Accessoire de Détection Dräger"><i class="fas fa-plus"></i> Ajouter au devis</button>
-                    </div>
-                </div>
-
-
-                <!-- Product: Cagoule -->
-                <div class="product-card" data-category="epi">
-                    <div class="product-image">
-                        <img src="assets/cagoule.png" alt="Cagoule de protection">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Équipement de Protection</div>
-                        <h3 class="product-title">Cagoule de Protection</h3>
-                        <p class="product-desc">Cagoule ignifugée haute résistance pour soudure et environnements extrêmes.</p>
-                        <button class="add-to-quote" data-name="Cagoule de Protection"><i class="fas fa-plus"></i> Ajouter au devis</button>
-                    </div>
-                </div>
-
-                <!-- Product: Toile -->
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
-                        <img src="assets/toile.png" alt="Toile Anti-Feu">
+                        <img src="assets/RIA.png" alt="Robinet d'Incendie Armé (RIA)">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">Protection Incendie</div>
-                        <h3 class="product-title">Toile Haute Température</h3>
-                        <p class="product-desc">Toile technique en fibre de verre pour l'isolation thermique et la protection anti-feu.</p>
-                        <button class="add-to-quote" data-name="Toile Haute Température"><i class="fas fa-plus"></i> Ajouter au devis</button>
+                        <h3>ROBINET D'INCENDIE ARMÉ (RIA)</h3>
+                        <p>RIA industriel complet DN 25 ou DN 33 avec dévidoir à alimentation axiale, tuyau semi-rigide
+                            de 30m et diffuseur à jet réglable jet conique/jet bâton. Conforme EN 671-1.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="ROBINET D'INCENDIE ARMÉ (RIA)">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/tuyaudincendi.png" alt="Lances et Tuyaux">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lances et Tuyaux incendie</h3>
+                        <p>Tuyaux plats de refoulement en polyester avec raccords symétriques Guillemin et lances à
+                            débit réglable (LDV) pour l'extinction professionnelle. Conforme EN 14540.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lances et Tuyaux incendie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/detecteur_fumee.png" alt="Détecteur de fumée">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de fumée</h3>
+                        <p>Détecte efficacement les particules de fumée dès le début d'un incendie. Indispensable pour maisons, bureaux et hôtels.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de fumée">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/detecteur_chaleur.png" alt="Détecteur de chaleur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de chaleur</h3>
+                        <p>Détecte une hausse rapide de température. Particulièrement utilisé dans les cuisines, garages et milieux industriels.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de chaleur">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/detecteur_flamme.png" alt="Détecteur de flamme">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de flamme</h3>
+                        <p>Détecte instantanément les flammes grâce aux rayons UV/IR. Parfait pour les zones industrielles et chimiques sensibles.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de flamme">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/sirene_incendie.png" alt="Sirène incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène incendie</h3>
+                        <p>Émet une alerte sonore très puissante pour l'évacuation, pouvant être combinée avec un signal lumineux (flash).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène incendie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/declencheur_manuel.png" alt="Alarme incendie manuelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alarme incendie manuelle</h3>
+                        <p>Déclencheur manuel rouge à bouton poussoir. Permet à toute personne témoin d'activer immédiatement l'alarme générale.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie manuelle">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/alarme_adressable.png" alt="Alarme incendie adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alarme incendie adressable</h3>
+                        <p>Chaque détecteur possède une adresse unique. Permet au système de localiser exactement et instantanément le départ de feu.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie adressable">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/alarme_conventionnelle.png" alt="Alarme incendie conventionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alarme incendie conventionnelle</h3>
+                        <p>Fonctionne par découpage en zones (boucles). Moins précise que l'adressable mais constitue une solution très économique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie conventionnelle">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/centrale_incendie.png" alt="Centrale incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale incendie</h3>
+                        <p>Le cerveau de l'installation de sécurité. Elle reçoit les alertes des capteurs et contrôle l'ensemble du système d'évacuation.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale incendie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/alarme_vocale.png" alt="Alarme vocale / évacuation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alarme vocale / évacuation</h3>
+                        <p>Haut-parleur de sécurité diffusant des messages vocaux pré-enregistrés pour fluidifier l'évacuation de grands bâtiments.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Alarme vocale">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/fire_alarm.png" alt="Alarme connectée">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alarme connectée</h3>
+                        <p>Système moderne qui envoie des alertes directement sur votre téléphone. Entièrement compatible avec les systèmes domotiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Alarme connectée">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/bouches_incendie.png" alt="Bouches incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bouches incendie</h3>
+                        <p>Bouches et poteaux d'incendie extérieurs normalisés pour l'alimentation des engins de lutte contre l'incendie. Construction robuste en fonte avec raccords conformes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bouches incendie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/equipements_pompiers.png" alt="Équipements pompiers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Équipements pompiers</h3>
+                        <p>Tenues d'intervention professionnelles ignifugées, casques F1/F2, bottes de feu, ceinturons et accessoires de protection individuelle pour les équipes de première et seconde intervention.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Équipements pompiers">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/emulseurs.png" alt="Émulseurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Émulseurs</h3>
+                        <p>Émulseurs synthétiques et fluorosynthétiques (AFFF, AR-AFFF) haute performance pour la production de mousse bas, moyen et haut foisonnement contre les feux d'hydrocarbures.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Émulseurs">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie">
+                    <div class="product-image">
+                        <img src="assets/unites_mobiles_incendie.png" alt="Unités mobiles incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Unités mobiles incendie</h3>
+                        <p>Extincteurs sur roues de grande capacité (50kg et plus) à poudre, eau ou CO2. Idéals pour la protection de grands espaces de stockage, aéroports et sites pétrochimiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Unités mobiles incendie">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === SECOURS === -->
+                <div class="product-card" data-category="secours">
+                    <div class="product-image">
+                        <img src="assets/first_aid_kit.png" alt="Trousse de Secours">
+                    </div>
+                    <div class="product-info">
+                        <h3>Trousses de secours</h3>
+                        <p>Coffret médical de premiers soins complet, équipé selon les exigences de la médecine du
+                            travail pour soigner les blessures courantes en milieu industriel et tertiaire.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Trousses de secours">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="secours">
+                    <div class="product-image">
+                        <img src="assets/f46899a3-a50f-4ca4-84d0-007bf3e792b9.png" alt="Défibrillateur DAE">
+                    </div>
+                    <div class="product-info">
+                        <h3>Défibrillateurs</h3>
+                        <p>Défibrillateur cardiaque d'urgence avec instructions vocales pas à pas et capteur d'aide au
+                            massage cardiaque, utilisable par tout public. Conforme normes CE et DAE.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Défibrillateurs">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="secours">
+                    <div class="product-image">
+                        <img src="assets/863eec96-a7ce-4f0f-ba87-9db9a0fa03b0.png" alt="Douche de Sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Douches et lave-yeux</h3>
+                        <p>Station d'urgence autonome ou raccordée en acier inoxydable pour la décontamination rapide du
+                            corps et des yeux en cas de projection chimique. Norme EN 15154.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Douches et lave-yeux">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="secours">
+                    <div class="product-image">
+                        <img src="assets/signalisation.png" alt="Matériel de Signalisation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Matériels de signalisation</h3>
+                        <p>Panneaux d'obligation, de danger, d'évacuation et de lutte contre l'incendie (NF ISO 7010).
+                            Cônes de chantier, rubans de balisage haute visibilité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Matériels de signalisation">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="secours">
+                    <div class="product-image">
+                        <img src="assets/cadenas_consignation.png" alt="Cadenas de Consignation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cadenas</h3>
+                        <p>Cadenas diélectriques, moraillons de consignation multiple, dispositifs de verrouillage de
+                            vannes ou disjoncteurs et étiquettes de signalisation. Procédure Lockout/Tagout.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Cadenas">
+                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                        </button>
                     </div>
                 </div>
 
@@ -302,23 +1062,38 @@
     </section>
 
     <!-- Floating Cart Widget -->
-    <a href="contact.html" class="floating-cart" id="floatingCart">
-        <div class="cart-icon">
-            <i class="fas fa-file-invoice"></i>
-            <span class="cart-count" id="cartCount">0</span>
-        </div>
-        <span class="cart-text">Valider le Devis</span>
-    </a>
+    <div class="floating-widget-container" id="floatingWidgetContainer">
+        <button id="clearCartBtn" class="clear-cart-btn" title="Vider la sélection">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+        <a href="contact.html" class="floating-cart" id="floatingCart">
+            <div class="cart-icon">
+                <i class="fas fa-file-invoice"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <span class="cart-text">Valider le Devis</span>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="container footer-container">
             <div class="footer-col">
-                <div class="footer-logo">
-                    <img src="assets/logo_cercle.jpg" alt="Logo GCS">
-                    <span>GCS Sarl</span>
+                <img src="assets/logo.jpg" alt="GCS Logo" class="footer-logo">
+                <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur
+                    mesure.</p>
+                <div class="company-info" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem; color: #94A3B8;"><strong>Société agréée en Sécurité
+                            Incendie</strong><br>Arrêté n°0623/MIS/ONPC du 02 juillet 2022</p>
+                    <p style="margin-bottom: 0; color: #94A3B8;">Capital : 1 000 000 F CFA<br>N° RCCM :
+                        CI-ABJ-2020-B-08677 | CC 2026453P</p>
                 </div>
-                <p>Votre partenaire de confiance en ingénierie sécurité et formation en Côte d'Ivoire.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1EVeEDYS7y/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Liens Rapides</h4>
@@ -333,19 +1108,174 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</li>
-                    <li><i class="fas fa-phone"></i> +225 00 00 00 00 00</li>
-                    <li><i class="fas fa-envelope"></i> contact@globalcustomersynergy.com</li>
+                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> <a
+                            href="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan" target="_blank"
+                            rel="noopener noreferrer"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='inherit'">Marcory Hibiscus, Blvd du Gabon,<br>Immeuble La
+                            Madone, Abidjan</a></li>
+                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-phone-alt"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> <a href="tel:+2250505058433"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='inherit'">+225 05 05 05 84 33</a><br><span
+                            style="margin-left: 24px;"></span><a href="tel:+2250707404184"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='inherit'">+225 07 07 40 41 84</a></li>
+                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-envelope"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> <a
+                            href="mailto:Contact@globalcustomersynergy.com"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='inherit'">Contact@globalcustomersynergy.com</a><br><span
+                            style="margin-left: 24px;"></span><a href="mailto:globalcustomersynergy@gmail.com"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='inherit'">globalcustomersynergy@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Global Customer Synergy Sarl. Tous droits réservés. | <a href="mentions-legales.html" style="color: var(--text-light);">Mentions Légales</a></p>
+            <div class="container">
+                <p>&copy; 2026 Global Customer Synergy Sarl. Tous droits réservés. | <a href="mentions-legales.html"
+                        style="color: var(--text-light);">Mentions Légales</a></p>
+            </div>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Modal Extincteurs -->
+    <div class="modal" id="modal-extincteurs">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image1.png" alt="Extincteurs" class="modal-img">
+        <div class="modal-body">
+            <h3>Extincteurs et Arroseurs Automatiques</h3>
+            <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une gamme complète de solutions de protection incendie,
+                incluant :</p>
+            <h4>Fourniture d'Extincteurs et d'Arroseurs Automatiques :</h4>
+            <p>Nos systèmes d'arroseurs automatiques peuvent varier en fonction de vos besoins :</p>
+            <ul>
+                <li><strong>Arroseurs automatiques à fonctionnement classique</strong> : Idéaux pour diverses
+                    applications</li>
+                <li><strong>Arroseurs à détection précoce</strong> : Conçus pour une réaction rapide</li>
+                <li><strong>Systèmes de gicleurs spécialisés</strong> : Adaptés à des environnements particuliers</li>
+            </ul>
+            <p>Nous fournissons également une sélection d'extincteurs de différents types.</p>
+            <h4>Fourniture d'Extincteurs et de Tuyaux d'Incendie :</h4>
+            <img src="assets/hose_reel.jpg" alt="Tuyaux d'Incendie" class="modal-inline-img">
+            <p>Notre équipe de professionnels vous aide à choisir l'équipement de prévention incendie adapté à vos
+                besoins et à votre budget. Nous offrons une gamme d'extincteurs, de tuyaux d'incendie, et d'accessoires
+                garantissant une protection optimale.</p>
+            <p>Tous nos produits s'accompagnent d'un programme de maintenance pour assurer leur efficacité à long terme,
+                et nos spécialistes sont là pour vous aider à trouver la solution la plus appropriée à votre situation.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal Alarme -->
+    <div class="modal" id="modal-alarme">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image2.jpg" alt="Systèmes d'alarme" class="modal-img">
+        <div class="modal-body">
+            <h3>Systèmes d'alarme</h3>
+            <p>Nous concevons et déployons des systèmes d'alarme incendie et d'extinction automatique à la pointe de la
+                technologie pour assurer la protection optimale de vos installations.</p>
+            <p>Chaque système est pensé sur-mesure pour s'adapter à la configuration de vos locaux, garantissant une
+                détection rapide et fiable face à tout début d'incendie.</p>
+        </div>
+    </div>
+
+    <!-- Modal Formations -->
+    <div class="modal" id="modal-formations">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image3.jpg" alt="Formations" class="modal-img">
+        <div class="modal-body">
+            <h3>Formations en prévention d'Incendie</h3>
+            <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une formation complète en prévention d'incendie, couvrant
+                tous les aspects essentiels de la sécurité. Notre programme est conçu pour former efficacement votre
+                personnel et vos intervenants, assurant ainsi une préparation optimale face aux risques d'incendie.</p>
+            <h4>Nos Programmes de Formation :</h4>
+            <ul>
+                <li><strong>1. Exercices d'Évacuation</strong>
+                    <ul>
+                        <li>Organisation et réalisation d'exercices pratiques</li>
+                        <li>Supervision professionnelle durant l'exercice</li>
+                        <li>Analyse et recommandations post-exercice</li>
+                    </ul>
+                </li>
+                <li><strong>2. Utilisation des Extincteurs Portatifs</strong>
+                    <ul>
+                        <li>Formation pratique sur l'utilisation sécuritaire des extincteurs</li>
+                        <li>Techniques d'extinction adaptées à différents types de feux</li>
+                    </ul>
+                </li>
+                <li><strong>3. Connaissance des Agents Extincteurs</strong>
+                    <ul>
+                        <li>Identification des différents types d'agents extincteurs</li>
+                        <li>Choix de l'agent approprié selon le type d'incendie</li>
+                    </ul>
+                </li>
+                <li><strong>4. Notions Fondamentales sur le Feu</strong>
+                    <ul>
+                        <li>Compréhension du triangle du feu</li>
+                        <li>Étude des différentes phases d'un incendie</li>
+                    </ul>
+                </li>
+                <li><strong>5. Identification des Combustibles</strong>
+                    <ul>
+                        <li>Reconnaissance des matériaux combustibles courants</li>
+                        <li>Évaluation des risques liés à différents types de combustibles</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Courtage -->
+    <div class="modal" id="modal-courtage">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <img src="assets/image4.png" alt="Courtage d'affaires" class="modal-img">
+        <div class="modal-body">
+            <h3>Courtage d'affaires</h3>
+            <p>Facilitez vos transactions commerciales grâce à notre expertise et notre réseau étendu de partenaires.
+            </p>
+            <p>Notre service de courtage d'affaires vous accompagne dans le développement stratégique de votre
+                entreprise en vous mettant en relation avec les bons acteurs économiques. Confiez-nous vos recherches de
+                partenariats, nous nous occupons de trouver les meilleures opportunités pour vous.</p>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Fermer la vue agrandie">&times;</button>
+            <img src="" alt="Agrandissement du produit" class="lightbox-img" id="lightbox-img">
+        </div>
+    </div>
+
+    <div class="search-modal" id="search-modal">
+        <button class="search-close" id="search-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <div class="search-modal-content">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Rechercher (ex: Extincteurs, Formations...)"
+                    autocomplete="off">
+            </div>
+            <div class="search-results" id="search-results">
+                <!-- Results will be injected here via JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- Supabase SDK & App Script -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
