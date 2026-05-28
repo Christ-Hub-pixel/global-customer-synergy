@@ -556,3 +556,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// --- Accordion Logic for Expertise Guide ---
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            // Close all accordions
+            accordionHeaders.forEach(h => {
+                h.classList.remove('active');
+                h.nextElementSibling.style.maxHeight = null;
+            });
+            
+            // Open the clicked one if it was closed
+            if (!isActive) {
+                header.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+});
