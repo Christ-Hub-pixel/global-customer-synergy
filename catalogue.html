@@ -130,13 +130,131 @@
                 <button class="filter-btn" data-filter="gaz">Détection de Gaz</button>
                 <button class="filter-btn" data-filter="incendie">Lutte Incendie & Alarmes</button>
                 <button class="filter-btn" data-filter="secours">Secours & Signalisation</button>
+                <button class="filter-btn" data-filter="video">Vidéosurveillance & Sécurité</button>
             </div>
 
             <!-- Product Grid -->
-            <div class="product-grid">
+            
+            <div class="catalogue-main-layout">
+                <aside class="catalogue-sidebar">
+                    <div class="sidebar-block theme-epi">
+                        <h3 class="sidebar-title" style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.25rem;"><i class="fas fa-hard-hat"></i> Expertise EPI</h3>
+                        <ul class="sidebar-nav-list">
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="casques-de-securite"><i class="fas fa-angle-right"></i> Casques de sécurité</button></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block theme-incendie" style="margin-top: 2rem;">
+                        <h3 class="sidebar-title" style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.25rem;"><i class="fas fa-fire-extinguisher"></i> Expertise Incendie</h3>
+                        <ul class="sidebar-nav-list">
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="cablage-incendie"><i class="fas fa-angle-right"></i> Câblage incendie</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="detection-adressable"><i class="fas fa-angle-right"></i> Détection adressable</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="detection-conventionnelle"><i class="fas fa-angle-right"></i> Détection conventionnelle</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="sirenes-incendie"><i class="fas fa-angle-right"></i> Sirènes incendie</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="declencheurs-manuels"><i class="fas fa-angle-right"></i> Déclencheurs manuels</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="centrales-incendie"><i class="fas fa-angle-right"></i> Centrales incendie</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="extincteurs"><i class="fas fa-angle-right"></i> Extincteurs</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="unites-mobiles"><i class="fas fa-angle-right"></i> Unités mobiles</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="ria"><i class="fas fa-angle-right"></i> RIA & Tuyaux</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="bouches-incendie"><i class="fas fa-angle-right"></i> Bouches d'incendie</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="equipements-pompiers"><i class="fas fa-angle-right"></i> Équipements pompiers</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="incendie" data-subcategory="emulseurs"><i class="fas fa-angle-right"></i> Émulseurs</button></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block theme-video" style="margin-top: 2rem;">
+                        <h3 class="sidebar-title" style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.25rem;"><i class="fas fa-video"></i> Expertise Vidéo</h3>
+                        <ul class="sidebar-nav-list">
+                            <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="classiques"><i class="fas fa-angle-right"></i> Caméras Classiques</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="discretes"><i class="fas fa-angle-right"></i> Caméras Discrètes</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="intelligentes"><i class="fas fa-angle-right"></i> Intelligentes & Thermiques</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="specifiques"><i class="fas fa-angle-right"></i> Industrielles & Spécifiques</button></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="catalogue-content">
+                    <div class="product-grid">
+
 
                 <!-- === EPI === -->
-                <div class="product-card" data-category="epi">
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque electrique isolant.png" alt="Casque électrique isolant">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque électrique isolant</h3>
+                        <p>Protection contre les risques électriques jusqu'à 1000V. Idéal pour les électriciens.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque électrique isolant">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque avec protection auditive.png" alt="Casque avec protection auditive">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque avec protection auditive</h3>
+                        <p>Casque intégré avec coquilles anti-bruit pour environnements industriels bruyants.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque avec protection auditive">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque avec visière.png" alt="Casque forestier avec visière">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque forestier avec visière</h3>
+                        <p>Protection complète avec visière grillagée et anti-bruit pour les travaux forestiers.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque forestier">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque pour travailleur en hauteur.png" alt="Casque pour travailleur en hauteur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque travailleur en hauteur</h3>
+                        <p>Conception légère sans visière avec jugulaire 4 points pour éviter la perte en cas de chute.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque travailleur en hauteur">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque de pompier.png" alt="Casque de pompier F1/F2">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque de pompier</h3>
+                        <p>Casque d'intervention résistant aux flammes et aux températures extrêmes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque de pompier">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
+                    <div class="product-image">
+                        <img src="assets/casque mineur.png" alt="Casque de mineur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque de mineur</h3>
+                        <p>Casque renforcé avec fixation pour lampe frontale, conçu pour l'industrie minière.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque de mineur">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
                         <img src="assets/casque_chantier.png" alt="Casque de chantier">
                     </div>
@@ -145,7 +263,7 @@
                         <p>Casque de sécurité haute résistance en polycarbonate avec réglage à crémaillère, harnais
                             textile et aération optimale. Certifié norme EN 397.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Casques de sécurité">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -159,7 +277,7 @@
                         <p>Demi-masque et masque complet de protection respiratoire à haut confort avec filtres à
                             baïonnette interchangeables contre gaz, vapeurs et poussières (norme EN 140 / EN 136).</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Protection respiratoire (masques, filtres)">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -173,7 +291,7 @@
                         <p>Lunettes de protection oculaire avec oculaires anti-rayures, traitement anti-buée extrême et
                             protection UV à 100%. Conforme à la norme EN 166.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Lunettes et protections des yeux">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -187,7 +305,7 @@
                         <p>Serre-tête de protection auditive haute performance (SNR 31dB) pour environnements
                             industriels à fort niveau sonore, arceau matelassé confortable. Norme EN 352-1.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Protection auditive">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -201,7 +319,7 @@
                         <p>Harnais de sécurité 2 points d'ancrage (dorsal et sternal) pour travaux en hauteur, avec
                             sangles sous-fessières élastiques et boucles rapides de fermeture. Norme EN 361.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Équipements antichute">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -214,7 +332,7 @@
                         <h3>Équipements antichute (Longes)</h3>
                         <p>Longe avec absorbeur d'énergie intégré pour l'arrêt sécurisé des chutes. Équipée de connecteurs haute résistance. Conforme à la norme EN 355.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Longe antichute EN 355">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -227,7 +345,7 @@
                         <h3>Équipements antichute (Connecteurs)</h3>
                         <p>Mousqueton et connecteur de sécurité à verrouillage automatique ou manuel pour systèmes antichute. Haute résistance, norme EN 362.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Connecteur antichute EN 362">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -241,7 +359,7 @@
                         <p>Cagoule de soudage automatique à cristaux liquides (teinte variable DIN 9-13) protégeant les
                             yeux et le visage contre l'arc électrique et les projections de soudage. Norme EN 379.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Équipements de soudure">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -255,7 +373,7 @@
                         <p>Bottes et chaussures de protection basses et hautes avec embout composite 200J, semelle
                             anti-perforation non métallique et tige hydrofuge. Norme EN ISO 20345 S3.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Chaussures basses de sécurité">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -268,7 +386,7 @@
                         <h3>Chaussures hautes</h3>
                         <p>Bottes professionnelles renforcées pour les milieux exigeants, offrant une excellente protection contre les chocs et les glissades. Norme EN ISO 20345.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Chaussures hautes">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -281,7 +399,7 @@
                         <h3>Couvre-chaussures</h3>
                         <p>Couvre-chaussures de sécurité jetables ou réutilisables, idéals pour les environnements propres, les laboratoires et les visites d'usines. Protègent les sols et les chaussures.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Couvre-chaussures">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -294,7 +412,7 @@
                         <h3>Cuissardes</h3>
                         <p>Cuissardes de sécurité étanches, idéales pour les travaux en milieux très humides, inondés ou agricoles. Offrent une excellente protection jusqu'en haut des cuisses.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Cuissardes">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -307,7 +425,7 @@
                         <h3>Bottes de sécurité</h3>
                         <p>Bottes de sécurité étanches en PVC ou PU avec embout de protection et semelle anti-perforation. Parfaites pour les chantiers humides et l'industrie lourde. Norme EN ISO 20345 S5.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Bottes de sécurité">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -321,7 +439,7 @@
                         <p>Large gamme de gants de manutention fine ou lourde : protection anti-coupure, chimique,
                             thermique et gants isolants électricien. Normes EN 388 / EN 374 / EN 407.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants de manutention">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -334,7 +452,7 @@
                         <h3>Gants anti-chaleur</h3>
                         <p>Gants de protection thermique conçus pour résister aux hautes températures. Idéals pour la manipulation de pièces chaudes en toute sécurité. Conformes à la norme EN 407.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants anti-chaleur">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -347,7 +465,7 @@
                         <h3>Gants anti-coupure</h3>
                         <p>Gants tricotés haute résistance pour une protection optimale contre les risques mécaniques et les coupures. Idéals pour les travaux de précision. Conformes à la norme EN 388.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants anti-coupure">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -360,7 +478,7 @@
                         <h3>Gants anti-froid</h3>
                         <p>Gants isolants conçus pour maintenir les mains au chaud tout en offrant une bonne préhension dans les environnements froids ou en extérieur. Conformes à la norme EN 511.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants anti-froid">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -373,7 +491,7 @@
                         <h3>Gants anti-vibration</h3>
                         <p>Gants de protection avec coussinets absorbants pour réduire la transmission des vibrations lors de l'utilisation d'outils mécaniques. Conformes à la norme EN ISO 10819.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants anti-vibration">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -386,7 +504,7 @@
                         <h3>Gants chimiques</h3>
                         <p>Gants étanches haute protection contre les produits chimiques agressifs et micro-organismes. Parfaits pour l'industrie chimique et les laboratoires. Conformes à la norme EN 374.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants chimiques">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -399,7 +517,7 @@
                         <h3>Gants pour soudeurs</h3>
                         <p>Gants en cuir épais avec manchette longue, conçus pour protéger contre les projections de métal fondu et la chaleur radiante lors des travaux de soudure. Conformes aux normes EN 407 et EN 12477.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants pour soudeurs">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -412,7 +530,7 @@
                         <h3>Gants PVC</h3>
                         <p>Gants enduits PVC offrant une excellente résistance à l'abrasion et une imperméabilité aux huiles, graisses et hydrocarbures. Idéals pour les travaux lourds en milieu humide.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants PVC">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -425,7 +543,7 @@
                         <h3>Gants jetables</h3>
                         <p>Gants à usage unique en nitrile ou latex, idéals pour le secteur médical, agroalimentaire ou pour les travaux nécessitant une hygiène stricte et une grande dextérité.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants jetables">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -438,7 +556,7 @@
                         <h3>Gants électriciens</h3>
                         <p>Gants isolants en latex spécialement conçus pour les travaux sous tension. Ils offrent une haute protection électrique adaptée à différentes classes de tension (norme EN 60903).</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gants électriciens">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -451,7 +569,7 @@
                         <h3>Combinaisons de travail</h3>
                         <p>Combinaisons double fermeture et tenues de travail complètes offrant une protection optimale contre les salissures et les risques mineurs. Idéales pour l'industrie et la mécanique.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Combinaisons de travail">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -464,7 +582,7 @@
                         <h3>Gilets haute visibilité</h3>
                         <p>Gilets et vêtements de signalisation à bandes réfléchissantes pour assurer une visibilité maximale de jour comme de nuit. Conformes à la norme EN ISO 20471.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Gilets haute visibilité">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -477,7 +595,7 @@
                         <h3>Manteaux de pluie</h3>
                         <p>Vêtements imperméables, ensembles de pluie et coupe-vents robustes pour une protection complète contre les intempéries sur les chantiers. Conformes à la norme EN 343.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Manteaux de pluie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -490,7 +608,7 @@
                         <h3>Blouses de travail</h3>
                         <p>Blouses d'atelier, médicales ou de laboratoire offrant confort et protection au quotidien. Faciles d'entretien et résistantes aux tâches courantes.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Blouses de travail">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -503,7 +621,7 @@
                         <h3>Pantalons de travail</h3>
                         <p>Pantalons multipoches robustes et ergonomiques, renforcés aux genoux pour résister à l'usure sur les chantiers. Confortables et fonctionnels pour les professionnels.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Pantalons de travail">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -516,7 +634,7 @@
                         <h3>Tabliers PVC</h3>
                         <p>Tabliers de protection étanches en PVC lourd ou léger. Offrent une excellente protection contre les liquides, les produits chimiques et les salissures en milieu industriel ou agroalimentaire.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Tabliers PVC">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -529,7 +647,7 @@
                         <h3>Vestes de travail</h3>
                         <p>Vestes de travail multipoches et blousons professionnels. Offrent robustesse, liberté de mouvement et protection contre le froid ou les intempéries sur tous vos chantiers.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Vestes de travail">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -542,7 +660,7 @@
                         <h3>Tenues de travail</h3>
                         <p>Ensembles complets de vêtements professionnels (vestes et pantalons assortis). Conception ergonomique, tissu résistant à l'abrasion et multipoches pour un confort optimal.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Tenues de travail">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -555,7 +673,7 @@
                         <h3>Vêtements de pluie</h3>
                         <p>Ensembles de pluie étanches, coupe-vents et tenues de protection complètes contre les intempéries. Assurent de rester au sec tout en conservant une grande liberté d'action.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Vêtements de pluie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -570,7 +688,7 @@
                         <p>Détecteur portable pour la surveillance continue de 1 à 4 gaz (gaz combustibles LEL, O2, CO,
                             H2S). Capteurs haute sensibilité avec alarmes visuelle, sonore et vibratoire.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Détecteurs multi-gaz">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -585,7 +703,7 @@
                             gaz toxique spécifique (O2, CO, H2S, SO2, CO2). Alarmes à 360° et enregistreur de données.
                         </p>
                         <button class="btn btn-outline btn-add-quote" data-product="Détecteurs mono-gaz">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -599,7 +717,7 @@
                         <p>Transmetteur fixe industriel pour la surveillance continue des gaz toxiques ou inflammables.
                             Sortie 4-20 mA avec relais intégrés pour asservissement de ventilations ou sirènes.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Détecteurs fixes">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -612,7 +730,7 @@
                         <h3>Balises de détection</h3>
                         <p>Balise de détection de zone multi-gaz pour la sécurisation temporaire de chantiers ou d'espaces confinés. Alarme visuelle et sonore très puissante avec grande autonomie.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Balises de détection">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -625,7 +743,7 @@
                         <h3>Capteurs de gaz</h3>
                         <p>Cellules et capteurs de rechange haute précision pour détecteurs fixes et portables. Compatibles avec une large gamme de gaz toxiques, explosibles ou asphyxiants.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Capteurs de gaz">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -638,7 +756,7 @@
                         <h3>Stations de test et d'étalonnage</h3>
                         <p>Stations d'étalonnage automatiques pour vérifier, calibrer et recharger vos détecteurs de gaz portables rapidement et en toute sécurité avant chaque utilisation.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Stations de test et d'étalonnage">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -651,7 +769,7 @@
                         <h3>Accessoires pour détecteurs</h3>
                         <p>Large gamme d'accessoires pour détecteurs : pompes d'échantillonnage, sondes de prélèvement, filtres, batteries de rechange et chargeurs pour vos équipements.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Accessoires pour détecteurs">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -665,13 +783,13 @@
                         <p>Système éprouvé de mesure ponctuelle et rapide de gaz avec pompe de prélèvement manuelle
                             Accuro pour plus de 500 substances chimiques et gaz toxiques.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Tubes réactifs Dräger">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
                 <!-- === INCENDIE === -->
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/extincteur_a_eau.png" alt="Extincteur à eau">
                     </div>
@@ -679,12 +797,12 @@
                         <h3>Extincteurs à eau</h3>
                         <p>Extincteurs à eau pulvérisée, idéals pour les feux de classe A (matériaux solides tels que le bois, le papier, le tissu). Simples et efficaces.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à eau">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/Extincteur à eau + additif.png" alt="Extincteur à eau avec additif">
                     </div>
@@ -692,12 +810,12 @@
                         <h3>Extincteurs à eau + additif</h3>
                         <p>Extincteurs à eau pulvérisée avec additif, redoutablement efficaces contre les feux de classe A (solides) et B (liquides inflammables). Parfaits pour les environnements mixtes.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à eau + additif">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/Extincteur a poudre.png" alt="Extincteur à poudre">
                     </div>
@@ -705,12 +823,12 @@
                         <h3>Extincteurs à poudre</h3>
                         <p>Extincteurs à poudre polyvalente ABC. Le plus polyvalent du marché, il étouffe les flammes et est efficace sur presque tous les types de feux de départ.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à poudre">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/poudreBC.png" alt="Extincteur à poudre BC">
                     </div>
@@ -718,12 +836,12 @@
                         <h3>Extincteurs à poudre BC</h3>
                         <p>Extincteurs à poudre spécifiquement conçus pour les feux de liquides ou de solides liquéfiables (classe B) et de gaz (classe C). Idéals pour les hydrocarbures et produits chimiques.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à poudre BC">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/extincteurCO2.png" alt="Extincteur au CO2">
                     </div>
@@ -731,12 +849,12 @@
                         <h3>Extincteurs au CO2</h3>
                         <p>Extincteurs au dioxyde de carbone (CO2). Efficaces contre les feux d'origine électrique et les liquides inflammables. Agissent par étouffement et refroidissement sans laisser de résidus.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs au CO2">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/extincteur_a_mousse.png" alt="Extincteur à mousse">
                     </div>
@@ -744,12 +862,12 @@
                         <h3>Extincteurs à mousse</h3>
                         <p>Extincteurs à mousse, particulièrement recommandés pour les feux de classe B (liquides inflammables). La mousse isole les vapeurs inflammables et empêche toute reprise du feu.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs à mousse">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/extincteurD.png" alt="Extincteur spécial classe D">
                     </div>
@@ -757,12 +875,12 @@
                         <h3>Extincteurs spéciaux classe D</h3>
                         <p>Extincteurs à poudre spéciale dédiés exclusivement aux feux de métaux (aluminium, magnésium, sodium, etc.). Indispensables pour les environnements industriels spécifiques.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs classe D">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
                         <img src="assets/extincteurF.png" alt="Extincteur classe F">
                     </div>
@@ -770,13 +888,13 @@
                         <h3>Extincteurs classe F</h3>
                         <p>Extincteurs à agent chimique humide, spécialement conçus pour les feux liés aux auxiliaires de cuisson (huiles et graisses végétales ou animales). Indispensables en restauration.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Extincteurs classe F">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="ria">
                     <div class="product-image">
                         <img src="assets/RIA.png" alt="Robinet d'Incendie Armé (RIA)">
                     </div>
@@ -785,12 +903,12 @@
                         <p>RIA industriel complet DN 25 ou DN 33 avec dévidoir à alimentation axiale, tuyau semi-rigide
                             de 30m et diffuseur à jet réglable jet conique/jet bâton. Conforme EN 671-1.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="ROBINET D'INCENDIE ARMÉ (RIA)">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="ria">
                     <div class="product-image">
                         <img src="assets/tuyaudincendi.png" alt="Lances et Tuyaux">
                     </div>
@@ -799,114 +917,26 @@
                         <p>Tuyaux plats de refoulement en polyester avec raccords symétriques Guillemin et lances à
                             débit réglable (LDV) pour l'extinction professionnelle. Conforme EN 14540.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Lances et Tuyaux incendie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/detecteur_fumee.png" alt="Détecteur de fumée">
-                    </div>
-                    <div class="product-info">
-                        <h3>Détecteur de fumée</h3>
-                        <p>Détecte efficacement les particules de fumée dès le début d'un incendie. Indispensable pour maisons, bureaux et hôtels.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de fumée">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/detecteur_chaleur.png" alt="Détecteur de chaleur">
-                    </div>
-                    <div class="product-info">
-                        <h3>Détecteur de chaleur</h3>
-                        <p>Détecte une hausse rapide de température. Particulièrement utilisé dans les cuisines, garages et milieux industriels.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de chaleur">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/detecteur_flamme.png" alt="Détecteur de flamme">
-                    </div>
-                    <div class="product-info">
-                        <h3>Détecteur de flamme</h3>
-                        <p>Détecte instantanément les flammes grâce aux rayons UV/IR. Parfait pour les zones industrielles et chimiques sensibles.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de flamme">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/sirene_incendie.png" alt="Sirène incendie">
-                    </div>
-                    <div class="product-info">
-                        <h3>Sirène incendie</h3>
-                        <p>Émet une alerte sonore très puissante pour l'évacuation, pouvant être combinée avec un signal lumineux (flash).</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Sirène incendie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/declencheur_manuel.png" alt="Alarme incendie manuelle">
-                    </div>
-                    <div class="product-info">
-                        <h3>Alarme incendie manuelle</h3>
-                        <p>Déclencheur manuel rouge à bouton poussoir. Permet à toute personne témoin d'activer immédiatement l'alarme générale.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie manuelle">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/alarme_adressable.png" alt="Alarme incendie adressable">
-                    </div>
-                    <div class="product-info">
-                        <h3>Alarme incendie adressable</h3>
-                        <p>Chaque détecteur possède une adresse unique. Permet au système de localiser exactement et instantanément le départ de feu.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie adressable">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/alarme_conventionnelle.png" alt="Alarme incendie conventionnelle">
-                    </div>
-                    <div class="product-info">
-                        <h3>Alarme incendie conventionnelle</h3>
-                        <p>Fonctionne par découpage en zones (boucles). Moins précise que l'adressable mais constitue une solution très économique.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Alarme incendie conventionnelle">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
-                <div class="product-card" data-category="incendie">
-                    <div class="product-image">
-                        <img src="assets/centrale_incendie.png" alt="Centrale incendie">
-                    </div>
-                    <div class="product-info">
-                        <h3>Centrale incendie</h3>
-                        <p>Le cerveau de l'installation de sécurité. Elle reçoit les alertes des capteurs et contrôle l'ensemble du système d'évacuation.</p>
-                        <button class="btn btn-outline btn-add-quote" data-product="Centrale incendie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
-                        </button>
-                    </div>
-                </div>
+                
 
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
@@ -916,7 +946,7 @@
                         <h3>Alarme vocale / évacuation</h3>
                         <p>Haut-parleur de sécurité diffusant des messages vocaux pré-enregistrés pour fluidifier l'évacuation de grands bâtiments.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Alarme vocale">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -929,12 +959,12 @@
                         <h3>Alarme connectée</h3>
                         <p>Système moderne qui envoie des alertes directement sur votre téléphone. Entièrement compatible avec les systèmes domotiques.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Alarme connectée">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="bouches-incendie">
                     <div class="product-image">
                         <img src="assets/bouches_incendie.png" alt="Bouches incendie">
                     </div>
@@ -942,12 +972,12 @@
                         <h3>Bouches incendie</h3>
                         <p>Bouches et poteaux d'incendie extérieurs normalisés pour l'alimentation des engins de lutte contre l'incendie. Construction robuste en fonte avec raccords conformes.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Bouches incendie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="equipements-pompiers">
                     <div class="product-image">
                         <img src="assets/equipements_pompiers.png" alt="Équipements pompiers">
                     </div>
@@ -955,12 +985,12 @@
                         <h3>Équipements pompiers</h3>
                         <p>Tenues d'intervention professionnelles ignifugées, casques F1/F2, bottes de feu, ceinturons et accessoires de protection individuelle pour les équipes de première et seconde intervention.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Équipements pompiers">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="emulseurs">
                     <div class="product-image">
                         <img src="assets/emulseurs.png" alt="Émulseurs">
                     </div>
@@ -968,12 +998,12 @@
                         <h3>Émulseurs</h3>
                         <p>Émulseurs synthétiques et fluorosynthétiques (AFFF, AR-AFFF) haute performance pour la production de mousse bas, moyen et haut foisonnement contre les feux d'hydrocarbures.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Émulseurs">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="incendie">
+                <div class="product-card" data-category="incendie" data-subcategory="unites-mobiles">
                     <div class="product-image">
                         <img src="assets/unites_mobiles_incendie.png" alt="Unités mobiles incendie">
                     </div>
@@ -981,7 +1011,515 @@
                         <h3>Unités mobiles incendie</h3>
                         <p>Extincteurs sur roues de grande capacité (50kg et plus) à poudre, eau ou CO2. Idéals pour la protection de grands espaces de stockage, aéroports et sites pétrochimiques.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Unités mobiles incendie">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_resistant_feu.png" alt="Câble résistant au feu :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble résistant au feu :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble résistant au feu :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_cr1_cr2.png" alt="Câble CR1 / CR2 :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble CR1 / CR2 :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble CR1 / CR2 :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_blinde.png" alt="Câble blindé :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble blindé :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble blindé :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_lszh.png" alt="Câble sans halogène (LSZH) :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble sans halogène (LSZH) :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble sans halogène (LSZH) :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_detection.png" alt="Câble de détection incendie :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble de détection incendie :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble de détection incendie :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
+                    <div class="product-image">
+                        <img src="assets/cable_alimentation.png" alt="Câble d’alimentation incendie :">
+                    </div>
+                    <div class="product-info">
+                        <h3>Câble d’alimentation incendie :</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Câble d’alimentation incendie :">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/fumee_adressable.png" alt="Détecteur de fumée adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de fumée adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de fumée adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/chaleur_adressable.png" alt="Détecteur de chaleur adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de chaleur adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de chaleur adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/multi_capteurs.png" alt="Détecteur multi-capteurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur multi-capteurs</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur multi-capteurs">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/declencheur_adressable.png" alt="Déclencheur manuel adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur manuel adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur manuel adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/sirene_adressable_img.png" alt="Sirène adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/module_es.png" alt="Module d’entrée/sortie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Module d’entrée/sortie</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Module d’entrée/sortie">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
+                    <div class="product-image">
+                        <img src="assets/centrale_adressable_img.png" alt="Centrale incendie adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale incendie adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale incendie adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
+                    <div class="product-image">
+                        <img src="assets/fumee_conv.png" alt="Détecteur de fumée conventionnel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur de fumée conventionnel</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur de fumée conventionnel">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
+                    <div class="product-image">
+                        <img src="assets/chaleur_conv.png" alt="Détecteur thermique conventionnel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Détecteur thermique conventionnel</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Détecteur thermique conventionnel">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
+                    <div class="product-image">
+                        <img src="assets/declencheur_conv.png" alt="Déclencheur manuel conventionnel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur manuel conventionnel</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur manuel conventionnel">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
+                    <div class="product-image">
+                        <img src="assets/sireneconventionnel.png" alt="Sirène conventionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène conventionnelle</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène conventionnelle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
+                    <div class="product-image">
+                        <img src="assets/centrale_adressable_img.png" alt="Centrale conventionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale conventionnelle</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale conventionnelle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène sonore.png" alt="Sirène sonore">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène sonore</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène sonore">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène flash lumineuse.png" alt="Sirène flash lumineuse">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène flash lumineuse</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène flash lumineuse">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène sonore + flash.png" alt="Sirène sonore + flash">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène sonore + flash</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène sonore + flash">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène extérieure.png" alt="Sirène extérieure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène extérieure</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène extérieure">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène intérieure.png" alt="Sirène intérieure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène intérieure</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène intérieure">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène adressable.png" alt="Sirène adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène conventionnelle.png" alt="Sirène conventionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène conventionnelle</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène conventionnelle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
+                    <div class="product-image">
+                        <img src="assets/Sirène vocale d’évacuation.png" alt="Sirène vocale d’évacuation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sirène vocale d’évacuation</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sirène vocale d’évacuation">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/Déclencheur manuel à vitre cassable.png" alt="Déclencheur manuel à vitre cassable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur manuel à vitre cassable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur manuel à vitre cassable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/declencheur_adressable.png" alt="Déclencheur à membrane réarmable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur à membrane réarmable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur à membrane réarmable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/Déclencheur adressable.png" alt="Déclencheur adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/declencheur_conv.png" alt="Déclencheur conventionnel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur conventionnel</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur conventionnel">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/Déclencheur exterieur.png" alt="Déclencheur étanche (extérieur)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur étanche (extérieur)</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur étanche (extérieur)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
+                    <div class="product-image">
+                        <img src="assets/Déclencheur avec capot de protection.png" alt="Déclencheur avec capot de protection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Déclencheur avec capot de protection</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Déclencheur avec capot de protection">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Centrale conventionnelle.png" alt="Centrale conventionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale conventionnelle</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale conventionnelle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Centrale adressable.png" alt="Centrale adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Centrale analogique adressable.png" alt="Centrale analogique adressable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale analogique adressable</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale analogique adressable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Centrale de mise en sécurité incendie (CMSI)__ Centrale de mise en sécurité incendie (CMSI).png" alt="Centrale de mise en sécurité incendie (CMSI)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale de mise en sécurité incendie (CMSI)</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale de mise en sécurité incendie (CMSI)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Centrale vocale d’évacuation.png" alt="Centrale vocale d’évacuation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale vocale d’évacuation</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale vocale d’évacuation">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/Mini centrale incendie.png" alt="Mini centrale incendie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mini centrale incendie</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Mini centrale incendie">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
+                    <div class="product-image">
+                        <img src="assets/centraleconnectée.jpg" alt="Centrale connectée / intelligente">
+                    </div>
+                    <div class="product-info">
+                        <h3>Centrale connectée / intelligente</h3>
+                        <p>Équipement de qualité professionnelle pour votre sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Centrale connectée / intelligente">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -996,7 +1534,7 @@
                         <p>Coffret médical de premiers soins complet, équipé selon les exigences de la médecine du
                             travail pour soigner les blessures courantes en milieu industriel et tertiaire.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Trousses de secours">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -1010,7 +1548,7 @@
                         <p>Défibrillateur cardiaque d'urgence avec instructions vocales pas à pas et capteur d'aide au
                             massage cardiaque, utilisable par tout public. Conforme normes CE et DAE.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Défibrillateurs">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -1024,7 +1562,7 @@
                         <p>Station d'urgence autonome ou raccordée en acier inoxydable pour la décontamination rapide du
                             corps et des yeux en cas de projection chimique. Norme EN 15154.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Douches et lave-yeux">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -1038,7 +1576,7 @@
                         <p>Panneaux d'obligation, de danger, d'évacuation et de lutte contre l'incendie (NF ISO 7010).
                             Cônes de chantier, rubans de balisage haute visibilité.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Matériels de signalisation">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
@@ -1052,302 +1590,528 @@
                         <p>Cadenas diélectriques, moraillons de consignation multiple, dispositifs de verrouillage de
                             vannes ou disjoncteurs et étiquettes de signalisation. Procédure Lockout/Tagout.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Cadenas">
-                            <i class="fas fa-cart-plus"></i> Ajouter au devis
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- === VIDEOSURVEILLANCE === -->
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_dome_1780003238006.png" alt="Caméra Dome">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Dome</h3>
+                        <p>Caméra dôme standard pour surveillance en intérieur, offrant une vision à 360° et un design discret.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Dome">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_bullet_1780003251757.png" alt="Caméra Bullet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Bullet</h3>
+                        <p>Caméra de forme cylindrique très visible, idéale pour dissuader les intrus en extérieur avec vision infrarouge.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Bullet">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_ptz_1780003264458.png" alt="Caméra PTZ (Pan Tilt Zoom)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra PTZ (Pan Tilt Zoom)</h3>
+                        <p>Caméra motorisée permettant des mouvements panoramiques, d'inclinaison et un zoom optique puissant.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra PTZ (Pan Tilt Zoom)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_ip_1780003786626.png" alt="Caméra IP">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra IP</h3>
+                        <p>Caméra réseau haute définition se connectant directement à votre infrastructure IP pour une transmission sécurisée.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra IP">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_analogique_1780003860645.png" alt="Caméra Analogique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Analogique</h3>
+                        <p>Caméra traditionnelle fiable et économique, compatible avec les enregistreurs DVR standards.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Analogique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_infrarouge_1780005517641.png" alt="Caméra Infrarouge (IR)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Infrarouge (IR)</h3>
+                        <p>Caméra dotée de LED infrarouges pour une vision nocturne parfaite même dans l'obscurité totale.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Infrarouge (IR)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_wifi_1780003800440.png" alt="Caméra Wi-Fi">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Wi-Fi</h3>
+                        <p>Caméra sans fil facilitant l'installation dans des zones difficiles d'accès sans câblage réseau.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Wi-Fi">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="discretes">
+                    <div class="product-image">
+                        <img src="assets/camera_cachee_1780005530688.png" alt="Caméra Cachée">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Cachée</h3>
+                        <p>Caméra miniature dissimulée pour une surveillance ultra-discrète sans alerter les personnes présentes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Cachée">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_thermique_1780003292044.png" alt="Caméra Thermique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Thermique</h3>
+                        <p>Détecte la chaleur émise par les objets et les personnes, idéale pour la surveillance périmétrique de nuit ou dans le brouillard.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Thermique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_fisheye_360_1780005548465.png" alt="Caméra Fisheye 360°">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Fisheye 360°</h3>
+                        <p>Objectif ultra grand-angle offrant une vue panoramique complète sans angle mort pour les grands espaces.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Fisheye 360°">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_speed_dome_1780005562076.png" alt="Caméra Speed Dome">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Speed Dome</h3>
+                        <p>Dôme motorisé très haute vitesse pour un suivi rapide et précis des sujets en mouvement.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Speed Dome">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="discretes">
+                    <div class="product-image">
+                        <img src="assets/camera_mini_dome_1780005575510.png" alt="Caméra Mini Dôme">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Mini Dôme</h3>
+                        <p>Version ultra-compacte de la caméra dôme, conçue pour s'intégrer discrètement dans les espaces restreints.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Mini Dôme">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_box_1780003814455.png" alt="Caméra Box">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Box</h3>
+                        <p>Caméra professionnelle à objectif interchangeable, parfaite pour des besoins spécifiques en qualité d'image.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Box">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_tourelle_1780005610125.png" alt="Caméra Tourelle (Turret)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Tourelle (Turret)</h3>
+                        <p>Caméra sans dôme de protection en verre pour éviter les reflets IR, idéale pour l'extérieur.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Tourelle (Turret)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_antivandale_1780003367156.png" alt="Caméra Anti-vandale">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Anti-vandale</h3>
+                        <p>Protégée par un boîtier IK10 résistant aux chocs et aux tentatives de destruction intentionnelles.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Anti-vandale">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_solaire_1780003335206.png" alt="Caméra Solaire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Solaire</h3>
+                        <p>Alimentée par panneau solaire, parfaite pour les sites isolés sans raccordement électrique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Solaire">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_4g_sim_1780005627020.png" alt="Caméra 4G / SIM">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra 4G / SIM</h3>
+                        <p>Transmet les images via le réseau mobile, idéale pour les chantiers et les zones blanches.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra 4G / SIM">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_reconnaissance_1780005646103.png" alt="Caméra Reconnaissance faciale">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Reconnaissance faciale</h3>
+                        <p>Intègre une IA pour identifier et comparer les visages avec une base de données en temps réel.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Reconnaissance faciale">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_lapi_1780003826654.png" alt="Caméra LAPI (lecture de plaques)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra LAPI (lecture de plaques)</h3>
+                        <p>Conçue pour capturer et lire avec précision les plaques d'immatriculation de jour comme de nuit.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra LAPI (lecture de plaques)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_hd_1780005661798.png" alt="Caméra HD">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra HD</h3>
+                        <p>Offre une résolution haute définition standard (720p) pour une surveillance de base claire.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra HD">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra Full HD.png" alt="Caméra Full HD">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Full HD</h3>
+                        <p>Résolution 1080p pour des images nettes et détaillées, le standard actuel de la vidéosurveillance.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Full HD">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_4k_ultra_hd_1780005681449.png" alt="Caméra 4K Ultra HD">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra 4K Ultra HD</h3>
+                        <p>Résolution exceptionnelle permettant de zoomer numériquement dans l'image sans perte de qualité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra 4K Ultra HD">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_jour_nuit_1780005706730.png" alt="Caméra Jour/Nuit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Jour/Nuit</h3>
+                        <p>Bascule automatiquement du mode couleur au mode noir et blanc pour s'adapter à la luminosité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Jour/Nuit">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="discretes">
+                    <div class="product-image">
+                        <img src="assets/camera_espion_1780003307730.png" alt="Caméra Espion">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Espion</h3>
+                        <p>Dispositif miniature intégré dans des objets du quotidien pour une surveillance secrète.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Espion">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="discretes">
+                    <div class="product-image">
+                        <img src="assets/camera_pinhole_1780005729542.png" alt="Caméra Pinhole">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Pinhole</h3>
+                        <p>Objectif sténopé minuscule nécessitant seulement un trou de quelques millimètres pour filmer.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Pinhole">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="classiques">
+                    <div class="product-image">
+                        <img src="assets/camera_reseau_1780005742585.png" alt="Caméra Réseau (Network Camera)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Réseau (Network Camera)</h3>
+                        <p>Caméra IP avancée avec traitement d'image intégré et encodage vidéo performant.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Réseau (Network Camera)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_thermographique_1780005764602.png" alt="Caméra Thermographique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Thermographique</h3>
+                        <p>Mesure avec précision la température des équipements industriels pour prévenir les incendies.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra Thermographique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_comptage_personnes_1780005778899.png" alt="Caméra de comptage de personnes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra de comptage de personnes</h3>
+                        <p>Analyse vidéo pour compter les flux de personnes dans les magasins ou bâtiments publics.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra de comptage de personnes">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="intelligentes">
+                    <div class="product-image">
+                        <img src="assets/camera_intelligente_ia_1780005808970.png" alt="Caméra intelligente IA">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra intelligente IA</h3>
+                        <p>Intègre des algorithmes de deep learning pour distinguer humains, véhicules et animaux.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra intelligente IA">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_multisensorielle_1780005831498.png" alt="Caméra multisensorielle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra multisensorielle</h3>
+                        <p>Intègre plusieurs capteurs dans un seul boîtier pour couvrir plusieurs directions simultanément.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra multisensorielle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_panoramique_1780003352751.png" alt="Caméra panoramique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra panoramique</h3>
+                        <p>Combine plusieurs objectifs pour recréer une image panoramique fluide à 180° ou 360°.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra panoramique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra extérieure étanche.png" alt="Caméra extérieure étanche">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra extérieure étanche</h3>
+                        <p>Certifiée IP67 pour résister à la pluie, la poussière et aux conditions climatiques extrêmes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra extérieure étanche">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra intérieure.png" alt="Caméra intérieure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra intérieure</h3>
+                        <p>Conçue pour une intégration esthétique dans les bureaux et commerces avec un éclairage standard.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra intérieure">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_embarquee_1780003377845.png" alt="Caméra mobile embarquée">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra mobile embarquée</h3>
+                        <p>Conçue pour résister aux vibrations dans les bus, trains et véhicules d'intervention.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra mobile embarquée">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra pour ascenseur.png" alt="Caméra pour ascenseur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra pour ascenseur</h3>
+                        <p>Objectif très grand angle adapté aux espaces confinés et transmetteur sans fil spécifique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra pour ascenseur">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra de circulation routière.png" alt="Caméra de circulation routière">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra de circulation routière</h3>
+                        <p>Optimisée pour capturer des véhicules à haute vitesse et gérer les phares de nuit.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra de circulation routière">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_industrielle_1780003394122.png" alt="Caméra de surveillance industrielle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra de surveillance industrielle</h3>
+                        <p>Résistante aux environnements très poussiéreux ou corrosifs (usines, mines).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra de surveillance industrielle">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra pour entrepôt.png" alt="Caméra pour entrepôt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra pour entrepôt</h3>
+                        <p>Équipée d'un puissant zoom et d'un éclairage IR longue portée pour les grandes allées.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra pour entrepôt">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/Caméra anti-explosion.png" alt="Caméra anti-explosion">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra anti-explosion</h3>
+                        <p>Boîtier certifié ATEX pour éviter toute étincelle dans les atmosphères explosives (pétrochimie).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra anti-explosion">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="video" data-subcategory="specifiques">
+                    <div class="product-image">
+                        <img src="assets/camera_marine_1780003846684.png" alt="Caméra marine / portuaire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra marine / portuaire</h3>
+                        <p>Boîtier en acier inoxydable 316L résistant à la corrosion saline et aux tempêtes maritimes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Caméra marine / portuaire">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
                 </div>
 
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Guide d'Expertise Incendie Section -->
-    <section class="expertise-section section bg-light" id="expertise">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 0.5rem;">Guide d'Expertise Incendie</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #64748B; max-width: 700px; margin-left: auto; margin-right: auto;">Découvrez en détail les technologies et équipements qui composent nos systèmes de sécurité incendie de pointe.</p>
-            
-            <div class="accordion-container">
-                <!-- Câblage incendie -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-plug"></i></span>
-                            <span class="accordion-title">Câblage incendie</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Types de câbles utilisés dans les systèmes incendie :</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/cable_resistant_feu.png" alt="Câble résistant au feu" class="expertise-img">
-                                    <div><strong>Câble résistant au feu :</strong> Continue à fonctionner pendant un incendie (alarme et évacuation).</div>
-                                </li>
-                                <li>
-                                    <img src="assets/cable_cr1_cr2.png" alt="Câble CR1 / CR2" class="expertise-img">
-                                    <div><strong>Câble CR1 / CR2 :</strong> Haute résistance au feu pour les installations critiques.</div>
-                                </li>
-                                <li>
-                                    <img src="assets/cable_blinde.png" alt="Câble blindé" class="expertise-img">
-                                    <div><strong>Câble blindé :</strong> Protège contre les interférences électriques.</div>
-                                </li>
-                                <li>
-                                    <img src="assets/cable_lszh.png" alt="Câble sans halogène (LSZH)" class="expertise-img">
-                                    <div><strong>Câble sans halogène (LSZH) :</strong> Faible émission de fumée et gaz toxiques (très utilisé dans ERP et bureaux).</div>
-                                </li>
-                                <li>
-                                    <img src="assets/cable_detection.png" alt="Câble de détection incendie" class="expertise-img">
-                                    <div><strong>Câble de détection incendie :</strong> Relie les détecteurs à la centrale.</div>
-                                </li>
-                                <li>
-                                    <img src="assets/cable_alimentation.png" alt="Câble d’alimentation incendie" class="expertise-img">
-                                    <div><strong>Câble d’alimentation incendie :</strong> Fournit l’alimentation électrique du système.</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Détection adressable -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-network-wired"></i></span>
-                            <span class="accordion-title">Détection adressable</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Système intelligent où chaque équipement possède une adresse unique. Idéal pour les grands bâtiments (localisation précise du feu, maintenance simplifiée).</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/fumee_adressable.png" alt="Détecteur de fumée adressable" class="expertise-img">
-                                    <div><strong>Détecteur de fumée adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/chaleur_adressable.png" alt="Détecteur de chaleur adressable" class="expertise-img">
-                                    <div><strong>Détecteur de chaleur adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/multi_capteurs.png" alt="Détecteur multi-capteurs" class="expertise-img">
-                                    <div><strong>Détecteur multi-capteurs</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/declencheur_adressable.png" alt="Déclencheur manuel adressable" class="expertise-img">
-                                    <div><strong>Déclencheur manuel adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/sirene_adressable_img.png" alt="Sirène adressable" class="expertise-img">
-                                    <div><strong>Sirène adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/module_es.png" alt="Module d’entrée/sortie" class="expertise-img">
-                                    <div><strong>Module d’entrée/sortie</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/centrale_adressable_img.png" alt="Centrale incendie adressable" class="expertise-img">
-                                    <div><strong>Centrale incendie adressable</strong></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Détection conventionnelle -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-sitemap"></i></span>
-                            <span class="accordion-title">Détection conventionnelle</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Système organisé par zones. Plus économique et simple à installer, parfaitement adapté aux petits bâtiments.</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/fumee_conv.png" alt="Détecteur de fumée conventionnel" class="expertise-img">
-                                    <div><strong>Détecteur de fumée conventionnel</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/chaleur_conv.png" alt="Détecteur thermique conventionnel" class="expertise-img">
-                                    <div><strong>Détecteur thermique conventionnel</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/declencheur_conv.png" alt="Déclencheur manuel conventionnel" class="expertise-img">
-                                    <div><strong>Déclencheur manuel conventionnel</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/sireneconventionnel.png" alt="Sirène conventionnelle" class="expertise-img">
-                                    <div><strong>Sirène conventionnelle</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/centrale_adressable_img.png" alt="Centrale conventionnelle (image temporaire)" class="expertise-img">
-                                    <div><strong>Centrale conventionnelle</strong></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sirènes incendie -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-volume-up"></i></span>
-                            <span class="accordion-title">Sirènes incendie</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Types d’alarmes sonores et visuelles pour l'avertissement et l'évacuation :</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/Sirène sonore.png" alt="Sirène sonore" class="expertise-img">
-                                    <div><strong>Sirène sonore</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène flash lumineuse.png" alt="Sirène flash lumineuse" class="expertise-img">
-                                    <div><strong>Sirène flash lumineuse</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène sonore + flash.png" alt="Sirène sonore + flash" class="expertise-img">
-                                    <div><strong>Sirène sonore + flash</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène extérieure.png" alt="Sirène extérieure" class="expertise-img">
-                                    <div><strong>Sirène extérieure</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène intérieure.png" alt="Sirène intérieure" class="expertise-img">
-                                    <div><strong>Sirène intérieure</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène adressable.png" alt="Sirène adressable" class="expertise-img">
-                                    <div><strong>Sirène adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène conventionnelle.png" alt="Sirène conventionnelle" class="expertise-img">
-                                    <div><strong>Sirène conventionnelle</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Sirène vocale d’évacuation.png" alt="Sirène vocale d’évacuation" class="expertise-img">
-                                    <div><strong>Sirène vocale d’évacuation</strong></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Déclencheurs manuels -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-hand-pointer"></i></span>
-                            <span class="accordion-title">Déclencheurs manuels</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Boîtiers de sécurité permettant de déclencher l’alarme générale manuellement :</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/Déclencheur manuel à vitre cassable.png" alt="Déclencheur manuel à vitre cassable" class="expertise-img">
-                                    <div><strong>Déclencheur manuel à vitre cassable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/declencheur_adressable.png" alt="Déclencheur à membrane réarmable (image temporaire)" class="expertise-img">
-                                    <div><strong>Déclencheur à membrane réarmable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Déclencheur adressable.png" alt="Déclencheur adressable" class="expertise-img">
-                                    <div><strong>Déclencheur adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/declencheur_conv.png" alt="Déclencheur conventionnel (image temporaire)" class="expertise-img">
-                                    <div><strong>Déclencheur conventionnel</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Déclencheur exterieur.png" alt="Déclencheur étanche (extérieur)" class="expertise-img">
-                                    <div><strong>Déclencheur étanche (extérieur)</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Déclencheur avec capot de protection.png" alt="Déclencheur avec capot de protection" class="expertise-img">
-                                    <div><strong>Déclencheur avec capot de protection</strong></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Centrales incendie -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title-wrap">
-                            <span class="accordion-icon"><i class="fas fa-server"></i></span>
-                            <span class="accordion-title">Centrales incendie</span>
-                        </div>
-                        <i class="fas fa-chevron-down accordion-arrow"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-inner">
-                            <p class="expertise-desc">Le cerveau du système de sécurité. Reçoit les alertes, gère les sirènes et l'évacuation automatique.</p>
-                            <ul class="expertise-list cable-list">
-                                <li>
-                                    <img src="assets/Centrale conventionnelle.png" alt="Centrale conventionnelle" class="expertise-img">
-                                    <div><strong>Centrale conventionnelle</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Centrale adressable.png" alt="Centrale adressable" class="expertise-img">
-                                    <div><strong>Centrale adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Centrale analogique adressable.png" alt="Centrale analogique adressable" class="expertise-img">
-                                    <div><strong>Centrale analogique adressable</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Centrale de mise en sécurité incendie (CMSI)__ Centrale de mise en sécurité incendie (CMSI).png" alt="Centrale de mise en sécurité incendie (CMSI)" class="expertise-img">
-                                    <div><strong>Centrale de mise en sécurité incendie (CMSI)</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Centrale vocale d’évacuation.png" alt="Centrale vocale d’évacuation" class="expertise-img">
-                                    <div><strong>Centrale vocale d’évacuation</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/Mini centrale incendie.png" alt="Mini centrale incendie" class="expertise-img">
-                                    <div><strong>Mini centrale incendie</strong></div>
-                                </li>
-                                <li>
-                                    <img src="assets/centraleconnectée.jpg" alt="Centrale connectée / intelligente" class="expertise-img">
-                                    <div><strong>Centrale connectée / intelligente</strong></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+</div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Floating Cart Widget -->
     <div class="floating-widget-container" id="floatingWidgetContainer">
         <button id="clearCartBtn" class="clear-cart-btn" title="Vider la sélection">
             <i class="fas fa-trash-alt"></i>
         </button>
-        <a href="contact.html" class="floating-cart" id="floatingCart">
+        <button class="floating-cart" id="floatingCart">
             <div class="cart-icon">
                 <i class="fas fa-file-invoice"></i>
                 <span class="cart-count" id="cartCount">0</span>
             </div>
-            <span class="cart-text">Valider le Devis</span>
-        </a>
+            <span class="cart-text">Voir le Devis</span>
+        </button>
+    </div>
+
+    <!-- Cart Sidebar & Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3><i class="fas fa-file-invoice" style="margin-right: 8px;"></i> Votre Devis</h3>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Fermer le panier"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-sidebar-body" id="cartSidebarBody">
+            <!-- Items will be injected here via JS -->
+            <div class="empty-cart-msg">Votre liste de devis est vide.</div>
+        </div>
+        <div class="cart-sidebar-footer">
+            <a href="contact.html" class="btn btn-primary btn-block" style="width: 100%; text-align: center;">Valider le Devis</a>
+        </div>
     </div>
 
     <!-- Footer -->

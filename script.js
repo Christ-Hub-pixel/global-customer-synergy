@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatingCart = document.getElementById('floatingCart');
     const floatingWidgetContainer = document.getElementById('floatingWidgetContainer');
     
-    // Fonction pour mettre à jour l'affichage du panier
+    // Fonction pour mettre à jour l'affichage du compteur et du bouton flottant
     function updateCartDisplay() {
         if (!cartCountEl) return;
         
@@ -382,8 +382,78 @@ document.addEventListener('DOMContentLoaded', () => {
             if (floatingWidgetContainer) floatingWidgetContainer.classList.remove('visible');
             else if (floatingCart) floatingCart.classList.remove('visible');
         }
+        renderCartSidebar();
     }
     
+    // Elements du panneau latéral (Sidebar Cart)
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartSidebarBody = document.getElementById('cartSidebarBody');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    
+    function openCart() {
+        if(cartSidebar && cartOverlay) {
+            cartSidebar.classList.add('open');
+            cartOverlay.classList.add('active');
+        }
+    }
+    
+    function closeCart() {
+        if(cartSidebar && cartOverlay) {
+            cartSidebar.classList.remove('open');
+            cartOverlay.classList.remove('active');
+        }
+    }
+    
+    if (floatingCart) {
+        floatingCart.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCart();
+        });
+    }
+    if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+    if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
+    
+    function renderCartSidebar() {
+        if (!cartSidebarBody) return;
+        
+        cartSidebarBody.innerHTML = '';
+        
+        if (quoteCart.length === 0) {
+            cartSidebarBody.innerHTML = '<div class="empty-cart-msg">Votre liste de devis est vide.</div>';
+            return;
+        }
+        
+        quoteCart.forEach((item, index) => {
+            const itemName = typeof item === 'string' ? item : item.name;
+            const itemImg = (typeof item === 'object' && item.image) ? `<img src="${item.image}" alt="${itemName}" class="cart-item-img">` : '';
+
+            const itemEl = document.createElement('div');
+            itemEl.className = 'cart-item';
+            itemEl.innerHTML = `
+                <div class="cart-item-info">
+                    ${itemImg}
+                    <h4>${itemName}</h4>
+                </div>
+                <button class="remove-item-btn" data-index="${index}" aria-label="Supprimer">
+                    <i class="fas fa-trash"></i>
+                </button>
+            `;
+            cartSidebarBody.appendChild(itemEl);
+        });
+        
+        // Attacher les events pour supprimer un item
+        const removeBtns = cartSidebarBody.querySelectorAll('.remove-item-btn');
+        removeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const idx = parseInt(this.getAttribute('data-index'));
+                quoteCart.splice(idx, 1);
+                localStorage.setItem('gcs_quote_cart', JSON.stringify(quoteCart));
+                updateCartDisplay();
+            });
+        });
+    }
+
     updateCartDisplay();
     
     // Gestion du bouton Vider le panier
@@ -418,7 +488,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
             
             // Ajouter au panier
-            quoteCart.push(productName);
+            const productCard = this.closest('.product-card');
+            const imgSrc = productCard ? productCard.querySelector('.product-image img').getAttribute('src') : '';
+            quoteCart.push({ name: productName, image: imgSrc });
             localStorage.setItem('gcs_quote_cart', JSON.stringify(quoteCart));
             
             updateCartDisplay();
@@ -428,13 +500,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filtres du catalogue
     const filterBtns = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
+    const sidebarBtns = document.querySelectorAll('.sidebar-filter-btn');
     
+    // Filtres principaux (Haut de page)
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Retirer l'état actif de tous les boutons
             filterBtns.forEach(b => b.classList.remove('active'));
-            // Ajouter l'état actif au bouton cliqué
             btn.classList.add('active');
+            
+            // Réinitialiser la barre latérale
+            if(sidebarBtns) {
+                sidebarBtns.forEach(b => b.classList.remove('active'));
+            }
             
             const filterValue = btn.getAttribute('data-filter');
             
@@ -445,8 +522,62 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.display = 'none';
                 }
             });
+            
+            // Revenir en haut des résultats pour éviter d'être bloqué en bas de page
+            const catalogueHeader = document.querySelector('.catalogue-filters');
+            if (catalogueHeader) {
+                const offset = 120; // Ajustement pour le menu flottant
+                const elementPosition = catalogueHeader.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
         });
     });
+    
+    // Filtres de la barre latérale (Sous-catégories)
+    if(sidebarBtns) {
+        sidebarBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sidebarBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Mettre à jour le bouton parent en haut
+                const parentCat = btn.getAttribute('data-category');
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    if(b.getAttribute('data-filter') === parentCat) {
+                        b.classList.add('active');
+                    }
+                });
+                
+                const subFilterValue = btn.getAttribute('data-subcategory');
+                
+                productCards.forEach(card => {
+                    if (card.getAttribute('data-subcategory') === subFilterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Revenir en haut des résultats pour éviter d'être bloqué en bas de page
+                const catalogueHeader = document.querySelector('.catalogue-filters');
+                if (catalogueHeader) {
+                    const offset = 120; // Ajustement pour le menu flottant
+                    const elementPosition = catalogueHeader.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+
+            });
+        });
+    }
     
     // Auto-remplissage du formulaire de contact si on vient du panier
     const messageField = document.getElementById('message');
@@ -455,7 +586,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (messageField.value.trim() === '') {
             let messageText = "Bonjour, je souhaite obtenir un devis pour les équipements suivants :\n\n";
             quoteCart.forEach((item, index) => {
-                messageText += `- ${item}\n`;
+                const itemName = typeof item === 'string' ? item : item.name;
+                messageText += `- ${itemName}\n`;
             });
             messageText += "\nMerci de me recontacter.";
             messageField.value = messageText;
