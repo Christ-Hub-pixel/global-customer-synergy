@@ -1910,3 +1910,25 @@ ul {
     color: #10B981;
     font-size: 0.9rem;
 }
+
+.cable-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.cable-list li::before {
+    display: none;
+}
+
+.expertise-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    flex-shrink: 0;
+    background-color: white;
+}
