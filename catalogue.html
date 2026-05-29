@@ -74,7 +74,7 @@
             <div class="featured-categories">
                 <!-- Card 1 -->
                 <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
+                    onclick="document.querySelector('[data-subcategory=\'chaussures-de-securite\']').click(); return false;">
                     <img src="assets/lifestyle_chaussures.png" alt="Chaussures de sécurité" class="category-img">
                     <div class="category-content">
                         <h3>Chaussures de Sécurité</h3>
@@ -84,7 +84,7 @@
 
                 <!-- Card 2 -->
                 <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
+                    onclick="document.querySelector('[data-subcategory=\'vetements-de-travail\']').click(); return false;">
                     <img src="assets/lifestyle_vetements.png" alt="Vêtements de travail" class="category-img">
                     <div class="category-content">
                         <h3>Vêtements de Travail</h3>
@@ -94,7 +94,7 @@
 
                 <!-- Card 3 -->
                 <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
+                    onclick="document.querySelector('[data-subcategory=\'casques-de-securite\']').click(); return false;">
                     <img src="assets/lifestyle_casque.png" alt="Casques" class="category-img">
                     <div class="category-content">
                         <h3>Casques</h3>
@@ -104,7 +104,7 @@
 
                 <!-- Card 4 -->
                 <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-filter=epi]').click(); return false;">
+                    onclick="document.querySelector('[data-subcategory=\'protection-respiratoire\']').click(); return false;">
                     <img src="assets/lifestyle_masque.png" alt="Protection Respiratoire" class="category-img">
                     <div class="category-content">
                         <h3>Protection Respiratoire</h3>
@@ -114,7 +114,7 @@
 
                 <!-- Card 5 -->
                 <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-filter=incendie]').click(); return false;">
+                    onclick="document.querySelector('[data-subcategory=\'extincteurs\']').click(); return false;">
                     <img src="assets/lifestyle_extincteur.png" alt="Extincteurs" class="category-img">
                     <div class="category-content">
                         <h3>Extincteurs</h3>
@@ -141,6 +141,10 @@
                         <h3 class="sidebar-title" style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.25rem;"><i class="fas fa-hard-hat"></i> Expertise EPI</h3>
                         <ul class="sidebar-nav-list">
                             <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="casques-de-securite"><i class="fas fa-angle-right"></i> Casques de sécurité</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="chaussures-de-securite"><i class="fas fa-angle-right"></i> Chaussures de sécurité</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="vetements-de-travail"><i class="fas fa-angle-right"></i> Vêtements de travail</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-respiratoire"><i class="fas fa-angle-right"></i> Protection respiratoire</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-yeux"><i class="fas fa-angle-right"></i> Protection des yeux</button></li>
                         </ul>
                     </div>
                     <div class="sidebar-block theme-incendie" style="margin-top: 2rem;">
@@ -268,7 +272,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
                         <img src="assets/masque.png" alt="Masque Respiratoire">
                     </div>
@@ -282,7 +286,241 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque jetable FFP1.png" alt="Masque jetable FFP1">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque jetable FFP1</h3>
+                        <p>Masque de protection respiratoire jetable FFP1. Protège efficacement contre les poussières fines non toxiques. Confortable et léger pour une utilisation prolongée.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque jetable FFP1">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque jetable FFP2.png" alt="Masque jetable FFP2">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque jetable FFP2</h3>
+                        <p>Masque de protection respiratoire jetable FFP2. Assure un excellent niveau de filtration contre les particules fines, toxiques et les aérosols. Forme ergonomique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque jetable FFP2">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque jetable FFP3.png" alt="Masque jetable FFP3">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque jetable FFP3</h3>
+                        <p>Masque de protection respiratoire jetable FFP3 avec valve. Offre la plus haute protection contre les poussières très fines, toxiques et les aérosols solides/liquides.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque jetable FFP3">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Demi-masque réutilisable.png" alt="Demi-masque réutilisable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Demi-masque réutilisable</h3>
+                        <p>Demi-masque de protection respiratoire réutilisable. Conception bi-filtre pour un équilibre parfait, compatible avec de multiples cartouches filtrantes (gaz, vapeurs, particules).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Demi-masque réutilisable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque complet respiratoire.png" alt="Masque complet respiratoire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque complet respiratoire</h3>
+                        <p>Masque de protection complet avec visière panoramique. Offre une protection maximale des voies respiratoires et des yeux contre les gaz, vapeurs et particules hautement toxiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque complet respiratoire">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque à cartouches filtrantes.png" alt="Masque à cartouches filtrantes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque à cartouches filtrantes</h3>
+                        <p>Masque respiratoire équipé de cartouches filtrantes interchangeables. Protection efficace contre une large gamme de gaz, vapeurs organiques et inorganiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque à cartouches filtrantes">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Appareil respiratoire isolant (ARI).png" alt="Appareil respiratoire isolant (ARI)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Appareil respiratoire isolant (ARI)</h3>
+                        <p>Équipement de pointe pour les interventions en milieu confiné ou pauvre en oxygène. Fournit un apport d'air indépendant et garantit la sécurité dans les environnements les plus dangereux.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Appareil respiratoire isolant (ARI)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Appareil respiratoire autonome.png" alt="Appareil respiratoire autonome">
+                    </div>
+                    <div class="product-info">
+                        <h3>Appareil respiratoire autonome</h3>
+                        <p>Système de protection respiratoire autonome complet, conçu pour les longues durées d'intervention en milieu hostile avec une bouteille d'air comprimé haute capacité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Appareil respiratoire autonome">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque d’évacuation d’urgence.png" alt="Masque d’évacuation d’urgence">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque d’évacuation d’urgence</h3>
+                        <p>Masque ou cagoule d'évacuation d'urgence. Déploiement ultra-rapide pour garantir une fuite sécurisée en cas d'incendie ou de fuite de gaz toxique.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque d’évacuation d’urgence">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque anti-gaz.png" alt="Masque anti-gaz">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque anti-gaz</h3>
+                        <p>Masque respiratoire hautement spécialisé pour la protection contre les gaz toxiques et les vapeurs chimiques dangereuses. Filtres spécifiques remplaçables.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque anti-gaz">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque pour soudage avec filtration.png" alt="Masque pour soudage avec filtration">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque pour soudage avec filtration</h3>
+                        <p>Cagoule de soudage intégrée avec système de filtration d'air (ventilation assistée). Protège les yeux des arcs électriques tout en assurant une respiration saine sans fumées de soudure.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque pour soudage avec filtration">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Cagoule à adduction d’air.png" alt="Cagoule à adduction d’air">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cagoule à adduction d’air</h3>
+                        <p>Système de protection avec cagoule légère alimentée en air pur via un réseau externe. Idéale pour les environnements avec de très fortes concentrations de contaminants.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Cagoule à adduction d’air">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Masque chirurgical jetable.png" alt="Masque chirurgical jetable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masque chirurgical jetable</h3>
+                        <p>Masque chirurgical de protection jetable 3 plis. Idéal pour un usage quotidien en milieu médical, agroalimentaire ou pour l'hygiène générale.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Masque chirurgical jetable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Système de protection respiratoire à ventilation assistée (PAPR).png" alt="Système de protection respiratoire à ventilation assistée (PAPR)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Système de protection respiratoire à ventilation assistée (PAPR)</h3>
+                        <p>Système PAPR complet avec moteur et filtres. Fournit un flux d'air purifié constant pour réduire la fatigue respiratoire lors des travaux prolongés en environnement pollué.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Système de protection respiratoire à ventilation assistée (PAPR)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Cartouches filtrantes respiratoires.png" alt="Cartouches filtrantes respiratoires">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cartouches filtrantes respiratoires</h3>
+                        <p>Lot de cartouches filtrantes de rechange pour demi-masques et masques complets. Protection spécifique contre les particules, gaz et vapeurs selon les besoins.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Cartouches filtrantes respiratoires">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Filtres à particules.png" alt="Filtres à particules">
+                    </div>
+                    <div class="product-info">
+                        <h3>Filtres à particules</h3>
+                        <p>Filtres de rechange haute efficacité pour systèmes de protection respiratoire. Bloquent les poussières fines, les aérosols et les particules nocives en suspension dans l'air.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Filtres à particules">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Filtres gaz et vapeurs.png" alt="Filtres gaz et vapeurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Filtres gaz et vapeurs</h3>
+                        <p>Filtres spécifiques pour une protection optimale contre une grande variété de gaz toxiques et de vapeurs (organiques, inorganiques, acides, ammoniac).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Filtres gaz et vapeurs">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
+                    <div class="product-image">
+                        <img src="assets/Accessoires de protection respiratoire.png" alt="Accessoires de protection respiratoire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Accessoires de protection respiratoire</h3>
+                        <p>Large gamme d'accessoires (lingettes nettoyantes, valves de rechange, sangles, étuis) pour entretenir et prolonger la durée de vie de vos masques de protection respiratoire.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Accessoires de protection respiratoire">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
                         <img src="assets/lunette.png" alt="Lunettes de Sécurité">
                     </div>
@@ -291,6 +529,175 @@
                         <p>Lunettes de protection oculaire avec oculaires anti-rayures, traitement anti-buée extrême et
                             protection UV à 100%. Conforme à la norme EN 166.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Lunettes et protections des yeux">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité transparentes.png" alt="Lunettes de sécurité transparentes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité transparentes</h3>
+                        <p>Lunettes de sécurité à verres transparents pour une vision claire en intérieur. Offrent une excellente protection contre les impacts et les projections.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité transparentes">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité teintées.png" alt="Lunettes de sécurité teintées">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité teintées</h3>
+                        <p>Lunettes de protection avec verres teintés anti-éblouissement, parfaites pour les travaux en extérieur ou sous une forte luminosité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité teintées">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité anti-buée.png" alt="Lunettes de sécurité anti-buée">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité anti-buée</h3>
+                        <p>Lunettes équipées d'un revêtement anti-buée ultra-performant. Maintiennent une vision nette même lors d'efforts intenses ou de changements de température.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité anti-buée">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité anti-rayures.png" alt="Lunettes de sécurité anti-rayures">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité anti-rayures</h3>
+                        <p>Lunettes de protection avec verres traités anti-rayures pour une durabilité exceptionnelle dans les environnements abrasifs ou poussiéreux.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité anti-rayures">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité avec protection latérale.png" alt="Lunettes de sécurité avec protection latérale">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité avec protection latérale</h3>
+                        <p>Lunettes de sécurité enveloppantes avec écrans latéraux intégrés. Offrent une protection complète contre les projections venant de tous les angles.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité avec protection latérale">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes-masque de sécurité.png" alt="Lunettes-masque de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes-masque de sécurité</h3>
+                        <p>Lunettes-masque étanches offrant une protection hermétique contre les liquides, les éclaboussures chimiques et les particules fines.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes-masque de sécurité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes pour soudage.png" alt="Lunettes pour soudage">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes pour soudage</h3>
+                        <p>Lunettes spécialisées pour les opérations de soudage au chalumeau, avec verres filtrants protégeant contre les rayonnements intenses et les projections.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes pour soudage">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité UV.png" alt="Lunettes de sécurité UV">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité UV</h3>
+                        <p>Lunettes de protection dotées de filtres anti-UV. Bloquent à 100% les rayonnements ultraviolets nocifs pour une sécurité optimale en extérieur ou en milieu médical.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité UV">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes-masque de sécurité1.png" alt="Lunettes-masque de sécurité ventilées">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes-masque de sécurité ventilées</h3>
+                        <p>Lunettes-masque avec système de ventilation indirecte. Assurent une protection optimale contre les projections tout en limitant fortement la formation de buée lors d'efforts.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes-masque de sécurité ventilées">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes balistiques de sécurité.png" alt="Lunettes balistiques de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes balistiques de sécurité</h3>
+                        <p>Lunettes de protection haute résistance certifiées normes balistiques. Conçues pour résister aux impacts à très haute vitesse (fragments, éclats).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes balistiques de sécurité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Lunettes de sécurité à verres correcteurs.png" alt="Lunettes de sécurité à verres correcteurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lunettes de sécurité à verres correcteurs</h3>
+                        <p>Monture de sécurité robuste avec possibilité d'intégration de verres correcteurs sur mesure. Allient parfaite vision et protection oculaire certifiée.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Lunettes de sécurité à verres correcteurs">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Sur-lunettes de sécurité.png" alt="Sur-lunettes de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sur-lunettes de sécurité</h3>
+                        <p>Conçues pour être portées confortablement par-dessus des lunettes de vue. Offrent une excellente couverture périphérique et une protection intégrale contre les chocs.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sur-lunettes de sécurité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
+                    <div class="product-image">
+                        <img src="assets/Écran facial de protection.png" alt="Écran facial de protection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Écran facial de protection</h3>
+                        <p>Visière transparente robuste avec serre-tête ajustable. Protège l'intégralité du visage contre les projections mécaniques, chimiques ou biologiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Écran facial de protection">
                             <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
@@ -364,7 +771,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
                         <img src="assets/chaussure basse de securité.png" alt="Chaussures de Sécurité">
                     </div>
@@ -378,7 +785,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
                         <img src="assets/chaussure haut de securité.png" alt="Bottes de Sécurité">
                     </div>
@@ -391,7 +798,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
                         <img src="assets/couvre_chaussure.png" alt="Couvre-chaussures">
                     </div>
@@ -404,7 +811,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
                         <img src="assets/cuissage.png" alt="Cuissardes">
                     </div>
@@ -417,14 +824,144 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/botte de securité.png" alt="Bottes de sécurité">
+                        <img src="assets/Bottes de sécurité.png" alt="Bottes de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Bottes de sécurité</h3>
                         <p>Bottes de sécurité étanches en PVC ou PU avec embout de protection et semelle anti-perforation. Parfaites pour les chantiers humides et l'industrie lourde. Norme EN ISO 20345 S5.</p>
                         <button class="btn btn-outline btn-add-quote" data-product="Bottes de sécurité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures de sécurité sport.png" alt="Chaussures de sécurité sport">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures de sécurité sport</h3>
+                        <p>Chaussures de sécurité au design sportif, légères et respirantes. Embout de protection et semelle anti-perforation pour un confort optimal tout au long de la journée.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures de sécurité sport">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures antidérapantes.png" alt="Chaussures antidérapantes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures antidérapantes</h3>
+                        <p>Chaussures professionnelles dotées d'une semelle ultra-adhérente, idéales pour les sols glissants (restauration, milieu médical, nettoyage). Confort et stabilité garantis.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures antidérapantes">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures isolantes électriques.png" alt="Chaussures isolantes électriques">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures isolantes électriques</h3>
+                        <p>Chaussures de sécurité avec semelle isolante haute tension, spécialement conçues pour protéger les électriciens contre les risques de chocs électriques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures isolantes électriques">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures ESD.png" alt="Chaussures ESD">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures ESD</h3>
+                        <p>Chaussures de sécurité dissipatrices d'électricité statique (ESD). Conçues pour l'industrie électronique et les zones sensibles aux décharges électrostatiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures ESD">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures résistantes à la chaleur.png" alt="Chaussures résistantes à la chaleur">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures résistantes à la chaleur</h3>
+                        <p>Chaussures de sécurité conçues pour résister aux températures extrêmes (HRO). Idéales pour la soudure, la métallurgie et les environnements à haute température.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures résistantes à la chaleur">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Bottes PVC de sécurité.png" alt="Bottes PVC de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bottes PVC de sécurité</h3>
+                        <p>Bottes de sécurité étanches en PVC lourd. Idéales pour les milieux très humides, inondés ou l'industrie chimique, avec embout de protection robuste.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bottes PVC de sécurité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures anti-perforation.png" alt="Chaussures anti-perforation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures anti-perforation</h3>
+                        <p>Chaussures renforcées intégrant une semelle anti-perforation ultra-résistante pour protéger contre les objets pointus et tranchants sur les chantiers.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures anti-perforation">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures pour soudeurs.png" alt="Chaussures pour soudeurs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures pour soudeurs</h3>
+                        <p>Chaussures montantes en cuir ignifugé, conçues spécifiquement pour la soudure. Fermeture rapide et protection renforcée contre les étincelles et le métal en fusion.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures pour soudeurs">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Chaussures sans métal.png" alt="Chaussures sans métal">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures sans métal</h3>
+                        <p>Chaussures de sécurité 100% amagnétiques (sans métal). Conçues avec un embout composite, elles sont plus légères et idéales pour le passage des portiques de sécurité.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures sans métal">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img src="assets/Sabots de sécurité.png" alt="Sabots de sécurité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sabots de sécurité</h3>
+                        <p>Sabots de sécurité confortables, parfaits pour le milieu médical, l'hygiène ou l'agroalimentaire. Faciles à enfiler, lavables et équipés d'une semelle antidérapante.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Sabots de sécurité">
                             <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
                         </button>
                     </div>
@@ -561,7 +1098,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/conbinaison de travail.png" alt="Combinaisons de travail">
                     </div>
@@ -574,7 +1111,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/gilet_haut_visibilité.png" alt="Gilets haute visibilité">
                     </div>
@@ -587,7 +1124,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/manteaux de pluies.png" alt="Manteaux de pluie">
                     </div>
@@ -600,7 +1137,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/blouse de travail.png" alt="Blouses de travail">
                     </div>
@@ -613,7 +1150,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/pantalon de travail.png" alt="Pantalons de travail">
                     </div>
@@ -626,7 +1163,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/tablier_pvc.png" alt="Tabliers PVC">
                     </div>
@@ -639,7 +1176,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/veste de travail.png" alt="Vestes de travail">
                     </div>
@@ -652,7 +1189,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/travail de travail.png" alt="Tenues de travail">
                     </div>
@@ -665,7 +1202,7 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
                         <img src="assets/vetement de pluies.png" alt="Vêtements de pluie">
                     </div>
