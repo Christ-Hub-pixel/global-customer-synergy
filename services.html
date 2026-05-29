@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo_cercle.jpg">
+    <link rel="icon" href="assets/logo_cercle.webp">
     <title>Nos Services | Global Customer Synergy (GCS)</title>
     <meta name="description"
         content="Nos prestations en sécurité incendie : installation d'extincteurs, systèmes d'alarme, robinets d'incendie, et formations professionnelles en Côte d'Ivoire.">
@@ -12,11 +12,11 @@
     <meta property="og:title" content="Nos Services - Global Customer Synergy">
     <meta property="og:description"
         content="Installation d'équipements incendie et formations santé sécurité au travail.">
-    <meta property="og:image" content="assets/logo_cercle.jpg">
+    <meta property="og:image" content="assets/logo_cercle.webp">
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
+        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -28,16 +28,25 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;700&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Top Bar Promotionnelle -->
+    <div class="promo-topbar" id="promo-topbar">
+        <div class="container promo-topbar-content">
+            <span class="promo-text"><i class="fas fa-gift"></i> <strong>Offre Spéciale :</strong> -15% sur votre première installation d'alarme ou de vidéosurveillance ce mois-ci !</span>
+            <button class="promo-close" id="promo-close" aria-label="Fermer la bannière"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="Global Customer Synergy Logo" class="logo-img">
+                <img src="assets/logo.webp" alt="Global Customer Synergy Logo" class="logo-img">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
@@ -72,8 +81,8 @@
                 <!-- Service 1 -->
                 <div class="service-card" data-reveal="bottom" data-delay="100">
                     <div class="service-image">
-                        <img src="assets/image1.png" alt="Extincteurs">
-                        <div class="service-icon">
+                        <img src="assets/image1.webp" alt="Extincteurs">
+                        <div class="service-icon open-modal" data-modal="modal-extincteurs">
                             <i class="fas fa-fire-extinguisher"></i>
                         </div>
                     </div>
@@ -89,8 +98,8 @@
                 <!-- Service 2 -->
                 <div class="service-card" data-reveal="bottom" data-delay="200">
                     <div class="service-image">
-                        <img src="assets/image2.jpg" alt="Systèmes d'alarme">
-                        <div class="service-icon">
+                        <img src="assets/image2.webp" alt="Systèmes d'alarme">
+                        <div class="service-icon open-modal" data-modal="modal-alarme">
                             <i class="fas fa-bell"></i>
                         </div>
                     </div>
@@ -105,8 +114,8 @@
                 <!-- Service 3 -->
                 <div class="service-card" data-reveal="bottom" data-delay="300">
                     <div class="service-image">
-                        <img src="assets/image3.jpg" alt="Formations">
-                        <div class="service-icon">
+                        <img src="assets/image3.webp" alt="Formations">
+                        <div class="service-icon open-modal" data-modal="modal-formations">
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
                     </div>
@@ -121,8 +130,8 @@
                 <!-- Service 4 -->
                 <div class="service-card" data-reveal="bottom" data-delay="400">
                     <div class="service-image">
-                        <img src="assets/image4.png" alt="Courtage d'affaires">
-                        <div class="service-icon">
+                        <img src="assets/image4.webp" alt="Courtage d'affaires">
+                        <div class="service-icon open-modal" data-modal="modal-courtage">
                             <i class="fas fa-handshake"></i>
                         </div>
                     </div>
@@ -142,7 +151,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <img src="assets/logo.jpg" alt="GCS Logo" class="footer-logo">
+                <img src="assets/logo.webp" alt="GCS Logo" class="footer-logo">
                 <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur
                     mesure.</p>
                 <div class="company-info" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
@@ -193,7 +202,7 @@
     <!-- Modal Extincteurs -->
     <div class="modal" id="modal-extincteurs">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image1.png" alt="Extincteurs" class="modal-img">
+        <img src="assets/image1.webp" alt="Extincteurs" class="modal-img">
         <div class="modal-body">
             <h3>Extincteurs et Arroseurs Automatiques</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une gamme complète de solutions de protection incendie,
@@ -208,7 +217,7 @@
             </ul>
             <p>Nous fournissons également une sélection d'extincteurs de différents types.</p>
             <h4>Fourniture d'Extincteurs et de Tuyaux d'Incendie :</h4>
-            <img src="assets/hose_reel.jpg" alt="Tuyaux d'Incendie" class="modal-inline-img">
+            <img src="assets/hose_reel.webp" alt="Tuyaux d'Incendie" class="modal-inline-img">
             <p>Notre équipe de professionnels vous aide à choisir l'équipement de prévention incendie adapté à vos
                 besoins et à votre budget. Nous offrons une gamme d'extincteurs, de tuyaux d'incendie, et d'accessoires
                 garantissant une protection optimale.</p>
@@ -221,7 +230,7 @@
     <!-- Modal Alarme -->
     <div class="modal" id="modal-alarme">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image2.jpg" alt="Systèmes d'alarme" class="modal-img">
+        <img src="assets/image2.webp" alt="Systèmes d'alarme" class="modal-img">
         <div class="modal-body">
             <h3>Systèmes d'alarme</h3>
             <p>Nous concevons et déployons des systèmes d'alarme incendie et d'extinction automatique à la pointe de la
@@ -234,7 +243,7 @@
     <!-- Modal Formations -->
     <div class="modal" id="modal-formations">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image3.jpg" alt="Formations" class="modal-img">
+        <img src="assets/image3.webp" alt="Formations" class="modal-img">
         <div class="modal-body">
             <h3>Formations en prévention d'Incendie</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une formation complète en prévention d'incendie, couvrant
@@ -280,7 +289,7 @@
     <!-- Modal Courtage -->
     <div class="modal" id="modal-courtage">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image4.png" alt="Courtage d'affaires" class="modal-img">
+        <img src="assets/image4.webp" alt="Courtage d'affaires" class="modal-img">
         <div class="modal-body">
             <h3>Courtage d'affaires</h3>
             <p>Facilitez vos transactions commerciales grâce à notre expertise et notre réseau étendu de partenaires.

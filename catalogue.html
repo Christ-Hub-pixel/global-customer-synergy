@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo_cercle.jpg">
+    <link rel="icon" href="assets/logo_cercle.webp">
     <title>Catalogue & Équipements | Global Customer Synergy (GCS)</title>
     <meta name="description"
         content="Découvrez le catalogue d'équipements de sécurité de Global Customer Synergy Sarl : extincteurs, alarmes, EPI, et détecteurs de gaz en Côte d'Ivoire.">
     <!-- Open Graph SEO -->
     <meta property="og:title" content="Catalogue - Global Customer Synergy">
     <meta property="og:description" content="Catalogue d'équipements de sécurité de haute qualité.">
-    <meta property="og:image" content="assets/logo_cercle.jpg">
+    <meta property="og:image" content="assets/logo_cercle.webp">
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src 'self' https://formsubmit.co https://nnywksxkslyzpxowtsys.supabase.co; frame-src 'none'; object-src 'none';">
+        content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' https://unpkg.com; connect-src 'self' https://formsubmit.co https://nnywksxkslyzpxowtsys.supabase.co; frame-src 'none'; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -25,16 +25,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Top Bar Promotionnelle -->
+    <div class="promo-topbar" id="promo-topbar">
+        <div class="container promo-topbar-content">
+            <span class="promo-text"><i class="fas fa-gift"></i> <strong>Offre Spéciale :</strong> -15% sur votre première installation d'alarme ou de vidéosurveillance ce mois-ci !</span>
+            <button class="promo-close" id="promo-close" aria-label="Fermer la bannière"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.jpg" alt="Global Customer Synergy Logo" class="logo-img">
+                <img loading="lazy" src="assets/logo.webp" alt="Global Customer Synergy Logo" class="logo-img">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
@@ -65,7 +74,7 @@
     </section>
 
     <!-- Catalogue Section -->
-    <section class="catalogue-section section-padding">
+    <section id="catalogue-section" class="catalogue-section section-padding">
         <div class="container">
 
 
@@ -73,9 +82,8 @@
             <h2 class="featured-title">Catégories Vedettes</h2>
             <div class="featured-categories">
                 <!-- Card 1 -->
-                <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-subcategory=\'chaussures-de-securite\']').click(); return false;">
-                    <img src="assets/lifestyle_chaussures.png" alt="Chaussures de sécurité" class="category-img">
+                <a href="#catalogue-section" class="category-card trigger-subcategory" data-target="chaussures-de-securite">
+                    <img loading="lazy" src="assets/lifestyle_chaussures.webp" alt="Chaussures de sécurité" class="category-img">
                     <div class="category-content">
                         <h3>Chaussures de Sécurité</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
@@ -83,9 +91,8 @@
                 </a>
 
                 <!-- Card 2 -->
-                <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-subcategory=\'vetements-de-travail\']').click(); return false;">
-                    <img src="assets/lifestyle_vetements.png" alt="Vêtements de travail" class="category-img">
+                <a href="#catalogue-section" class="category-card trigger-subcategory" data-target="vetements-de-travail">
+                    <img loading="lazy" src="assets/lifestyle_vetements.webp" alt="Vêtements de travail" class="category-img">
                     <div class="category-content">
                         <h3>Vêtements de Travail</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
@@ -93,9 +100,8 @@
                 </a>
 
                 <!-- Card 3 -->
-                <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-subcategory=\'casques-de-securite\']').click(); return false;">
-                    <img src="assets/lifestyle_casque.png" alt="Casques" class="category-img">
+                <a href="#catalogue-section" class="category-card trigger-subcategory" data-target="casques-de-securite">
+                    <img loading="lazy" src="assets/lifestyle_casque.webp" alt="Casques" class="category-img">
                     <div class="category-content">
                         <h3>Casques</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
@@ -103,9 +109,8 @@
                 </a>
 
                 <!-- Card 4 -->
-                <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-subcategory=\'protection-respiratoire\']').click(); return false;">
-                    <img src="assets/lifestyle_masque.png" alt="Protection Respiratoire" class="category-img">
+                <a href="#catalogue-section" class="category-card trigger-subcategory" data-target="protection-respiratoire">
+                    <img loading="lazy" src="assets/lifestyle_masque.webp" alt="Protection Respiratoire" class="category-img">
                     <div class="category-content">
                         <h3>Protection Respiratoire</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
@@ -113,9 +118,8 @@
                 </a>
 
                 <!-- Card 5 -->
-                <a href="#" class="category-card"
-                    onclick="document.querySelector('[data-subcategory=\'extincteurs\']').click(); return false;">
-                    <img src="assets/lifestyle_extincteur.png" alt="Extincteurs" class="category-img">
+                <a href="#catalogue-section" class="category-card trigger-subcategory" data-target="extincteurs">
+                    <img loading="lazy" src="assets/lifestyle_extincteur.webp" alt="Extincteurs" class="category-img">
                     <div class="category-content">
                         <h3>Extincteurs</h3>
                         <span class="btn-explorer">Explorer Maintenant <i class="fas fa-arrow-right"></i></span>
@@ -145,6 +149,9 @@
                             <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="vetements-de-travail"><i class="fas fa-angle-right"></i> Vêtements de travail</button></li>
                             <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-respiratoire"><i class="fas fa-angle-right"></i> Protection respiratoire</button></li>
                             <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-yeux"><i class="fas fa-angle-right"></i> Protection des yeux</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-mains"><i class="fas fa-angle-right"></i> Gants de protection</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="protection-auditive"><i class="fas fa-angle-right"></i> Protection auditive</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="epi" data-subcategory="equipements-antichute"><i class="fas fa-angle-right"></i> Équipements antichute</button></li>
                         </ul>
                     </div>
                     <div class="sidebar-block theme-incendie" style="margin-top: 2rem;">
@@ -182,7 +189,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque electrique isolant.png" alt="Casque électrique isolant">
+                        <img loading="lazy" src="assets/casque electrique isolant.webp" alt="Casque électrique isolant">
                     </div>
                     <div class="product-info">
                         <h3>Casque électrique isolant</h3>
@@ -195,7 +202,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque avec protection auditive.png" alt="Casque avec protection auditive">
+                        <img loading="lazy" src="assets/casque avec protection auditive.webp" alt="Casque avec protection auditive">
                     </div>
                     <div class="product-info">
                         <h3>Casque avec protection auditive</h3>
@@ -208,7 +215,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque avec visière.png" alt="Casque forestier avec visière">
+                        <img loading="lazy" src="assets/casque avec visière.webp" alt="Casque forestier avec visière">
                     </div>
                     <div class="product-info">
                         <h3>Casque forestier avec visière</h3>
@@ -221,7 +228,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque pour travailleur en hauteur.png" alt="Casque pour travailleur en hauteur">
+                        <img loading="lazy" src="assets/casque pour travailleur en hauteur.webp" alt="Casque pour travailleur en hauteur">
                     </div>
                     <div class="product-info">
                         <h3>Casque travailleur en hauteur</h3>
@@ -234,7 +241,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque de pompier.png" alt="Casque de pompier F1/F2">
+                        <img loading="lazy" src="assets/casque de pompier.webp" alt="Casque de pompier F1/F2">
                     </div>
                     <div class="product-info">
                         <h3>Casque de pompier</h3>
@@ -247,7 +254,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque mineur.png" alt="Casque de mineur">
+                        <img loading="lazy" src="assets/casque mineur.webp" alt="Casque de mineur">
                     </div>
                     <div class="product-info">
                         <h3>Casque de mineur</h3>
@@ -260,7 +267,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="casques-de-securite">
                     <div class="product-image">
-                        <img src="assets/casque_chantier.png" alt="Casque de chantier">
+                        <img loading="lazy" src="assets/casque_chantier.webp" alt="Casque de chantier">
                     </div>
                     <div class="product-info">
                         <h3>Casques de sécurité</h3>
@@ -274,7 +281,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/masque.png" alt="Masque Respiratoire">
+                        <img loading="lazy" src="assets/masque.webp" alt="Masque Respiratoire">
                     </div>
                     <div class="product-info">
                         <h3>Protection respiratoire (masques, filtres)</h3>
@@ -288,7 +295,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque jetable FFP1.png" alt="Masque jetable FFP1">
+                        <img loading="lazy" src="assets/Masque jetable FFP1.webp" alt="Masque jetable FFP1">
                     </div>
                     <div class="product-info">
                         <h3>Masque jetable FFP1</h3>
@@ -301,7 +308,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque jetable FFP2.png" alt="Masque jetable FFP2">
+                        <img loading="lazy" src="assets/Masque jetable FFP2.webp" alt="Masque jetable FFP2">
                     </div>
                     <div class="product-info">
                         <h3>Masque jetable FFP2</h3>
@@ -314,7 +321,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque jetable FFP3.png" alt="Masque jetable FFP3">
+                        <img loading="lazy" src="assets/Masque jetable FFP3.webp" alt="Masque jetable FFP3">
                     </div>
                     <div class="product-info">
                         <h3>Masque jetable FFP3</h3>
@@ -327,7 +334,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Demi-masque réutilisable.png" alt="Demi-masque réutilisable">
+                        <img loading="lazy" src="assets/Demi-masque réutilisable.webp" alt="Demi-masque réutilisable">
                     </div>
                     <div class="product-info">
                         <h3>Demi-masque réutilisable</h3>
@@ -340,7 +347,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque complet respiratoire.png" alt="Masque complet respiratoire">
+                        <img loading="lazy" src="assets/Masque complet respiratoire.webp" alt="Masque complet respiratoire">
                     </div>
                     <div class="product-info">
                         <h3>Masque complet respiratoire</h3>
@@ -353,7 +360,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque à cartouches filtrantes.png" alt="Masque à cartouches filtrantes">
+                        <img loading="lazy" src="assets/Masque à cartouches filtrantes.webp" alt="Masque à cartouches filtrantes">
                     </div>
                     <div class="product-info">
                         <h3>Masque à cartouches filtrantes</h3>
@@ -366,7 +373,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Appareil respiratoire isolant (ARI).png" alt="Appareil respiratoire isolant (ARI)">
+                        <img loading="lazy" src="assets/Appareil respiratoire isolant (ARI).webp" alt="Appareil respiratoire isolant (ARI)">
                     </div>
                     <div class="product-info">
                         <h3>Appareil respiratoire isolant (ARI)</h3>
@@ -379,7 +386,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Appareil respiratoire autonome.png" alt="Appareil respiratoire autonome">
+                        <img loading="lazy" src="assets/Appareil respiratoire autonome.webp" alt="Appareil respiratoire autonome">
                     </div>
                     <div class="product-info">
                         <h3>Appareil respiratoire autonome</h3>
@@ -392,7 +399,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque d’évacuation d’urgence.png" alt="Masque d’évacuation d’urgence">
+                        <img loading="lazy" src="assets/Masque d’évacuation d’urgence.webp" alt="Masque d’évacuation d’urgence">
                     </div>
                     <div class="product-info">
                         <h3>Masque d’évacuation d’urgence</h3>
@@ -405,7 +412,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque anti-gaz.png" alt="Masque anti-gaz">
+                        <img loading="lazy" src="assets/Masque anti-gaz.webp" alt="Masque anti-gaz">
                     </div>
                     <div class="product-info">
                         <h3>Masque anti-gaz</h3>
@@ -418,7 +425,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque pour soudage avec filtration.png" alt="Masque pour soudage avec filtration">
+                        <img loading="lazy" src="assets/Masque pour soudage avec filtration.webp" alt="Masque pour soudage avec filtration">
                     </div>
                     <div class="product-info">
                         <h3>Masque pour soudage avec filtration</h3>
@@ -431,7 +438,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Cagoule à adduction d’air.png" alt="Cagoule à adduction d’air">
+                        <img loading="lazy" src="assets/Cagoule à adduction d’air.webp" alt="Cagoule à adduction d’air">
                     </div>
                     <div class="product-info">
                         <h3>Cagoule à adduction d’air</h3>
@@ -444,7 +451,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Masque chirurgical jetable.png" alt="Masque chirurgical jetable">
+                        <img loading="lazy" src="assets/Masque chirurgical jetable.webp" alt="Masque chirurgical jetable">
                     </div>
                     <div class="product-info">
                         <h3>Masque chirurgical jetable</h3>
@@ -457,7 +464,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Système de protection respiratoire à ventilation assistée (PAPR).png" alt="Système de protection respiratoire à ventilation assistée (PAPR)">
+                        <img loading="lazy" src="assets/Système de protection respiratoire à ventilation assistée (PAPR).webp" alt="Système de protection respiratoire à ventilation assistée (PAPR)">
                     </div>
                     <div class="product-info">
                         <h3>Système de protection respiratoire à ventilation assistée (PAPR)</h3>
@@ -470,7 +477,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Cartouches filtrantes respiratoires.png" alt="Cartouches filtrantes respiratoires">
+                        <img loading="lazy" src="assets/Cartouches filtrantes respiratoires.webp" alt="Cartouches filtrantes respiratoires">
                     </div>
                     <div class="product-info">
                         <h3>Cartouches filtrantes respiratoires</h3>
@@ -483,7 +490,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Filtres à particules.png" alt="Filtres à particules">
+                        <img loading="lazy" src="assets/Filtres à particules.webp" alt="Filtres à particules">
                     </div>
                     <div class="product-info">
                         <h3>Filtres à particules</h3>
@@ -496,7 +503,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Filtres gaz et vapeurs.png" alt="Filtres gaz et vapeurs">
+                        <img loading="lazy" src="assets/Filtres gaz et vapeurs.webp" alt="Filtres gaz et vapeurs">
                     </div>
                     <div class="product-info">
                         <h3>Filtres gaz et vapeurs</h3>
@@ -509,7 +516,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-respiratoire">
                     <div class="product-image">
-                        <img src="assets/Accessoires de protection respiratoire.png" alt="Accessoires de protection respiratoire">
+                        <img loading="lazy" src="assets/Accessoires de protection respiratoire.webp" alt="Accessoires de protection respiratoire">
                     </div>
                     <div class="product-info">
                         <h3>Accessoires de protection respiratoire</h3>
@@ -522,7 +529,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/lunette.png" alt="Lunettes de Sécurité">
+                        <img loading="lazy" src="assets/lunette.webp" alt="Lunettes de Sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes et protections des yeux</h3>
@@ -536,7 +543,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité transparentes.png" alt="Lunettes de sécurité transparentes">
+                        <img loading="lazy" src="assets/Lunettes de sécurité transparentes.webp" alt="Lunettes de sécurité transparentes">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité transparentes</h3>
@@ -549,7 +556,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité teintées.png" alt="Lunettes de sécurité teintées">
+                        <img loading="lazy" src="assets/Lunettes de sécurité teintées.webp" alt="Lunettes de sécurité teintées">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité teintées</h3>
@@ -562,7 +569,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité anti-buée.png" alt="Lunettes de sécurité anti-buée">
+                        <img loading="lazy" src="assets/Lunettes de sécurité anti-buée.webp" alt="Lunettes de sécurité anti-buée">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité anti-buée</h3>
@@ -575,7 +582,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité anti-rayures.png" alt="Lunettes de sécurité anti-rayures">
+                        <img loading="lazy" src="assets/Lunettes de sécurité anti-rayures.webp" alt="Lunettes de sécurité anti-rayures">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité anti-rayures</h3>
@@ -588,7 +595,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité avec protection latérale.png" alt="Lunettes de sécurité avec protection latérale">
+                        <img loading="lazy" src="assets/Lunettes de sécurité avec protection latérale.webp" alt="Lunettes de sécurité avec protection latérale">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité avec protection latérale</h3>
@@ -601,7 +608,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes-masque de sécurité.png" alt="Lunettes-masque de sécurité">
+                        <img loading="lazy" src="assets/Lunettes-masque de sécurité.webp" alt="Lunettes-masque de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes-masque de sécurité</h3>
@@ -614,7 +621,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes pour soudage.png" alt="Lunettes pour soudage">
+                        <img loading="lazy" src="assets/Lunettes pour soudage.webp" alt="Lunettes pour soudage">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes pour soudage</h3>
@@ -627,7 +634,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité UV.png" alt="Lunettes de sécurité UV">
+                        <img loading="lazy" src="assets/Lunettes de sécurité UV.webp" alt="Lunettes de sécurité UV">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité UV</h3>
@@ -640,7 +647,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes-masque de sécurité1.png" alt="Lunettes-masque de sécurité ventilées">
+                        <img loading="lazy" src="assets/Lunettes-masque de sécurité1.webp" alt="Lunettes-masque de sécurité ventilées">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes-masque de sécurité ventilées</h3>
@@ -653,7 +660,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes balistiques de sécurité.png" alt="Lunettes balistiques de sécurité">
+                        <img loading="lazy" src="assets/Lunettes balistiques de sécurité.webp" alt="Lunettes balistiques de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes balistiques de sécurité</h3>
@@ -666,7 +673,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Lunettes de sécurité à verres correcteurs.png" alt="Lunettes de sécurité à verres correcteurs">
+                        <img loading="lazy" src="assets/Lunettes de sécurité à verres correcteurs.webp" alt="Lunettes de sécurité à verres correcteurs">
                     </div>
                     <div class="product-info">
                         <h3>Lunettes de sécurité à verres correcteurs</h3>
@@ -679,7 +686,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Sur-lunettes de sécurité.png" alt="Sur-lunettes de sécurité">
+                        <img loading="lazy" src="assets/Sur-lunettes de sécurité.webp" alt="Sur-lunettes de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Sur-lunettes de sécurité</h3>
@@ -692,7 +699,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="protection-yeux">
                     <div class="product-image">
-                        <img src="assets/Écran facial de protection.png" alt="Écran facial de protection">
+                        <img loading="lazy" src="assets/Écran facial de protection.webp" alt="Écran facial de protection">
                     </div>
                     <div class="product-info">
                         <h3>Écran facial de protection</h3>
@@ -703,9 +710,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-auditive">
                     <div class="product-image">
-                        <img src="assets/Protection auditive.png" alt="Casque Antibruit">
+                        <img loading="lazy" src="assets/Protection auditive.webp" alt="Casque Antibruit">
                     </div>
                     <div class="product-info">
                         <h3>Protection auditive</h3>
@@ -717,9 +724,61 @@
                     </div>
                 </div>
 
+                <div class="product-card" data-category="epi" data-subcategory="protection-auditive">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Bouchons d'oreilles jetables .webp" alt="Bouchons d'oreilles jetables">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bouchons d'oreilles jetables</h3>
+                        <p>Bouchons d'oreilles en mousse de polyuréthane à expansion lente. Idéals pour une utilisation prolongée dans les environnements bruyants. Haute atténuation sonore.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bouchons d'oreilles jetables">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-auditive">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Bouchons d'oreilles réutilisables avec cordon.webp" alt="Bouchons d'oreilles réutilisables avec cordon">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bouchons d'oreilles réutilisables avec cordon</h3>
+                        <p>Bouchons préformés en silicone lavable avec cordon de maintien. Conception multi-collerettes pour un ajustement parfait et une isolation sonore fiable.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bouchons d'oreilles réutilisables avec cordon">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-auditive">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Casque antibruit actif (électronique).webp" alt="Casque antibruit actif (électronique)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque antibruit actif (électronique)</h3>
+                        <p>Casque intelligent avec modulation sonore. Amplifie les voix et bruits ambiants faibles tout en bloquant instantanément les bruits nocifs (au-delà de 82 dB).</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque antibruit actif (électronique)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="protection-auditive">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Casque antibruit communicant (avec radio intégrée).webp" alt="Casque antibruit communicant (avec radio intégrée)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casque antibruit communicant (avec radio intégrée)</h3>
+                        <p>Casque de protection avec système de communication radio bidirectionnelle intégré. Idéal pour coordonner des équipes dans des environnements très bruyants.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Casque antibruit communicant (avec radio intégrée)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
                 <div class="product-card" data-category="epi">
                     <div class="product-image">
-                        <img src="assets/Un harnais certifié EN 361.png" alt="Harnais Antichute">
+                        <img loading="lazy" src="assets/Un harnais certifié EN 361.webp" alt="Harnais Antichute">
                     </div>
                     <div class="product-info">
                         <h3>Équipements antichute (Harnais)</h3>
@@ -733,7 +792,7 @@
 
                 <div class="product-card" data-category="epi">
                     <div class="product-image">
-                        <img src="assets/Une longe avec absorbeur d'énergie (EN 355).png" alt="Longe avec absorbeur d'énergie">
+                        <img loading="lazy" src="assets/Une longe avec absorbeur d'énergie (EN 355).webp" alt="Longe avec absorbeur d'énergie">
                     </div>
                     <div class="product-info">
                         <h3>Équipements antichute (Longes)</h3>
@@ -746,7 +805,7 @@
 
                 <div class="product-card" data-category="epi">
                     <div class="product-image">
-                        <img src="assets/Un connectEN362.png" alt="Connecteur EN 362">
+                        <img loading="lazy" src="assets/Un connectEN362.webp" alt="Connecteur EN 362">
                     </div>
                     <div class="product-info">
                         <h3>Équipements antichute (Connecteurs)</h3>
@@ -759,7 +818,7 @@
 
                 <div class="product-card" data-category="epi">
                     <div class="product-image">
-                        <img src="assets/masque_soudure.png" alt="Masque de Soudure">
+                        <img loading="lazy" src="assets/masque_soudure.webp" alt="Masque de Soudure">
                     </div>
                     <div class="product-info">
                         <h3>Équipements de soudure</h3>
@@ -773,7 +832,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/chaussure basse de securité.png" alt="Chaussures de Sécurité">
+                        <img loading="lazy" src="assets/chaussure basse de securité.webp" alt="Chaussures de Sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures basses de sécurité</h3>
@@ -787,7 +846,46 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/chaussure haut de securité.png" alt="Bottes de Sécurité">
+                        <img loading="lazy" src="assets/Baskets de sécurité légères (S1P).webp" alt="Baskets de sécurité légères (S1P)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Baskets de sécurité légères (S1P)</h3>
+                        <p>Chaussures de sécurité au style sport, respirantes et ultra-légères avec embout de protection. Idéales pour la logistique, l'industrie légère et l'artisanat.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Baskets de sécurité légères (S1P)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Chaussures de sécurité montantes pour chantier (S3).webp" alt="Chaussures de sécurité montantes (S3)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chaussures de sécurité montantes (S3)</h3>
+                        <p>Chaussures tout-terrain robustes avec maintien de la cheville, semelle crantée anti-perforation et tige hydrofuge. Spécialement conçues pour les chantiers et le BTP.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Chaussures de sécurité montantes (S3)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Bottes de sécurité étanches (S5).webp" alt="Bottes de sécurité étanches (S5)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bottes de sécurité étanches (S5)</h3>
+                        <p>Bottes professionnelles imperméables en PVC/Nitrile, avec embout protecteur et semelle crantée anti-perforation. Idéales pour les milieux humides et boueux.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Bottes de sécurité étanches (S5)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/chaussure haut de securité.webp" alt="Bottes de Sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures hautes</h3>
@@ -800,7 +898,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/couvre_chaussure.png" alt="Couvre-chaussures">
+                        <img loading="lazy" src="assets/couvre_chaussure.webp" alt="Couvre-chaussures">
                     </div>
                     <div class="product-info">
                         <h3>Couvre-chaussures</h3>
@@ -813,7 +911,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/cuissage.png" alt="Cuissardes">
+                        <img loading="lazy" src="assets/cuissage.webp" alt="Cuissardes">
                     </div>
                     <div class="product-info">
                         <h3>Cuissardes</h3>
@@ -826,7 +924,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Bottes de sécurité.png" alt="Bottes de sécurité">
+                        <img loading="lazy" src="assets/Bottes de sécurité.webp" alt="Bottes de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Bottes de sécurité</h3>
@@ -839,7 +937,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures de sécurité sport.png" alt="Chaussures de sécurité sport">
+                        <img loading="lazy" src="assets/Chaussures de sécurité sport.webp" alt="Chaussures de sécurité sport">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures de sécurité sport</h3>
@@ -852,7 +950,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures antidérapantes.png" alt="Chaussures antidérapantes">
+                        <img loading="lazy" src="assets/Chaussures antidérapantes.webp" alt="Chaussures antidérapantes">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures antidérapantes</h3>
@@ -865,7 +963,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures isolantes électriques.png" alt="Chaussures isolantes électriques">
+                        <img loading="lazy" src="assets/Chaussures isolantes électriques.webp" alt="Chaussures isolantes électriques">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures isolantes électriques</h3>
@@ -878,7 +976,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures ESD.png" alt="Chaussures ESD">
+                        <img loading="lazy" src="assets/Chaussures ESD.webp" alt="Chaussures ESD">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures ESD</h3>
@@ -891,7 +989,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures résistantes à la chaleur.png" alt="Chaussures résistantes à la chaleur">
+                        <img loading="lazy" src="assets/Chaussures résistantes à la chaleur.webp" alt="Chaussures résistantes à la chaleur">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures résistantes à la chaleur</h3>
@@ -904,7 +1002,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Bottes PVC de sécurité.png" alt="Bottes PVC de sécurité">
+                        <img loading="lazy" src="assets/Bottes PVC de sécurité.webp" alt="Bottes PVC de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Bottes PVC de sécurité</h3>
@@ -917,7 +1015,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures anti-perforation.png" alt="Chaussures anti-perforation">
+                        <img loading="lazy" src="assets/Chaussures anti-perforation.webp" alt="Chaussures anti-perforation">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures anti-perforation</h3>
@@ -930,7 +1028,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures pour soudeurs.png" alt="Chaussures pour soudeurs">
+                        <img loading="lazy" src="assets/Chaussures pour soudeurs.webp" alt="Chaussures pour soudeurs">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures pour soudeurs</h3>
@@ -943,7 +1041,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Chaussures sans métal.png" alt="Chaussures sans métal">
+                        <img loading="lazy" src="assets/Chaussures sans métal.webp" alt="Chaussures sans métal">
                     </div>
                     <div class="product-info">
                         <h3>Chaussures sans métal</h3>
@@ -956,7 +1054,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="chaussures-de-securite">
                     <div class="product-image">
-                        <img src="assets/Sabots de sécurité.png" alt="Sabots de sécurité">
+                        <img loading="lazy" src="assets/Sabots de sécurité.webp" alt="Sabots de sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Sabots de sécurité</h3>
@@ -967,9 +1065,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant.png" alt="Gants de Protection">
+                        <img loading="lazy" src="assets/gant.webp" alt="Gants de Protection">
                     </div>
                     <div class="product-info">
                         <h3>Gants de manutention</h3>
@@ -981,9 +1079,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_anti_chaleur.png" alt="Gants Anti-chaleur">
+                        <img loading="lazy" src="assets/gant_anti_chaleur.webp" alt="Gants Anti-chaleur">
                     </div>
                     <div class="product-info">
                         <h3>Gants anti-chaleur</h3>
@@ -994,9 +1092,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_anti-coupure.png" alt="Gants Anti-coupure">
+                        <img loading="lazy" src="assets/gant_anti-coupure.webp" alt="Gants Anti-coupure">
                     </div>
                     <div class="product-info">
                         <h3>Gants anti-coupure</h3>
@@ -1007,9 +1105,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gantantifroid.png" alt="Gants Anti-froid">
+                        <img loading="lazy" src="assets/gantantifroid.webp" alt="Gants Anti-froid">
                     </div>
                     <div class="product-info">
                         <h3>Gants anti-froid</h3>
@@ -1020,9 +1118,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_anti-vibration.png" alt="Gants Anti-vibration">
+                        <img loading="lazy" src="assets/gant_anti-vibration.webp" alt="Gants Anti-vibration">
                     </div>
                     <div class="product-info">
                         <h3>Gants anti-vibration</h3>
@@ -1033,9 +1131,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_chimique.png" alt="Gants chimiques">
+                        <img loading="lazy" src="assets/gant_chimique.webp" alt="Gants chimiques">
                     </div>
                     <div class="product-info">
                         <h3>Gants chimiques</h3>
@@ -1046,9 +1144,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_pour_soudeur.png" alt="Gants pour soudeurs">
+                        <img loading="lazy" src="assets/gant_pour_soudeur.webp" alt="Gants pour soudeurs">
                     </div>
                     <div class="product-info">
                         <h3>Gants pour soudeurs</h3>
@@ -1059,9 +1157,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_pvs.png" alt="Gants PVC">
+                        <img loading="lazy" src="assets/gant_pvs.webp" alt="Gants PVC">
                     </div>
                     <div class="product-info">
                         <h3>Gants PVC</h3>
@@ -1072,9 +1170,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_jetable.png" alt="Gants jetables">
+                        <img loading="lazy" src="assets/gant_jetable.webp" alt="Gants jetables">
                     </div>
                     <div class="product-info">
                         <h3>Gants jetables</h3>
@@ -1085,9 +1183,9 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-category="epi">
+                <div class="product-card" data-category="epi" data-subcategory="protection-mains">
                     <div class="product-image">
-                        <img src="assets/gant_electricien.png" alt="Gants électriciens">
+                        <img loading="lazy" src="assets/gant_electricien.webp" alt="Gants électriciens">
                     </div>
                     <div class="product-info">
                         <h3>Gants électriciens</h3>
@@ -1100,7 +1198,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/conbinaison de travail.png" alt="Combinaisons de travail">
+                        <img loading="lazy" src="assets/conbinaison de travail.webp" alt="Combinaisons de travail">
                     </div>
                     <div class="product-info">
                         <h3>Combinaisons de travail</h3>
@@ -1113,7 +1211,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/gilet_haut_visibilité.png" alt="Gilets haute visibilité">
+                        <img loading="lazy" src="assets/gilet_haut_visibilité.webp" alt="Gilets haute visibilité">
                     </div>
                     <div class="product-info">
                         <h3>Gilets haute visibilité</h3>
@@ -1126,7 +1224,59 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/manteaux de pluies.png" alt="Manteaux de pluie">
+                        <img loading="lazy" src="assets/vestes Haute Visibilité.webp" alt="Vestes Haute Visibilité">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vestes Haute Visibilité</h3>
+                        <p>Vestes et blousons chauds et imperméables, dotés de bandes rétroréfléchissantes pour une signalisation optimale lors de travaux en extérieur par temps froid ou pluvieux.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Vestes Haute Visibilité">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Combinaisons de protection chimique (jetables de type Tyvek).webp" alt="Combinaisons de protection chimique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Combinaisons de protection chimique</h3>
+                        <p>Combinaisons jetables hautement résistantes (type Tyvek) pour la protection contre les particules fines, les éclaboussures de liquides et les risques chimiques et biologiques.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Combinaisons de protection chimique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Vêtements ignifugés (retardateurs de flamme).webp" alt="Vêtements ignifugés">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vêtements ignifugés</h3>
+                        <p>Vêtements techniques retardateurs de flamme pour une protection optimale contre la chaleur, les flammes et les arcs électriques. Conformes à la norme EN ISO 11612.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Vêtements ignifugés">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Vêtements pour le grand froid.webp" alt="Vêtements pour le grand froid">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vêtements pour le grand froid</h3>
+                        <p>Parkas et pantalons thermiques haute isolation. Conçus pour maintenir la chaleur corporelle lors de travaux dans des environnements à températures négatives ou en chambre froide.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Vêtements pour le grand froid">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/manteaux de pluies.webp" alt="Manteaux de pluie">
                     </div>
                     <div class="product-info">
                         <h3>Manteaux de pluie</h3>
@@ -1139,7 +1289,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/blouse de travail.png" alt="Blouses de travail">
+                        <img loading="lazy" src="assets/blouse de travail.webp" alt="Blouses de travail">
                     </div>
                     <div class="product-info">
                         <h3>Blouses de travail</h3>
@@ -1152,7 +1302,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/pantalon de travail.png" alt="Pantalons de travail">
+                        <img loading="lazy" src="assets/pantalon de travail.webp" alt="Pantalons de travail">
                     </div>
                     <div class="product-info">
                         <h3>Pantalons de travail</h3>
@@ -1165,7 +1315,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/tablier_pvc.png" alt="Tabliers PVC">
+                        <img loading="lazy" src="assets/tablier_pvc.webp" alt="Tabliers PVC">
                     </div>
                     <div class="product-info">
                         <h3>Tabliers PVC</h3>
@@ -1178,7 +1328,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/veste de travail.png" alt="Vestes de travail">
+                        <img loading="lazy" src="assets/veste de travail.webp" alt="Vestes de travail">
                     </div>
                     <div class="product-info">
                         <h3>Vestes de travail</h3>
@@ -1191,7 +1341,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/travail de travail.png" alt="Tenues de travail">
+                        <img loading="lazy" src="assets/travail de travail.webp" alt="Tenues de travail">
                     </div>
                     <div class="product-info">
                         <h3>Tenues de travail</h3>
@@ -1204,7 +1354,7 @@
 
                 <div class="product-card" data-category="epi" data-subcategory="vetements-de-travail">
                     <div class="product-image">
-                        <img src="assets/vetement de pluies.png" alt="Vêtements de pluie">
+                        <img loading="lazy" src="assets/vetement de pluies.webp" alt="Vêtements de pluie">
                     </div>
                     <div class="product-info">
                         <h3>Vêtements de pluie</h3>
@@ -1215,10 +1365,63 @@
                     </div>
                 </div>
 
+                <!-- === EQUIPEMENTS ANTI-CHUTE === -->
+                <div class="product-card" data-category="epi" data-subcategory="equipements-antichute">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Un harnais certifié EN 361.webp" alt="Harnais certifié EN 361" class="fallback-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Harnais certifié EN 361</h3>
+                        <p>Harnais de sécurité certifié selon la norme EN 361 pour les travaux en hauteur. Équipé de sangles ajustables et boucles de maintien pour une protection optimale.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Harnais EN 361">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="equipements-antichute">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Une longe avec absorbeur d'énergie (EN 355).webp" alt="Longe avec absorbeur d'énergie (EN 355)" class="fallback-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Longe avec absorbeur (EN 355)</h3>
+                        <p>Longe de sécurité certifiée EN 355 avec absorbeur d'énergie intégré. Conçue pour dissiper la force d'impact en cas de chute et protéger l'utilisateur.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Longe absorbeur EN 355">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="equipements-antichute">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Un point d'ancrage certifié..webp" alt="Point d'ancrage certifié" class="fallback-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Point d'ancrage certifié</h3>
+                        <p>Dispositif d'ancrage fixe ou temporaire haute résistance. Indispensable pour créer un point d'attache sécurisé pour les systèmes antichute.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Point d'ancrage">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="epi" data-subcategory="equipements-antichute">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Un connectEN362.webp" alt="Connecteur EN 362" class="fallback-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Connecteurs EN 362</h3>
+                        <p>Mousquetons et connecteurs en acier ou aluminium certifiés EN 362. Système de verrouillage sécurisé pour relier les composants du système d'arrêt des chutes.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Connecteurs EN 362">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
                 <!-- === DETECTION GAZ === -->
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/gas_detector.png" alt="Détecteur Multi-Gaz Portable">
+                        <img loading="lazy" src="assets/gas_detector.webp" alt="Détecteur Multi-Gaz Portable">
                     </div>
                     <div class="product-info">
                         <h3>Détecteurs multi-gaz</h3>
@@ -1232,7 +1435,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/detecteur_monogaz_.png" alt="Détecteur Mono-Gaz">
+                        <img loading="lazy" src="assets/detecteur_monogaz_.webp" alt="Détecteur Mono-Gaz">
                     </div>
                     <div class="product-info">
                         <h3>Détecteurs mono-gaz</h3>
@@ -1247,7 +1450,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/Detecteurfixe.png" alt="Détecteur de Gaz Fixe">
+                        <img loading="lazy" src="assets/Detecteurfixe.webp" alt="Détecteur de Gaz Fixe">
                     </div>
                     <div class="product-info">
                         <h3>Détecteurs fixes</h3>
@@ -1261,7 +1464,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/Balise de detection.png" alt="Balise de détection de gaz">
+                        <img loading="lazy" src="assets/Balise de detection.webp" alt="Balise de détection de gaz">
                     </div>
                     <div class="product-info">
                         <h3>Balises de détection</h3>
@@ -1274,7 +1477,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/Capteurs gaz.png" alt="Capteurs de gaz">
+                        <img loading="lazy" src="assets/Capteurs gaz.webp" alt="Capteurs de gaz">
                     </div>
                     <div class="product-info">
                         <h3>Capteurs de gaz</h3>
@@ -1287,7 +1490,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/Stations de test et d’étalonnage.png" alt="Stations de test et d'étalonnage">
+                        <img loading="lazy" src="assets/Stations de test et d’étalonnage.webp" alt="Stations de test et d'étalonnage">
                     </div>
                     <div class="product-info">
                         <h3>Stations de test et d'étalonnage</h3>
@@ -1300,7 +1503,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/Accessoires détecteurs gaz.png" alt="Accessoires pour détecteurs de gaz">
+                        <img loading="lazy" src="assets/Accessoires détecteurs gaz.webp" alt="Accessoires pour détecteurs de gaz">
                     </div>
                     <div class="product-info">
                         <h3>Accessoires pour détecteurs</h3>
@@ -1313,7 +1516,7 @@
 
                 <div class="product-card" data-category="gaz">
                     <div class="product-image">
-                        <img src="assets/tubes_reactifs.png" alt="Tubes Réactifs">
+                        <img loading="lazy" src="assets/tubes_reactifs.webp" alt="Tubes Réactifs">
                     </div>
                     <div class="product-info">
                         <h3>Tubes réactifs Dräger</h3>
@@ -1328,7 +1531,7 @@
                 <!-- === INCENDIE === -->
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/extincteur_a_eau.png" alt="Extincteur à eau">
+                        <img loading="lazy" src="assets/extincteur_a_eau.webp" alt="Extincteur à eau">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs à eau</h3>
@@ -1341,7 +1544,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/Extincteur à eau + additif.png" alt="Extincteur à eau avec additif">
+                        <img loading="lazy" src="assets/Extincteur à eau + additif.webp" alt="Extincteur à eau avec additif">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs à eau + additif</h3>
@@ -1354,7 +1557,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/Extincteur a poudre.png" alt="Extincteur à poudre">
+                        <img loading="lazy" src="assets/Extincteur a poudre.webp" alt="Extincteur à poudre">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs à poudre</h3>
@@ -1367,7 +1570,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/poudreBC.png" alt="Extincteur à poudre BC">
+                        <img loading="lazy" src="assets/poudreBC.webp" alt="Extincteur à poudre BC">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs à poudre BC</h3>
@@ -1380,7 +1583,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/extincteurCO2.png" alt="Extincteur au CO2">
+                        <img loading="lazy" src="assets/extincteurCO2.webp" alt="Extincteur au CO2">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs au CO2</h3>
@@ -1393,7 +1596,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/extincteur_a_mousse.png" alt="Extincteur à mousse">
+                        <img loading="lazy" src="assets/extincteur_a_mousse.webp" alt="Extincteur à mousse">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs à mousse</h3>
@@ -1406,7 +1609,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/extincteurD.png" alt="Extincteur spécial classe D">
+                        <img loading="lazy" src="assets/extincteurD.webp" alt="Extincteur spécial classe D">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs spéciaux classe D</h3>
@@ -1419,7 +1622,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
                     <div class="product-image">
-                        <img src="assets/extincteurF.png" alt="Extincteur classe F">
+                        <img loading="lazy" src="assets/extincteurF.webp" alt="Extincteur classe F">
                     </div>
                     <div class="product-info">
                         <h3>Extincteurs classe F</h3>
@@ -1433,7 +1636,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="ria">
                     <div class="product-image">
-                        <img src="assets/RIA.png" alt="Robinet d'Incendie Armé (RIA)">
+                        <img loading="lazy" src="assets/RIA.webp" alt="Robinet d'Incendie Armé (RIA)">
                     </div>
                     <div class="product-info">
                         <h3>ROBINET D'INCENDIE ARMÉ (RIA)</h3>
@@ -1447,7 +1650,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="ria">
                     <div class="product-image">
-                        <img src="assets/tuyaudincendi.png" alt="Lances et Tuyaux">
+                        <img loading="lazy" src="assets/tuyaudincendi.webp" alt="Lances et Tuyaux">
                     </div>
                     <div class="product-info">
                         <h3>Lances et Tuyaux incendie</h3>
@@ -1477,7 +1680,7 @@
 
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
-                        <img src="assets/alarme_vocale.png" alt="Alarme vocale / évacuation">
+                        <img loading="lazy" src="assets/alarme_vocale.webp" alt="Alarme vocale / évacuation">
                     </div>
                     <div class="product-info">
                         <h3>Alarme vocale / évacuation</h3>
@@ -1490,7 +1693,7 @@
 
                 <div class="product-card" data-category="incendie">
                     <div class="product-image">
-                        <img src="assets/fire_alarm.png" alt="Alarme connectée">
+                        <img loading="lazy" src="assets/fire_alarm.webp" alt="Alarme connectée">
                     </div>
                     <div class="product-info">
                         <h3>Alarme connectée</h3>
@@ -1503,7 +1706,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="bouches-incendie">
                     <div class="product-image">
-                        <img src="assets/bouches_incendie.png" alt="Bouches incendie">
+                        <img loading="lazy" src="assets/bouches_incendie.webp" alt="Bouches incendie">
                     </div>
                     <div class="product-info">
                         <h3>Bouches incendie</h3>
@@ -1516,7 +1719,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="equipements-pompiers">
                     <div class="product-image">
-                        <img src="assets/equipements_pompiers.png" alt="Équipements pompiers">
+                        <img loading="lazy" src="assets/equipements_pompiers.webp" alt="Équipements pompiers">
                     </div>
                     <div class="product-info">
                         <h3>Équipements pompiers</h3>
@@ -1529,7 +1732,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="emulseurs">
                     <div class="product-image">
-                        <img src="assets/emulseurs.png" alt="Émulseurs">
+                        <img loading="lazy" src="assets/emulseurs.webp" alt="Émulseurs">
                     </div>
                     <div class="product-info">
                         <h3>Émulseurs</h3>
@@ -1542,7 +1745,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="unites-mobiles">
                     <div class="product-image">
-                        <img src="assets/unites_mobiles_incendie.png" alt="Unités mobiles incendie">
+                        <img loading="lazy" src="assets/unites_mobiles_incendie.webp" alt="Unités mobiles incendie">
                     </div>
                     <div class="product-info">
                         <h3>Unités mobiles incendie</h3>
@@ -1556,7 +1759,7 @@
                 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_resistant_feu.png" alt="Câble résistant au feu :">
+                        <img loading="lazy" src="assets/cable_resistant_feu.webp" alt="Câble résistant au feu :">
                     </div>
                     <div class="product-info">
                         <h3>Câble résistant au feu :</h3>
@@ -1569,7 +1772,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_cr1_cr2.png" alt="Câble CR1 / CR2 :">
+                        <img loading="lazy" src="assets/cable_cr1_cr2.webp" alt="Câble CR1 / CR2 :">
                     </div>
                     <div class="product-info">
                         <h3>Câble CR1 / CR2 :</h3>
@@ -1582,7 +1785,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_blinde.png" alt="Câble blindé :">
+                        <img loading="lazy" src="assets/cable_blinde.webp" alt="Câble blindé :">
                     </div>
                     <div class="product-info">
                         <h3>Câble blindé :</h3>
@@ -1595,7 +1798,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_lszh.png" alt="Câble sans halogène (LSZH) :">
+                        <img loading="lazy" src="assets/cable_lszh.webp" alt="Câble sans halogène (LSZH) :">
                     </div>
                     <div class="product-info">
                         <h3>Câble sans halogène (LSZH) :</h3>
@@ -1608,7 +1811,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_detection.png" alt="Câble de détection incendie :">
+                        <img loading="lazy" src="assets/cable_detection.webp" alt="Câble de détection incendie :">
                     </div>
                     <div class="product-info">
                         <h3>Câble de détection incendie :</h3>
@@ -1621,7 +1824,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="cablage-incendie">
                     <div class="product-image">
-                        <img src="assets/cable_alimentation.png" alt="Câble d’alimentation incendie :">
+                        <img loading="lazy" src="assets/cable_alimentation.webp" alt="Câble d’alimentation incendie :">
                     </div>
                     <div class="product-info">
                         <h3>Câble d’alimentation incendie :</h3>
@@ -1634,7 +1837,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/fumee_adressable.png" alt="Détecteur de fumée adressable">
+                        <img loading="lazy" src="assets/fumee_adressable.webp" alt="Détecteur de fumée adressable">
                     </div>
                     <div class="product-info">
                         <h3>Détecteur de fumée adressable</h3>
@@ -1647,7 +1850,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/chaleur_adressable.png" alt="Détecteur de chaleur adressable">
+                        <img loading="lazy" src="assets/chaleur_adressable.webp" alt="Détecteur de chaleur adressable">
                     </div>
                     <div class="product-info">
                         <h3>Détecteur de chaleur adressable</h3>
@@ -1660,7 +1863,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/multi_capteurs.png" alt="Détecteur multi-capteurs">
+                        <img loading="lazy" src="assets/multi_capteurs.webp" alt="Détecteur multi-capteurs">
                     </div>
                     <div class="product-info">
                         <h3>Détecteur multi-capteurs</h3>
@@ -1673,7 +1876,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/declencheur_adressable.png" alt="Déclencheur manuel adressable">
+                        <img loading="lazy" src="assets/declencheur_adressable.webp" alt="Déclencheur manuel adressable">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur manuel adressable</h3>
@@ -1686,7 +1889,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/sirene_adressable_img.png" alt="Sirène adressable">
+                        <img loading="lazy" src="assets/sirene_adressable_img.webp" alt="Sirène adressable">
                     </div>
                     <div class="product-info">
                         <h3>Sirène adressable</h3>
@@ -1699,7 +1902,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/module_es.png" alt="Module d’entrée/sortie">
+                        <img loading="lazy" src="assets/module_es.webp" alt="Module d’entrée/sortie">
                     </div>
                     <div class="product-info">
                         <h3>Module d’entrée/sortie</h3>
@@ -1712,7 +1915,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-adressable">
                     <div class="product-image">
-                        <img src="assets/centrale_adressable_img.png" alt="Centrale incendie adressable">
+                        <img loading="lazy" src="assets/centrale_adressable_img.webp" alt="Centrale incendie adressable">
                     </div>
                     <div class="product-info">
                         <h3>Centrale incendie adressable</h3>
@@ -1725,7 +1928,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
                     <div class="product-image">
-                        <img src="assets/fumee_conv.png" alt="Détecteur de fumée conventionnel">
+                        <img loading="lazy" src="assets/fumee_conv.webp" alt="Détecteur de fumée conventionnel">
                     </div>
                     <div class="product-info">
                         <h3>Détecteur de fumée conventionnel</h3>
@@ -1738,7 +1941,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
                     <div class="product-image">
-                        <img src="assets/chaleur_conv.png" alt="Détecteur thermique conventionnel">
+                        <img loading="lazy" src="assets/chaleur_conv.webp" alt="Détecteur thermique conventionnel">
                     </div>
                     <div class="product-info">
                         <h3>Détecteur thermique conventionnel</h3>
@@ -1751,7 +1954,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
                     <div class="product-image">
-                        <img src="assets/declencheur_conv.png" alt="Déclencheur manuel conventionnel">
+                        <img loading="lazy" src="assets/declencheur_conv.webp" alt="Déclencheur manuel conventionnel">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur manuel conventionnel</h3>
@@ -1764,7 +1967,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
                     <div class="product-image">
-                        <img src="assets/sireneconventionnel.png" alt="Sirène conventionnelle">
+                        <img loading="lazy" src="assets/sireneconventionnel.webp" alt="Sirène conventionnelle">
                     </div>
                     <div class="product-info">
                         <h3>Sirène conventionnelle</h3>
@@ -1777,7 +1980,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="detection-conventionnelle">
                     <div class="product-image">
-                        <img src="assets/centrale_adressable_img.png" alt="Centrale conventionnelle">
+                        <img loading="lazy" src="assets/centrale_adressable_img.webp" alt="Centrale conventionnelle">
                     </div>
                     <div class="product-info">
                         <h3>Centrale conventionnelle</h3>
@@ -1790,7 +1993,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène sonore.png" alt="Sirène sonore">
+                        <img loading="lazy" src="assets/Sirène sonore.webp" alt="Sirène sonore">
                     </div>
                     <div class="product-info">
                         <h3>Sirène sonore</h3>
@@ -1803,7 +2006,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène flash lumineuse.png" alt="Sirène flash lumineuse">
+                        <img loading="lazy" src="assets/Sirène flash lumineuse.webp" alt="Sirène flash lumineuse">
                     </div>
                     <div class="product-info">
                         <h3>Sirène flash lumineuse</h3>
@@ -1816,7 +2019,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène sonore + flash.png" alt="Sirène sonore + flash">
+                        <img loading="lazy" src="assets/Sirène sonore + flash.webp" alt="Sirène sonore + flash">
                     </div>
                     <div class="product-info">
                         <h3>Sirène sonore + flash</h3>
@@ -1829,7 +2032,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène extérieure.png" alt="Sirène extérieure">
+                        <img loading="lazy" src="assets/Sirène extérieure.webp" alt="Sirène extérieure">
                     </div>
                     <div class="product-info">
                         <h3>Sirène extérieure</h3>
@@ -1842,7 +2045,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène intérieure.png" alt="Sirène intérieure">
+                        <img loading="lazy" src="assets/Sirène intérieure.webp" alt="Sirène intérieure">
                     </div>
                     <div class="product-info">
                         <h3>Sirène intérieure</h3>
@@ -1855,7 +2058,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène adressable.png" alt="Sirène adressable">
+                        <img loading="lazy" src="assets/Sirène adressable.webp" alt="Sirène adressable">
                     </div>
                     <div class="product-info">
                         <h3>Sirène adressable</h3>
@@ -1868,7 +2071,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène conventionnelle.png" alt="Sirène conventionnelle">
+                        <img loading="lazy" src="assets/Sirène conventionnelle.webp" alt="Sirène conventionnelle">
                     </div>
                     <div class="product-info">
                         <h3>Sirène conventionnelle</h3>
@@ -1881,7 +2084,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="sirenes-incendie">
                     <div class="product-image">
-                        <img src="assets/Sirène vocale d’évacuation.png" alt="Sirène vocale d’évacuation">
+                        <img loading="lazy" src="assets/Sirène vocale d’évacuation.webp" alt="Sirène vocale d’évacuation">
                     </div>
                     <div class="product-info">
                         <h3>Sirène vocale d’évacuation</h3>
@@ -1894,7 +2097,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/Déclencheur manuel à vitre cassable.png" alt="Déclencheur manuel à vitre cassable">
+                        <img loading="lazy" src="assets/Déclencheur manuel à vitre cassable.webp" alt="Déclencheur manuel à vitre cassable">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur manuel à vitre cassable</h3>
@@ -1907,7 +2110,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/declencheur_adressable.png" alt="Déclencheur à membrane réarmable">
+                        <img loading="lazy" src="assets/declencheur_adressable.webp" alt="Déclencheur à membrane réarmable">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur à membrane réarmable</h3>
@@ -1920,7 +2123,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/Déclencheur adressable.png" alt="Déclencheur adressable">
+                        <img loading="lazy" src="assets/Déclencheur adressable.webp" alt="Déclencheur adressable">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur adressable</h3>
@@ -1933,7 +2136,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/declencheur_conv.png" alt="Déclencheur conventionnel">
+                        <img loading="lazy" src="assets/declencheur_conv.webp" alt="Déclencheur conventionnel">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur conventionnel</h3>
@@ -1946,7 +2149,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/Déclencheur exterieur.png" alt="Déclencheur étanche (extérieur)">
+                        <img loading="lazy" src="assets/Déclencheur exterieur.webp" alt="Déclencheur étanche (extérieur)">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur étanche (extérieur)</h3>
@@ -1959,7 +2162,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="declencheurs-manuels">
                     <div class="product-image">
-                        <img src="assets/Déclencheur avec capot de protection.png" alt="Déclencheur avec capot de protection">
+                        <img loading="lazy" src="assets/Déclencheur avec capot de protection.webp" alt="Déclencheur avec capot de protection">
                     </div>
                     <div class="product-info">
                         <h3>Déclencheur avec capot de protection</h3>
@@ -1972,7 +2175,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Centrale conventionnelle.png" alt="Centrale conventionnelle">
+                        <img loading="lazy" src="assets/Centrale conventionnelle.webp" alt="Centrale conventionnelle">
                     </div>
                     <div class="product-info">
                         <h3>Centrale conventionnelle</h3>
@@ -1985,7 +2188,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Centrale adressable.png" alt="Centrale adressable">
+                        <img loading="lazy" src="assets/Centrale adressable.webp" alt="Centrale adressable">
                     </div>
                     <div class="product-info">
                         <h3>Centrale adressable</h3>
@@ -1998,7 +2201,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Centrale analogique adressable.png" alt="Centrale analogique adressable">
+                        <img loading="lazy" src="assets/Centrale analogique adressable.webp" alt="Centrale analogique adressable">
                     </div>
                     <div class="product-info">
                         <h3>Centrale analogique adressable</h3>
@@ -2011,7 +2214,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Centrale de mise en sécurité incendie (CMSI)__ Centrale de mise en sécurité incendie (CMSI).png" alt="Centrale de mise en sécurité incendie (CMSI)">
+                        <img loading="lazy" src="assets/Centrale de mise en sécurité incendie (CMSI)__ Centrale de mise en sécurité incendie (CMSI).webp" alt="Centrale de mise en sécurité incendie (CMSI)">
                     </div>
                     <div class="product-info">
                         <h3>Centrale de mise en sécurité incendie (CMSI)</h3>
@@ -2024,7 +2227,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Centrale vocale d’évacuation.png" alt="Centrale vocale d’évacuation">
+                        <img loading="lazy" src="assets/Centrale vocale d’évacuation.webp" alt="Centrale vocale d’évacuation">
                     </div>
                     <div class="product-info">
                         <h3>Centrale vocale d’évacuation</h3>
@@ -2037,7 +2240,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/Mini centrale incendie.png" alt="Mini centrale incendie">
+                        <img loading="lazy" src="assets/Mini centrale incendie.webp" alt="Mini centrale incendie">
                     </div>
                     <div class="product-info">
                         <h3>Mini centrale incendie</h3>
@@ -2050,7 +2253,7 @@
 
                 <div class="product-card" data-category="incendie" data-subcategory="centrales-incendie">
                     <div class="product-image">
-                        <img src="assets/centraleconnectée.jpg" alt="Centrale connectée / intelligente">
+                        <img loading="lazy" src="assets/centraleconnectée.webp" alt="Centrale connectée / intelligente">
                     </div>
                     <div class="product-info">
                         <h3>Centrale connectée / intelligente</h3>
@@ -2064,7 +2267,7 @@
                 <!-- === SECOURS === -->
                 <div class="product-card" data-category="secours">
                     <div class="product-image">
-                        <img src="assets/first_aid_kit.png" alt="Trousse de Secours">
+                        <img loading="lazy" src="assets/first_aid_kit.webp" alt="Trousse de Secours">
                     </div>
                     <div class="product-info">
                         <h3>Trousses de secours</h3>
@@ -2078,7 +2281,7 @@
 
                 <div class="product-card" data-category="secours">
                     <div class="product-image">
-                        <img src="assets/f46899a3-a50f-4ca4-84d0-007bf3e792b9.png" alt="Défibrillateur DAE">
+                        <img loading="lazy" src="assets/f46899a3-a50f-4ca4-84d0-007bf3e792b9.webp" alt="Défibrillateur DAE">
                     </div>
                     <div class="product-info">
                         <h3>Défibrillateurs</h3>
@@ -2092,7 +2295,7 @@
 
                 <div class="product-card" data-category="secours">
                     <div class="product-image">
-                        <img src="assets/863eec96-a7ce-4f0f-ba87-9db9a0fa03b0.png" alt="Douche de Sécurité">
+                        <img loading="lazy" src="assets/863eec96-a7ce-4f0f-ba87-9db9a0fa03b0.webp" alt="Douche de Sécurité">
                     </div>
                     <div class="product-info">
                         <h3>Douches et lave-yeux</h3>
@@ -2106,7 +2309,7 @@
 
                 <div class="product-card" data-category="secours">
                     <div class="product-image">
-                        <img src="assets/signalisation.png" alt="Matériel de Signalisation">
+                        <img loading="lazy" src="assets/signalisation.webp" alt="Matériel de Signalisation">
                     </div>
                     <div class="product-info">
                         <h3>Matériels de signalisation</h3>
@@ -2120,7 +2323,7 @@
 
                 <div class="product-card" data-category="secours">
                     <div class="product-image">
-                        <img src="assets/cadenas_consignation.png" alt="Cadenas de Consignation">
+                        <img loading="lazy" src="assets/cadenas_consignation.webp" alt="Cadenas de Consignation">
                     </div>
                     <div class="product-info">
                         <h3>Cadenas</h3>
@@ -2135,7 +2338,7 @@
                 <!-- === VIDEOSURVEILLANCE === -->
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_dome_1780003238006.png" alt="Caméra Dome">
+                        <img loading="lazy" src="assets/camera_dome_1780003238006.webp" alt="Caméra Dome">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Dome</h3>
@@ -2147,7 +2350,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_bullet_1780003251757.png" alt="Caméra Bullet">
+                        <img loading="lazy" src="assets/camera_bullet_1780003251757.webp" alt="Caméra Bullet">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Bullet</h3>
@@ -2159,7 +2362,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_ptz_1780003264458.png" alt="Caméra PTZ (Pan Tilt Zoom)">
+                        <img loading="lazy" src="assets/camera_ptz_1780003264458.webp" alt="Caméra PTZ (Pan Tilt Zoom)">
                     </div>
                     <div class="product-info">
                         <h3>Caméra PTZ (Pan Tilt Zoom)</h3>
@@ -2171,7 +2374,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_ip_1780003786626.png" alt="Caméra IP">
+                        <img loading="lazy" src="assets/camera_ip_1780003786626.webp" alt="Caméra IP">
                     </div>
                     <div class="product-info">
                         <h3>Caméra IP</h3>
@@ -2183,7 +2386,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_analogique_1780003860645.png" alt="Caméra Analogique">
+                        <img loading="lazy" src="assets/camera_analogique_1780003860645.webp" alt="Caméra Analogique">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Analogique</h3>
@@ -2195,7 +2398,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_infrarouge_1780005517641.png" alt="Caméra Infrarouge (IR)">
+                        <img loading="lazy" src="assets/camera_infrarouge_1780005517641.webp" alt="Caméra Infrarouge (IR)">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Infrarouge (IR)</h3>
@@ -2207,7 +2410,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_wifi_1780003800440.png" alt="Caméra Wi-Fi">
+                        <img loading="lazy" src="assets/camera_wifi_1780003800440.webp" alt="Caméra Wi-Fi">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Wi-Fi</h3>
@@ -2219,7 +2422,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="discretes">
                     <div class="product-image">
-                        <img src="assets/camera_cachee_1780005530688.png" alt="Caméra Cachée">
+                        <img loading="lazy" src="assets/camera_cachee_1780005530688.webp" alt="Caméra Cachée">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Cachée</h3>
@@ -2231,7 +2434,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_thermique_1780003292044.png" alt="Caméra Thermique">
+                        <img loading="lazy" src="assets/camera_thermique_1780003292044.webp" alt="Caméra Thermique">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Thermique</h3>
@@ -2243,7 +2446,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_fisheye_360_1780005548465.png" alt="Caméra Fisheye 360°">
+                        <img loading="lazy" src="assets/camera_fisheye_360_1780005548465.webp" alt="Caméra Fisheye 360°">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Fisheye 360°</h3>
@@ -2255,7 +2458,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_speed_dome_1780005562076.png" alt="Caméra Speed Dome">
+                        <img loading="lazy" src="assets/camera_speed_dome_1780005562076.webp" alt="Caméra Speed Dome">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Speed Dome</h3>
@@ -2267,7 +2470,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="discretes">
                     <div class="product-image">
-                        <img src="assets/camera_mini_dome_1780005575510.png" alt="Caméra Mini Dôme">
+                        <img loading="lazy" src="assets/camera_mini_dome_1780005575510.webp" alt="Caméra Mini Dôme">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Mini Dôme</h3>
@@ -2279,7 +2482,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_box_1780003814455.png" alt="Caméra Box">
+                        <img loading="lazy" src="assets/camera_box_1780003814455.webp" alt="Caméra Box">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Box</h3>
@@ -2291,7 +2494,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_tourelle_1780005610125.png" alt="Caméra Tourelle (Turret)">
+                        <img loading="lazy" src="assets/camera_tourelle_1780005610125.webp" alt="Caméra Tourelle (Turret)">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Tourelle (Turret)</h3>
@@ -2303,7 +2506,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_antivandale_1780003367156.png" alt="Caméra Anti-vandale">
+                        <img loading="lazy" src="assets/camera_antivandale_1780003367156.webp" alt="Caméra Anti-vandale">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Anti-vandale</h3>
@@ -2315,7 +2518,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_solaire_1780003335206.png" alt="Caméra Solaire">
+                        <img loading="lazy" src="assets/camera_solaire_1780003335206.webp" alt="Caméra Solaire">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Solaire</h3>
@@ -2327,7 +2530,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_4g_sim_1780005627020.png" alt="Caméra 4G / SIM">
+                        <img loading="lazy" src="assets/camera_4g_sim_1780005627020.webp" alt="Caméra 4G / SIM">
                     </div>
                     <div class="product-info">
                         <h3>Caméra 4G / SIM</h3>
@@ -2339,7 +2542,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_reconnaissance_1780005646103.png" alt="Caméra Reconnaissance faciale">
+                        <img loading="lazy" src="assets/camera_reconnaissance_1780005646103.webp" alt="Caméra Reconnaissance faciale">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Reconnaissance faciale</h3>
@@ -2351,7 +2554,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_lapi_1780003826654.png" alt="Caméra LAPI (lecture de plaques)">
+                        <img loading="lazy" src="assets/camera_lapi_1780003826654.webp" alt="Caméra LAPI (lecture de plaques)">
                     </div>
                     <div class="product-info">
                         <h3>Caméra LAPI (lecture de plaques)</h3>
@@ -2363,7 +2566,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_hd_1780005661798.png" alt="Caméra HD">
+                        <img loading="lazy" src="assets/camera_hd_1780005661798.webp" alt="Caméra HD">
                     </div>
                     <div class="product-info">
                         <h3>Caméra HD</h3>
@@ -2375,7 +2578,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/Caméra Full HD.png" alt="Caméra Full HD">
+                        <img loading="lazy" src="assets/Caméra Full HD.webp" alt="Caméra Full HD">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Full HD</h3>
@@ -2387,7 +2590,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_4k_ultra_hd_1780005681449.png" alt="Caméra 4K Ultra HD">
+                        <img loading="lazy" src="assets/camera_4k_ultra_hd_1780005681449.webp" alt="Caméra 4K Ultra HD">
                     </div>
                     <div class="product-info">
                         <h3>Caméra 4K Ultra HD</h3>
@@ -2399,7 +2602,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_jour_nuit_1780005706730.png" alt="Caméra Jour/Nuit">
+                        <img loading="lazy" src="assets/camera_jour_nuit_1780005706730.webp" alt="Caméra Jour/Nuit">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Jour/Nuit</h3>
@@ -2411,7 +2614,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="discretes">
                     <div class="product-image">
-                        <img src="assets/camera_espion_1780003307730.png" alt="Caméra Espion">
+                        <img loading="lazy" src="assets/camera_espion_1780003307730.webp" alt="Caméra Espion">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Espion</h3>
@@ -2423,7 +2626,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="discretes">
                     <div class="product-image">
-                        <img src="assets/camera_pinhole_1780005729542.png" alt="Caméra Pinhole">
+                        <img loading="lazy" src="assets/camera_pinhole_1780005729542.webp" alt="Caméra Pinhole">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Pinhole</h3>
@@ -2435,7 +2638,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="classiques">
                     <div class="product-image">
-                        <img src="assets/camera_reseau_1780005742585.png" alt="Caméra Réseau (Network Camera)">
+                        <img loading="lazy" src="assets/camera_reseau_1780005742585.webp" alt="Caméra Réseau (Network Camera)">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Réseau (Network Camera)</h3>
@@ -2447,7 +2650,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_thermographique_1780005764602.png" alt="Caméra Thermographique">
+                        <img loading="lazy" src="assets/camera_thermographique_1780005764602.webp" alt="Caméra Thermographique">
                     </div>
                     <div class="product-info">
                         <h3>Caméra Thermographique</h3>
@@ -2459,7 +2662,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_comptage_personnes_1780005778899.png" alt="Caméra de comptage de personnes">
+                        <img loading="lazy" src="assets/camera_comptage_personnes_1780005778899.webp" alt="Caméra de comptage de personnes">
                     </div>
                     <div class="product-info">
                         <h3>Caméra de comptage de personnes</h3>
@@ -2471,7 +2674,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="intelligentes">
                     <div class="product-image">
-                        <img src="assets/camera_intelligente_ia_1780005808970.png" alt="Caméra intelligente IA">
+                        <img loading="lazy" src="assets/camera_intelligente_ia_1780005808970.webp" alt="Caméra intelligente IA">
                     </div>
                     <div class="product-info">
                         <h3>Caméra intelligente IA</h3>
@@ -2483,7 +2686,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_multisensorielle_1780005831498.png" alt="Caméra multisensorielle">
+                        <img loading="lazy" src="assets/camera_multisensorielle_1780005831498.webp" alt="Caméra multisensorielle">
                     </div>
                     <div class="product-info">
                         <h3>Caméra multisensorielle</h3>
@@ -2495,7 +2698,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_panoramique_1780003352751.png" alt="Caméra panoramique">
+                        <img loading="lazy" src="assets/camera_panoramique_1780003352751.webp" alt="Caméra panoramique">
                     </div>
                     <div class="product-info">
                         <h3>Caméra panoramique</h3>
@@ -2507,7 +2710,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra extérieure étanche.png" alt="Caméra extérieure étanche">
+                        <img loading="lazy" src="assets/Caméra extérieure étanche.webp" alt="Caméra extérieure étanche">
                     </div>
                     <div class="product-info">
                         <h3>Caméra extérieure étanche</h3>
@@ -2519,7 +2722,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra intérieure.png" alt="Caméra intérieure">
+                        <img loading="lazy" src="assets/Caméra intérieure.webp" alt="Caméra intérieure">
                     </div>
                     <div class="product-info">
                         <h3>Caméra intérieure</h3>
@@ -2531,7 +2734,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_embarquee_1780003377845.png" alt="Caméra mobile embarquée">
+                        <img loading="lazy" src="assets/camera_embarquee_1780003377845.webp" alt="Caméra mobile embarquée">
                     </div>
                     <div class="product-info">
                         <h3>Caméra mobile embarquée</h3>
@@ -2543,7 +2746,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra pour ascenseur.png" alt="Caméra pour ascenseur">
+                        <img loading="lazy" src="assets/Caméra pour ascenseur.webp" alt="Caméra pour ascenseur">
                     </div>
                     <div class="product-info">
                         <h3>Caméra pour ascenseur</h3>
@@ -2555,7 +2758,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra de circulation routière.png" alt="Caméra de circulation routière">
+                        <img loading="lazy" src="assets/Caméra de circulation routière.webp" alt="Caméra de circulation routière">
                     </div>
                     <div class="product-info">
                         <h3>Caméra de circulation routière</h3>
@@ -2567,7 +2770,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_industrielle_1780003394122.png" alt="Caméra de surveillance industrielle">
+                        <img loading="lazy" src="assets/camera_industrielle_1780003394122.webp" alt="Caméra de surveillance industrielle">
                     </div>
                     <div class="product-info">
                         <h3>Caméra de surveillance industrielle</h3>
@@ -2579,7 +2782,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra pour entrepôt.png" alt="Caméra pour entrepôt">
+                        <img loading="lazy" src="assets/Caméra pour entrepôt.webp" alt="Caméra pour entrepôt">
                     </div>
                     <div class="product-info">
                         <h3>Caméra pour entrepôt</h3>
@@ -2591,7 +2794,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/Caméra anti-explosion.png" alt="Caméra anti-explosion">
+                        <img loading="lazy" src="assets/Caméra anti-explosion.webp" alt="Caméra anti-explosion">
                     </div>
                     <div class="product-info">
                         <h3>Caméra anti-explosion</h3>
@@ -2603,7 +2806,7 @@
                 </div>
                 <div class="product-card" data-category="video" data-subcategory="specifiques">
                     <div class="product-image">
-                        <img src="assets/camera_marine_1780003846684.png" alt="Caméra marine / portuaire">
+                        <img loading="lazy" src="assets/camera_marine_1780003846684.webp" alt="Caméra marine / portuaire">
                     </div>
                     <div class="product-info">
                         <h3>Caméra marine / portuaire</h3>
@@ -2655,7 +2858,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <img src="assets/logo.jpg" alt="GCS Logo" class="footer-logo">
+                <img loading="lazy" src="assets/logo.webp" alt="GCS Logo" class="footer-logo">
                 <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur
                     mesure.</p>
                 <div class="company-info" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
@@ -2689,28 +2892,23 @@
                             href="https://www.google.com/maps?q=Global+Customer+Synergy,+Abidjan" target="_blank"
                             rel="noopener noreferrer"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-primary)'"
-                            onmouseout="this.style.color='inherit'">Marcory Hibiscus, Blvd du Gabon,<br>Immeuble La
+                            class="hover-color-primary">Marcory Hibiscus, Blvd du Gabon,<br>Immeuble La
                             Madone, Abidjan</a></li>
                     <li style="margin-bottom: 0.75rem;"><i class="fas fa-phone-alt"
                             style="color: var(--color-primary); margin-right: 8px;"></i> <a href="tel:+2250505058433"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-primary)'"
-                            onmouseout="this.style.color='inherit'">+225 05 05 05 84 33</a><br><span
+                            class="hover-color-primary">+225 05 05 05 84 33</a><br><span
                             style="margin-left: 24px;"></span><a href="tel:+2250707404184"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-primary)'"
-                            onmouseout="this.style.color='inherit'">+225 07 07 40 41 84</a></li>
+                            class="hover-color-primary">+225 07 07 40 41 84</a></li>
                     <li style="margin-bottom: 0.75rem;"><i class="fas fa-envelope"
                             style="color: var(--color-primary); margin-right: 8px;"></i> <a
                             href="mailto:Contact@globalcustomersynergy.com"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-primary)'"
-                            onmouseout="this.style.color='inherit'">Contact@globalcustomersynergy.com</a><br><span
+                            class="hover-color-primary">Contact@globalcustomersynergy.com</a><br><span
                             style="margin-left: 24px;"></span><a href="mailto:globalcustomersynergy@gmail.com"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-primary)'"
-                            onmouseout="this.style.color='inherit'">globalcustomersynergy@gmail.com</a></li>
+                            class="hover-color-primary">globalcustomersynergy@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -2728,7 +2926,7 @@
     <!-- Modal Extincteurs -->
     <div class="modal" id="modal-extincteurs">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image1.png" alt="Extincteurs" class="modal-img">
+        <img loading="lazy" src="assets/image1.webp" alt="Extincteurs" class="modal-img">
         <div class="modal-body">
             <h3>Extincteurs et Arroseurs Automatiques</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une gamme complète de solutions de protection incendie,
@@ -2743,7 +2941,7 @@
             </ul>
             <p>Nous fournissons également une sélection d'extincteurs de différents types.</p>
             <h4>Fourniture d'Extincteurs et de Tuyaux d'Incendie :</h4>
-            <img src="assets/hose_reel.jpg" alt="Tuyaux d'Incendie" class="modal-inline-img">
+            <img loading="lazy" src="assets/hose_reel.webp" alt="Tuyaux d'Incendie" class="modal-inline-img">
             <p>Notre équipe de professionnels vous aide à choisir l'équipement de prévention incendie adapté à vos
                 besoins et à votre budget. Nous offrons une gamme d'extincteurs, de tuyaux d'incendie, et d'accessoires
                 garantissant une protection optimale.</p>
@@ -2756,7 +2954,7 @@
     <!-- Modal Alarme -->
     <div class="modal" id="modal-alarme">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image2.jpg" alt="Systèmes d'alarme" class="modal-img">
+        <img loading="lazy" src="assets/image2.webp" alt="Systèmes d'alarme" class="modal-img">
         <div class="modal-body">
             <h3>Systèmes d'alarme</h3>
             <p>Nous concevons et déployons des systèmes d'alarme incendie et d'extinction automatique à la pointe de la
@@ -2769,7 +2967,7 @@
     <!-- Modal Formations -->
     <div class="modal" id="modal-formations">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image3.jpg" alt="Formations" class="modal-img">
+        <img loading="lazy" src="assets/image3.webp" alt="Formations" class="modal-img">
         <div class="modal-body">
             <h3>Formations en prévention d'Incendie</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une formation complète en prévention d'incendie, couvrant
@@ -2815,7 +3013,7 @@
     <!-- Modal Courtage -->
     <div class="modal" id="modal-courtage">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image4.png" alt="Courtage d'affaires" class="modal-img">
+        <img loading="lazy" src="assets/image4.webp" alt="Courtage d'affaires" class="modal-img">
         <div class="modal-body">
             <h3>Courtage d'affaires</h3>
             <p>Facilitez vos transactions commerciales grâce à notre expertise et notre réseau étendu de partenaires.
@@ -2850,7 +3048,7 @@
     </div>
 
     <!-- Supabase SDK & App Script -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js" integrity="sha384-+exuGmToMCgcfiTDu+P+1aCmlH2Mis7lstkjVmVHdwvJqtNNqhxMreqsIe6bVstn" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

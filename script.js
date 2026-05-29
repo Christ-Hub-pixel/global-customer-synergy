@@ -105,21 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             if (!supabaseClient) {
-                alert("Erreur: Supabase n'est pas configuré. Veuillez recharger la page.");
-                btn.innerHTML = originalText;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-                return;
+                console.warn("Supabase n'est pas configuré. Le formulaire sera envoyé uniquement par email.");
+            } else {
+                try {
+                    // 1. Envoi à Supabase (Base de données) si configuré
+                    const { data, error } = await supabaseClient
+                        .from('soumissions')
+                        .insert([formData]);
+
+                    if (error) console.error("Erreur Supabase:", error);
+                } catch (e) {
+                    console.error("Erreur lors de l'insertion Supabase:", e);
+                }
             }
 
             try {
-                // 1. Envoi à Supabase (Base de données)
-                const { data, error } = await supabaseClient
-                    .from('soumissions')
-                    .insert([formData]);
-
-                if (error) throw error;
-
                 // 2. Envoi de l'email via FormSubmit (Notification par mail)
                 await fetch("https://formsubmit.co/ajax/globalcustomersynergy@gmail.com", {
                     method: "POST",
@@ -138,6 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.innerHTML = '<i class="fas fa-check"></i> Demande envoyée !';
                 btn.style.backgroundColor = '#10B981'; // Vert
                 contactForm.reset();
+                
+                // Remise à l'état initial après 3s
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                }, 3000);
 
             } catch (error) {
                 console.error('Erreur lors de l\'envoi:', error);
@@ -248,11 +256,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Sur-lunettes de sécurité", desc: "Conçues pour être portées confortablement par-dessus des lunettes de vue. Offrent une excellente couverture périphérique...", link: "catalogue.html?item=Sur-lunettes%20de%20s%C3%A9curit%C3%A9" },
         { title: "Écran facial de protection", desc: "Visière transparente robuste avec serre-tête ajustable. Protège l'intégralité du visage contre les projections mécaniques...", link: "catalogue.html?item=%C3%89cran%20facial%20de%20protection" },
         { title: "Protection auditive", desc: "Serre-tête de protection auditive haute performance (SNR 31dB) pour environnements...", link: "catalogue.html?item=Protection%20auditive" },
+        { title: "Bouchons d'oreilles jetables", desc: "Bouchons d'oreilles en mousse de polyuréthane à expansion lente. Idéals pour une utilisation prolongée dans les environnements bruyants...", link: "catalogue.html?item=Bouchons%20d'oreilles%20jetables" },
+        { title: "Bouchons d'oreilles réutilisables avec cordon", desc: "Bouchons préformés en silicone lavable avec cordon de maintien. Conception multi-collerettes pour un ajustement parfait...", link: "catalogue.html?item=Bouchons%20d'oreilles%20r%C3%A9utilisables%20avec%20cordon" },
+        { title: "Casque antibruit actif (électronique)", desc: "Casque intelligent avec modulation sonore. Amplifie les voix et bruits ambiants faibles tout en bloquant instantanément les bruits nocifs...", link: "catalogue.html?item=Casque%20antibruit%20actif%20%28%C3%A9lectronique%29" },
+        { title: "Casque antibruit communicant (avec radio intégrée)", desc: "Casque de protection avec système de communication radio bidirectionnelle intégré. Idéal pour coordonner des équipes...", link: "catalogue.html?item=Casque%20antibruit%20communicant%20%28avec%20radio%20int%C3%A9gr%C3%A9e%29" },
         { title: "Équipements antichute (Harnais)", desc: "Harnais de sécurité 2 points d'ancrage (dorsal et sternal) pour travaux en hauteur...", link: "catalogue.html?item=%C3%89quipements%20antichute%20%28Harnais%29" },
         { title: "Équipements antichute (Longes)", desc: "Longe avec absorbeur d'énergie intégré pour l'arrêt sécurisé des chutes...", link: "catalogue.html?item=%C3%89quipements%20antichute%20%28Longes%29" },
         { title: "Équipements antichute (Connecteurs)", desc: "Mousqueton et connecteur de sécurité à verrouillage automatique ou manuel...", link: "catalogue.html?item=%C3%89quipements%20antichute%20%28Connecteurs%29" },
         { title: "Équipements de soudure", desc: "Cagoule de soudage automatique à cristaux liquides protégeant les...", link: "catalogue.html?item=%C3%89quipements%20de%20soudure" },
         { title: "Chaussures basses de sécurité", desc: "Bottes et chaussures de protection basses et hautes avec embout composite...", link: "catalogue.html?item=Chaussures%20basses%20de%20s%C3%A9curit%C3%A9" },
+        { title: "Baskets de sécurité légères (S1P)", desc: "Chaussures de sécurité au style sport, respirantes et ultra-légères avec embout de protection...", link: "catalogue.html?item=Baskets%20de%20s%C3%A9curit%C3%A9%20l%C3%A9g%C3%A8res%20%28S1P%29" },
+        { title: "Chaussures de sécurité montantes (S3)", desc: "Chaussures tout-terrain robustes avec maintien de la cheville, semelle crantée anti-perforation et tige hydrofuge...", link: "catalogue.html?item=Chaussures%20de%20s%C3%A9curit%C3%A9%20montantes%20%28S3%29" },
+        { title: "Bottes de sécurité étanches (S5)", desc: "Bottes professionnelles imperméables en PVC/Nitrile, avec embout protecteur et semelle crantée anti-perforation...", link: "catalogue.html?item=Bottes%20de%20s%C3%A9curit%C3%A9%20%C3%A9tanches%20%28S5%29" },
         { title: "Chaussures hautes", desc: "Bottes professionnelles renforcées pour les milieux exigeants...", link: "catalogue.html?item=Chaussures%20hautes" },
         { title: "Couvre-chaussures", desc: "Couvre-chaussures de sécurité jetables ou réutilisables, idéals pour les environnements propres...", link: "catalogue.html?item=Couvre-chaussures" },
         { title: "Cuissardes", desc: "Cuissardes de sécurité étanches, idéales pour les travaux en milieux très humides...", link: "catalogue.html?item=Cuissardes" },
@@ -277,8 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Gants PVC", desc: "Gants enduits PVC offrant une excellente résistance à l'abrasion...", link: "catalogue.html?item=Gants%20PVC" },
         { title: "Gants jetables", desc: "Gants à usage unique en nitrile ou latex, idéals pour le secteur médical...", link: "catalogue.html?item=Gants%20jetables" },
         { title: "Gants électriciens", desc: "Gants isolants en latex spécialement conçus pour les travaux sous tension...", link: "catalogue.html?item=Gants%20%C3%A9lectriciens" },
-        { title: "Combinaisons de travail", desc: "Combinaisons double fermeture et tenues de travail complètes offrant une protection...", link: "catalogue.html?item=Combinaisons%20de%20travail" },
+        { title: "Combinaisons de travail", desc: "Combinaisons double fermeture et tenues de travail complètes offrant une protection optimale...", link: "catalogue.html?item=Combinaisons%20de%20travail" },
         { title: "Gilets haute visibilité", desc: "Gilets et vêtements de signalisation à bandes réfléchissantes pour assurer une visibilité...", link: "catalogue.html?item=Gilets%20haute%20visibilit%C3%A9" },
+        { title: "Vestes Haute Visibilité", desc: "Vestes et blousons chauds et imperméables, dotés de bandes rétroréfléchissantes pour une signalisation optimale...", link: "catalogue.html?item=Vestes%20Haute%20Visibilit%C3%A9" },
+        { title: "Combinaisons de protection chimique", desc: "Combinaisons jetables hautement résistantes (type Tyvek) pour la protection contre les particules fines, les éclaboussures...", link: "catalogue.html?item=Combinaisons%20de%20protection%20chimique" },
+        { title: "Vêtements ignifugés", desc: "Vêtements techniques retardateurs de flamme pour une protection optimale contre la chaleur, les flammes et les arcs électriques...", link: "catalogue.html?item=V%C3%AAtements%20ignifug%C3%A9s" },
+        { title: "Vêtements pour le grand froid", desc: "Parkas et pantalons thermiques haute isolation. Conçus pour maintenir la chaleur corporelle lors de travaux dans des environnements...", link: "catalogue.html?item=V%C3%AAtements%20pour%20le%20grand%20froid" },
         { title: "Manteaux de pluie", desc: "Vêtements imperméables, ensembles de pluie et coupe-vents robustes...", link: "catalogue.html?item=Manteaux%20de%20pluie" },
         { title: "Blouses de travail", desc: "Blouses d'atelier, médicales ou de laboratoire offrant confort et protection...", link: "catalogue.html?item=Blouses%20de%20travail" },
         { title: "Pantalons de travail", desc: "Pantalons multipoches robustes et ergonomiques, renforcés aux genoux...", link: "catalogue.html?item=Pantalons%20de%20travail" },
@@ -322,7 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Défibrillateurs", desc: "Défibrillateur cardiaque d'urgence avec instructions vocales pas à pas...", link: "catalogue.html?item=D%C3%A9fibrillateurs" },
         { title: "Douches et lave-yeux", desc: "Station d'urgence autonome ou raccordée en acier inoxydable pour la décontamination...", link: "catalogue.html?item=Douches%20et%20lave-yeux" },
         { title: "Matériels de signalisation", desc: "Panneaux d'obligation, de danger, d'évacuation et de lutte contre l'incendie...", link: "catalogue.html?item=Mat%C3%A9riels%20de%20signalisation" },
-        { title: "Cadenas de consignation", desc: "Cadenas diélectriques, moraillons de consignation multiple, dispositifs de verrouillage...", link: "catalogue.html?item=Cadenas%20de%20consignation" }
+        { title: "Cadenas de consignation", desc: "Cadenas diélectriques, moraillons de consignation multiple, dispositifs de verrouillage...", link: "catalogue.html?item=Cadenas%20de%20consignation" },
+        { title: "Harnais certifié EN 361", desc: "Harnais de sécurité certifié selon la norme EN 361 pour les travaux en hauteur...", link: "catalogue.html?item=Harnais%20EN%20361" },
+        { title: "Longe avec absorbeur (EN 355)", desc: "Longe de sécurité certifiée EN 355 avec absorbeur d'énergie intégré...", link: "catalogue.html?item=Longe%20absorbeur%20EN%20355" },
+        { title: "Point d'ancrage certifié", desc: "Dispositif d'ancrage fixe ou temporaire haute résistance...", link: "catalogue.html?item=Point%20d'ancrage" },
+        { title: "Connecteurs EN 362", desc: "Mousquetons et connecteurs en acier ou aluminium certifiés EN 362...", link: "catalogue.html?item=Connecteurs%20EN%20362" }
     ];
 
     function openSearch() {
@@ -360,13 +383,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const a = document.createElement('a');
             a.href = item.link;
             a.className = 'search-result-item';
-            a.innerHTML = `
-                <div>
-                    <div class="search-result-title">${item.title}</div>
-                    <div class="search-result-desc">${item.desc}</div>
-                </div>
-                <i class="fas fa-chevron-right" style="color: var(--accent-red);"></i>
-            `;
+            
+            const divContainer = document.createElement('div');
+            
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'search-result-title';
+            titleDiv.textContent = item.title;
+            
+            const descDiv = document.createElement('div');
+            descDiv.className = 'search-result-desc';
+            descDiv.textContent = item.desc;
+            
+            divContainer.appendChild(titleDiv);
+            divContainer.appendChild(descDiv);
+            
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-chevron-right';
+            icon.style.color = 'var(--accent-red)';
+            
+            a.appendChild(divContainer);
+            a.appendChild(icon);
             searchResults.appendChild(a);
         });
     }
@@ -467,19 +503,37 @@ document.addEventListener('DOMContentLoaded', () => {
         
         quoteCart.forEach((item, index) => {
             const itemName = typeof item === 'string' ? item : item.name;
-            const itemImg = (typeof item === 'object' && item.image) ? `<img src="${item.image}" alt="${itemName}" class="cart-item-img">` : '';
+            const itemImgSrc = (typeof item === 'object' && item.image) ? item.image : '';
 
             const itemEl = document.createElement('div');
             itemEl.className = 'cart-item';
-            itemEl.innerHTML = `
-                <div class="cart-item-info">
-                    ${itemImg}
-                    <h4>${itemName}</h4>
-                </div>
-                <button class="remove-item-btn" data-index="${index}" aria-label="Supprimer">
-                    <i class="fas fa-trash"></i>
-                </button>
-            `;
+            
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'cart-item-info';
+            
+            if (itemImgSrc) {
+                const img = document.createElement('img');
+                img.src = itemImgSrc;
+                img.alt = itemName;
+                img.className = 'cart-item-img';
+                infoDiv.appendChild(img);
+            }
+            
+            const titleH4 = document.createElement('h4');
+            titleH4.textContent = itemName;
+            infoDiv.appendChild(titleH4);
+            
+            const btn = document.createElement('button');
+            btn.className = 'remove-item-btn';
+            btn.setAttribute('data-index', index);
+            btn.setAttribute('aria-label', 'Supprimer');
+            
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-trash';
+            btn.appendChild(icon);
+            
+            itemEl.appendChild(infoDiv);
+            itemEl.appendChild(btn);
             cartSidebarBody.appendChild(itemEl);
         });
         
@@ -752,4 +806,115 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+
+// Gestionnaire global pour remplacer les onerror inline (Sécurité)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.fallback-img').forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'assets/hero-image.webp';
+        });
+    });
+
+    // Gestionnaire global pour remplacer les onclick inline du catalogue (Sécurité)
+    document.querySelectorAll('.trigger-subcategory').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('data-target');
+            const targetBtn = document.querySelector(`[data-subcategory='${target}']`);
+            if (targetBtn) {
+                targetBtn.click();
+                
+                // Défilement manuel fluide vers la section catalogue
+                const catalogueSection = document.getElementById('catalogue-section');
+                if (catalogueSection) {
+                    catalogueSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+});
+
+
+// Protection Anti-Inspection Maximale
+document.addEventListener('DOMContentLoaded', () => {
+    // Désactiver le clic droit
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+
+    // Désactiver les raccourcis clavier (F12, Ctrl+Shift+I, Ctrl+U, etc.)
+    document.addEventListener('keydown', (e) => {
+        // F12
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+        // Ctrl+Shift+I ou Ctrl+Shift+J ou Ctrl+U
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+            e.preventDefault();
+        }
+        // Ctrl+U (Code source)
+        if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+            e.preventDefault();
+        }
+        // Ctrl+S (Sauvegarder)
+        if (e.ctrlKey && (e.key === 'S' || e.key === 's')) {
+            e.preventDefault();
+        }
+    });
+});
+
+
+// ==========================================
+// MARKETING & PUBLICITÉ
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Top Bar Promotionnelle
+    const promoTopbar = document.getElementById('promo-topbar');
+    const promoClose = document.getElementById('promo-close');
+    
+    if (promoTopbar && promoClose) {
+        // Vérifier si déjà fermée dans cette session
+        if (sessionStorage.getItem('promoClosed') === 'true') {
+            promoTopbar.style.display = 'none';
+        }
+        
+        promoClose.addEventListener('click', () => {
+            promoTopbar.classList.add('closed');
+            sessionStorage.setItem('promoClosed', 'true');
+        });
+    }
+
+    // 2. Exit Intent Pop-up (Lead Magnet)
+    const exitPopup = document.getElementById('exit-popup');
+    const exitPopupClose = document.getElementById('exit-popup-close');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    if (exitPopup && exitPopupClose && modalOverlay) {
+        
+        // Fermer le popup
+        exitPopupClose.addEventListener('click', () => {
+            exitPopup.classList.remove('active');
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Détecter la sortie de la souris vers le haut (intent de fermer l'onglet)
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0) {
+                // Vérifier si la pop-up a déjà été montrée
+                if (!sessionStorage.getItem('exitPopupShown')) {
+                    // Afficher la pop-up
+                    exitPopup.classList.add('active');
+                    modalOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Enregistrer pour ne pas spammer l'utilisateur
+                    sessionStorage.setItem('exitPopupShown', 'true');
+                }
+            }
+        });
+    }
 });

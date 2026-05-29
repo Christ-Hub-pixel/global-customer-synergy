@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo_cercle.jpg">
+    <link rel="icon" href="assets/logo_cercle.webp">
     <title>À Propos de Nous | Global Customer Synergy (GCS)</title>
     <meta name="description"
         content="Découvrez notre équipe d'experts et nos partenaires internationaux (France, Canada, Seychelles) dédiés à votre sécurité et prévention incendie.">
     <!-- Open Graph SEO -->
     <meta property="og:title" content="L'équipe Global Customer Synergy">
     <meta property="og:description" content="Plus de 10 ans d'expertise dans la prévention des risques professionnels.">
-    <meta property="og:image" content="assets/logo_cercle.jpg">
+    <meta property="og:image" content="assets/logo_cercle.webp">
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
+        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -27,16 +27,25 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;700&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Top Bar Promotionnelle -->
+    <div class="promo-topbar" id="promo-topbar">
+        <div class="container promo-topbar-content">
+            <span class="promo-text"><i class="fas fa-gift"></i> <strong>Offre Spéciale :</strong> -15% sur votre première installation d'alarme ou de vidéosurveillance ce mois-ci !</span>
+            <button class="promo-close" id="promo-close" aria-label="Fermer la bannière"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="Global Customer Synergy Logo" class="logo-img">
+                <img src="assets/logo.webp" alt="Global Customer Synergy Logo" class="logo-img">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
@@ -60,7 +69,7 @@
     <section class="about section bg-light" id="a-propos">
         <div class="container about-container">
             <div class="about-image" data-reveal="left">
-                <img src="assets/about-image.png" alt="Notre Expertise" id="about-img">
+                <img src="assets/about-image.webp" alt="Notre Expertise" id="about-img">
             </div>
             <div class="about-content" data-reveal="right">
                 <h2 class="section-title">Plus de 10 ans au service de la <span class="text-gradient">sécurité
@@ -94,8 +103,8 @@
                 <!-- Administrateur 1 -->
                 <div class="rep-card" data-reveal="left">
                     <div class="rep-header">
-                        <img src="assets/picture1.png" alt="Photo Administrateur" class="rep-logo"
-                            onerror="this.src='assets/hero-image.png'">
+                        <img src="assets/picture1.webp" alt="Photo Administrateur" class="rep-logo"
+                            class="fallback-img">
                         <h3 style="margin-left: 1rem; color: #0F172A;">Direction</h3>
                     </div>
                     <div class="rep-body">
@@ -107,16 +116,15 @@
                             <i class="fas fa-envelope" style="color: var(--primary-blue);"></i>
                             <a href="mailto:globalcustomersynergy@gmail.com"
                                 style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                onmouseover="this.style.color='var(--primary-blue)'"
-                                onmouseout="this.style.color='inherit'">globalcustomersynergy@gmail.com</a>
+                                class="hover-primary-blue">globalcustomersynergy@gmail.com</a>
                         </p>
                     </div>
                 </div>
                 <!-- Administrateur 2 -->
                 <div class="rep-card" data-reveal="bottom" data-delay="100">
                     <div class="rep-header">
-                        <img src="assets/picture2.png" alt="Photo Administratrice" class="rep-logo"
-                            onerror="this.src='assets/hero-image.png'">
+                        <img src="assets/picture2.webp" alt="Photo Administratrice" class="rep-logo"
+                            class="fallback-img">
                         <h3 style="margin-left: 1rem; color: #0F172A;">Administration</h3>
                     </div>
                     <div class="rep-body">
@@ -128,16 +136,15 @@
                             <i class="fas fa-envelope" style="color: var(--primary-blue);"></i>
                             <a href="mailto:globalcustomersynergy@gmail.com"
                                 style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                onmouseover="this.style.color='var(--primary-blue)'"
-                                onmouseout="this.style.color='inherit'">globalcustomersynergy@gmail.com</a>
+                                class="hover-primary-blue">globalcustomersynergy@gmail.com</a>
                         </p>
                     </div>
                 </div>
                 <!-- Administrateur 3 -->
                 <div class="rep-card" data-reveal="right" data-delay="200">
                     <div class="rep-header">
-                        <img src="assets/Dev1.jpeg" alt="Photo Informaticien" class="rep-logo"
-                            onerror="this.src='assets/hero-image.png'">
+                        <img src="assets/Dev1.webp" alt="Photo Informaticien" class="rep-logo"
+                            class="fallback-img">
                         <h3 style="margin-left: 1rem; color: #0F172A;">Informatique</h3>
                     </div>
                     <div class="rep-body">
@@ -149,8 +156,7 @@
                             <i class="fas fa-envelope" style="color: var(--primary-blue);"></i>
                             <a href="mailto:globaltechsynergie@gmail.com"
                                 style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                onmouseover="this.style.color='var(--primary-blue)'"
-                                onmouseout="this.style.color='inherit'">globaltechsynergie@gmail.com</a>
+                                class="hover-primary-blue">globaltechsynergie@gmail.com</a>
                         </p>
                     </div>
                 </div>
@@ -170,7 +176,7 @@
                 <!-- France -->
                 <div class="rep-card" data-reveal="left">
                     <div class="rep-header">
-                        <img src="assets/France.jpeg" alt="Représentant France" class="rep-logo">
+                        <img src="assets/France.webp" alt="Représentant France" class="rep-logo">
                         <h3>FRANCE <i class="fas fa-tower-broadcast"
                                 style="color: #0055A4; margin-left: 8px; font-size: 1.2rem;"></i></h3>
                     </div>
@@ -182,8 +188,7 @@
                         <ul class="rep-contact">
                             <li><i class="fas fa-envelope"></i> <a href="mailto:koneya2040@gmail.com"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">koneya2040@gmail.com</a></li>
+                                    class="hover-color-primary">koneya2040@gmail.com</a></li>
                             <li><i class="fas fa-info-circle"></i> SIREN : 893 189 480</li>
                         </ul>
                     </div>
@@ -191,7 +196,7 @@
                 <!-- Canada -->
                 <div class="rep-card" data-reveal="bottom" data-delay="100">
                     <div class="rep-header">
-                        <img src="assets/canada.jpeg" alt="Représentant Canada" class="rep-logo">
+                        <img src="assets/canada.webp" alt="Représentant Canada" class="rep-logo">
                         <h3>CANADA <i class="fab fa-canadian-maple-leaf"
                                 style="color: #E31837; margin-left: 8px; font-size: 1.2rem;"></i></h3>
                     </div>
@@ -204,20 +209,18 @@
                                     href="https://www.google.com/maps?q=10428+Whalley+Boulevard,+Surrey,+BC,+V3T+OW2"
                                     target="_blank" rel="noopener noreferrer"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">Vancouver, British Columbia<br>10428 Whalley
+                                    class="hover-color-primary">Vancouver, British Columbia<br>10428 Whalley
                                     Boulevard, Surrey, BC, V3T OW2</a></li>
                             <li><i class="fas fa-phone-alt"></i> <a href="tel:+15144304056"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">+1 (514) 430-4056</a></li>
+                                    class="hover-color-primary">+1 (514) 430-4056</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- Seychelles -->
                 <div class="rep-card" data-reveal="right" data-delay="200">
                     <div class="rep-header">
-                        <img src="assets/Seychelle.jpeg" alt="Représentant Seychelles" class="rep-logo">
+                        <img src="assets/Seychelle.webp" alt="Représentant Seychelles" class="rep-logo">
                         <h3>SEYCHELLES <i class="fas fa-globe-africa"
                                 style="color: #007A5E; margin-left: 8px; font-size: 1.2rem;"></i></h3>
                     </div>
@@ -230,17 +233,14 @@
                                     href="https://www.google.com/maps?q=Avenue+de+la+Révolution,+Victoria,+Mahé,+Seychelles"
                                     target="_blank" rel="noopener noreferrer"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">Avenue de la Révolution, Victoria, Mahé,
+                                    class="hover-color-primary">Avenue de la Révolution, Victoria, Mahé,
                                     Seychelles</a></li>
                             <li><i class="fas fa-envelope"></i> <a href="mailto:ezybao@hotmail.com"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">ezybao@hotmail.com</a></li>
+                                    class="hover-color-primary">ezybao@hotmail.com</a></li>
                             <li><i class="fas fa-phone-alt"></i> <a href="tel:+2482508207"
                                     style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                                    onmouseover="this.style.color='var(--color-primary)'"
-                                    onmouseout="this.style.color='inherit'">+248 2 508 207</a></li>
+                                    class="hover-color-primary">+248 2 508 207</a></li>
                         </ul>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <img src="assets/logo.jpg" alt="GCS Logo" class="footer-logo">
+                <img src="assets/logo.webp" alt="GCS Logo" class="footer-logo">
                 <p>GLOBAL CUSTOMER SYNERGY, le partenaire de confiance pour une protection incendie complète et sur
                     mesure.</p>
                 <div class="company-info" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
@@ -303,7 +303,7 @@
     <!-- Modal Extincteurs -->
     <div class="modal" id="modal-extincteurs">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image1.png" alt="Extincteurs" class="modal-img">
+        <img src="assets/image1.webp" alt="Extincteurs" class="modal-img">
         <div class="modal-body">
             <h3>Extincteurs et Arroseurs Automatiques</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une gamme complète de solutions de protection incendie,
@@ -318,7 +318,7 @@
             </ul>
             <p>Nous fournissons également une sélection d'extincteurs de différents types.</p>
             <h4>Fourniture d'Extincteurs et de Tuyaux d'Incendie :</h4>
-            <img src="assets/hose_reel.jpg" alt="Tuyaux d'Incendie" class="modal-inline-img">
+            <img src="assets/hose_reel.webp" alt="Tuyaux d'Incendie" class="modal-inline-img">
             <p>Notre équipe de professionnels vous aide à choisir l'équipement de prévention incendie adapté à vos
                 besoins et à votre budget. Nous offrons une gamme d'extincteurs, de tuyaux d'incendie, et d'accessoires
                 garantissant une protection optimale.</p>
@@ -331,7 +331,7 @@
     <!-- Modal Alarme -->
     <div class="modal" id="modal-alarme">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image2.jpg" alt="Systèmes d'alarme" class="modal-img">
+        <img src="assets/image2.webp" alt="Systèmes d'alarme" class="modal-img">
         <div class="modal-body">
             <h3>Systèmes d'alarme</h3>
             <p>Nous concevons et déployons des systèmes d'alarme incendie et d'extinction automatique à la pointe de la
@@ -344,7 +344,7 @@
     <!-- Modal Formations -->
     <div class="modal" id="modal-formations">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image3.jpg" alt="Formations" class="modal-img">
+        <img src="assets/image3.webp" alt="Formations" class="modal-img">
         <div class="modal-body">
             <h3>Formations en prévention d'Incendie</h3>
             <p>Chez GLOBAL CUSTOMER SYNERGY, nous proposons une formation complète en prévention d'incendie, couvrant
@@ -390,7 +390,7 @@
     <!-- Modal Courtage -->
     <div class="modal" id="modal-courtage">
         <button class="modal-close"><i class="fas fa-times"></i></button>
-        <img src="assets/image4.png" alt="Courtage d'affaires" class="modal-img">
+        <img src="assets/image4.webp" alt="Courtage d'affaires" class="modal-img">
         <div class="modal-body">
             <h3>Courtage d'affaires</h3>
             <p>Facilitez vos transactions commerciales grâce à notre expertise et notre réseau étendu de partenaires.
