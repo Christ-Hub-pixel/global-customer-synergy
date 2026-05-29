@@ -702,15 +702,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
-    const productImages = document.querySelectorAll('.product-image img');
+    const productImagesContainers = document.querySelectorAll('.product-image');
 
     if (lightboxModal && lightboxImg) {
-        productImages.forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightboxModal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
+        productImagesContainers.forEach(container => {
+            container.addEventListener('click', () => {
+                const img = container.querySelector('img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightboxModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
+                }
             });
         });
 

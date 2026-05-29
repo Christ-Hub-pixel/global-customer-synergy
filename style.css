@@ -1760,7 +1760,7 @@ ul {
 }
 
 /* Curseur sur les images pour indiquer qu'on peut cliquer */
-.product-image img {
+.product-image {
     cursor: zoom-in;
 }
 
