@@ -699,8 +699,8 @@ ul {
 
 .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
+    gap: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -1414,12 +1414,12 @@ ul {
 
 .product-image {
     width: 100%;
-    height: 160px;
+    height: 220px;
     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--border-color);
@@ -1447,6 +1447,20 @@ ul {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Full-bleed style for full photo product images like fences */
+.product-card[data-subcategory="cloture-electrique"] .product-image {
+    padding: 0;
+    background: none;
+}
+.product-card[data-subcategory="cloture-electrique"] .product-image::after {
+    display: none;
+}
+.product-card[data-subcategory="cloture-electrique"] .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .product-card:hover .product-image img {
     transform: scale(1.08);
 }
@@ -1456,6 +1470,30 @@ ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+.specs-list li {
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+    line-height: 1.4;
+}
+.specs-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8rem;
 }
 
 .product-info h3 {
@@ -2615,4 +2653,35 @@ html {
 img {
     /* Évite les sauts de layout (CLS) en attendant le chargement */
     content-visibility: auto; 
+}
+
+/* ==========================================================================
+   VIDEO SECTION
+   ========================================================================== */
+.video-section {
+    position: relative;
+    z-index: 10;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: #000;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
 }

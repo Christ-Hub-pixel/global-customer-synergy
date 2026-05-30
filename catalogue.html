@@ -135,6 +135,7 @@
                 <button class="filter-btn" data-filter="incendie">Lutte Incendie & Alarmes</button>
                 <button class="filter-btn" data-filter="secours">Secours & Signalisation</button>
                 <button class="filter-btn" data-filter="video">Vidéosurveillance & Sécurité</button>
+                <button class="filter-btn" data-filter="energie">Énergie & Alimentation</button>
             </div>
 
             <!-- Product Grid -->
@@ -178,6 +179,14 @@
                             <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="discretes"><i class="fas fa-angle-right"></i> Caméras Discrètes</button></li>
                             <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="intelligentes"><i class="fas fa-angle-right"></i> Intelligentes & Thermiques</button></li>
                             <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="specifiques"><i class="fas fa-angle-right"></i> Industrielles & Spécifiques</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="video" data-subcategory="cloture-electrique"><i class="fas fa-bolt"></i> Clôtures Électriques</button></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block theme-energie" style="margin-top: 2rem;">
+                        <h3 class="sidebar-title" style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.25rem;"><i class="fas fa-plug"></i> Expertise Énergie</h3>
+                        <ul class="sidebar-nav-list">
+                            <li><button class="sidebar-filter-btn" data-category="energie" data-subcategory="groupes-electrogenes"><i class="fas fa-angle-right"></i> Groupes Électrogènes</button></li>
+                            <li><button class="sidebar-filter-btn" data-category="energie" data-subcategory="onduleurs"><i class="fas fa-angle-right"></i> Onduleurs (UPS)</button></li>
                         </ul>
                     </div>
                 </aside>
@@ -1633,6 +1642,45 @@
                     </div>
                 </div>
 
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/Boule extinctrice.png" alt="Boule extinctrice">
+                    </div>
+                    <div class="product-info">
+                        <h3>Boule extinctrice</h3>
+                        <p>Dispositif d'extinction d'incendie autonome. Se déclenche automatiquement au contact des flammes pour disperser une poudre extinctrice efficace sur la zone ciblée.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Boule extinctrice">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/extincteur automatique de plafond.png" alt="Extincteur automatique de plafond">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteur automatique de plafond</h3>
+                        <p>Système d'extinction automatique conçu pour une installation au plafond. Idéal pour les locaux techniques et une protection incendie sans intervention humaine.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteur automatique de plafond">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="incendie" data-subcategory="extincteurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/extincteur automatique tableau électrique.png" alt="Extincteur automatique pour tableau électrique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Extincteur automatique pour tableau électrique</h3>
+                        <p>Système d'extinction automatique compact, conçu spécifiquement pour la protection des armoires et tableaux électriques contre les départs de feu.</p>
+                        <button class="btn btn-outline btn-add-quote" data-product="Extincteur automatique pour tableau électrique">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
 
                 <div class="product-card" data-category="incendie" data-subcategory="ria">
                     <div class="product-image">
@@ -2817,7 +2865,225 @@
                     </div>
                 </div>
 
-</div>
+                <!-- === CLOTURES ELECTRIQUES === -->
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_security_1780096126703.png" alt="Clôture Électrique Murale">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clôture Électrique Murale</h3>
+                        <p>Modèle de sécurité haute tension fixé sur un mur. Empêche toute escalade avec des panneaux de signalisation pour dissuasion maximale.</p>
+                        <ul class="specs-list">
+                            <li><strong>Tension :</strong> Jusqu'à 10 000V</li>
+                            <li><strong>Alarme :</strong> Détection de coupure immédiate</li>
+                            <li><strong>Norme :</strong> Certification internationale</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Clôture Électrique Murale">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_freestanding_1780096152880.png" alt="Clôture Électrique Autoportante">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clôture Électrique Autoportante</h3>
+                        <p>Barrière de sécurité industrielle au sol. Conçue pour les zones sensibles de grande envergure avec fils sous tension multiples.</p>
+                        <ul class="specs-list">
+                            <li><strong>Hauteur :</strong> Jusqu'à 3 mètres</li>
+                            <li><strong>Contrôle :</strong> Gestion multizones</li>
+                            <li><strong>Sécurité :</strong> Anti-sabotage intégré</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Clôture Électrique Autoportante">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_agricultural_1780096173987.png" alt="Clôture Électrique Agricole">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clôture Électrique Agricole</h3>
+                        <p>Idéale pour le bétail et l'agriculture. Fil et rubans à haute visibilité garantissant la rétention animale en toute sécurité.</p>
+                        <ul class="specs-list">
+                            <li><strong>Alimentation :</strong> Solaire ou secteur</li>
+                            <li><strong>Visibilité :</strong> Rubans larges fluo</li>
+                            <li><strong>Choc :</strong> Adapté aux animaux (non létal)</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Clôture Électrique Agricole">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_solar_1780098054637.png" alt="Électrificateur Solaire">
+                    </div>
+                    <div class="product-info">
+                        <h3>Électrificateur Solaire</h3>
+                        <p>Électrificateur haute tension autonome alimenté par panneau solaire. Idéal pour les zones isolées sans raccordement électrique.</p>
+                        <ul class="specs-list">
+                            <li><strong>Autonomie :</strong> 3 semaines sans soleil</li>
+                            <li><strong>Batterie :</strong> Plomb-gel intégrée</li>
+                            <li><strong>Capacité :</strong> Jusqu'à 50 km de fil</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Électrificateur Solaire">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_netting_1780098070144.png" alt="Filet Électrique">
+                    </div>
+                    <div class="product-info">
+                        <h3>Filet Électrique Mobile</h3>
+                        <p>Solution flexible et rapide à installer, particulièrement adaptée pour l'élevage de volailles ou la protection temporaire de cultures.</p>
+                        <ul class="specs-list">
+                            <li><strong>Installation :</strong> Ultra-rapide (-10 min)</li>
+                            <li><strong>Hauteur :</strong> Standard 112 cm</li>
+                            <li><strong>Maillage :</strong> Renforcé anti-prédateur</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Filet Électrique Mobile">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="video" data-subcategory="cloture-electrique">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/electric_fence_rooftop_1780098084473.png" alt="Clôture Sécurité Toiture">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clôture Sécurité Toiture</h3>
+                        <p>Système de sécurité périmétrique conçu pour être fixé sur les rebords de toits terrasses afin d'empêcher les accès par le haut.</p>
+                        <ul class="specs-list">
+                            <li><strong>Fixation :</strong> Platines spéciales toiture</li>
+                            <li><strong>Tension :</strong> Haute dissuasion</li>
+                            <li><strong>Connectivité :</strong> Relais centrale d'alarme</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Clôture Sécurité Toiture">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === GROUPES ELECTROGENES === -->
+                <div class="product-card" data-category="energie" data-subcategory="groupes-electrogenes">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/generator_industrial_canopy_1780099268361.png" alt="Groupe Électrogène Insonorisé">
+                    </div>
+                    <div class="product-info">
+                        <h3>Groupe Électrogène Insonorisé</h3>
+                        <p>Générateur diesel industriel sous capotage insonorisé. Conçu pour fournir une alimentation de secours fiable et silencieuse pour hôpitaux, entreprises et data centers.</p>
+                        <ul class="specs-list">
+                            <li><strong>Puissance :</strong> 50 à 1000 kVA</li>
+                            <li><strong>Moteur :</strong> Diesel industriel</li>
+                            <li><strong>Niveau sonore :</strong> Ultra-silencieux (<65 dB)</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Groupe Électrogène Insonorisé">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energie" data-subcategory="groupes-electrogenes">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/generator_open_set_1780099283477.png" alt="Groupe Électrogène Ouvert (Skid)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Groupe Électrogène Ouvert (Skid)</h3>
+                        <p>Générateur diesel industriel monté sur châssis (ouvert). Modèle ultra-robuste adapté aux locaux techniques et salles des machines nécessitant une forte puissance.</p>
+                        <ul class="specs-list">
+                            <li><strong>Puissance :</strong> 100 à 2500 kVA</li>
+                            <li><strong>Démarrage :</strong> Automatique (Inverseur)</li>
+                            <li><strong>Châssis :</strong> Acier renforcé anti-vibration</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Groupe Électrogène Ouvert (Skid)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energie" data-subcategory="groupes-electrogenes">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/generator_portable_1780099297867.png" alt="Groupe Électrogène Portable">
+                    </div>
+                    <div class="product-info">
+                        <h3>Groupe Électrogène Portable</h3>
+                        <p>Générateur compact et mobile sur roues. Idéal pour les chantiers, les petits commerces ou pour une alimentation d'appoint de secours rapide.</p>
+                        <ul class="specs-list">
+                            <li><strong>Puissance :</strong> 3 à 15 kVA</li>
+                            <li><strong>Carburant :</strong> Essence ou Diesel</li>
+                            <li><strong>Mobilité :</strong> Chariot de transport intégré</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Groupe Électrogène Portable">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === ONDULEURS (UPS) === -->
+                <div class="product-card" data-category="energie" data-subcategory="onduleurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/ups_rackmount_1780099656436.png" alt="Onduleur Rackable (UPS)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Onduleur Rackable (UPS)</h3>
+                        <p>Onduleur rackable haute performance conçu pour les baies de serveurs et locaux informatiques. Assure une protection électrique continue et fiable.</p>
+                        <ul class="specs-list">
+                            <li><strong>Capacité :</strong> 1 kVA à 10 kVA</li>
+                            <li><strong>Format :</strong> 1U à 4U (Rack 19")</li>
+                            <li><strong>Technologie :</strong> On-Line Double Conversion</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Onduleur Rackable (UPS)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energie" data-subcategory="onduleurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/ups_tower_1780099673654.png" alt="Onduleur Tour (UPS)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Onduleur Tour (UPS)</h3>
+                        <p>Format tour compact idéal pour la protection des stations de travail, équipements de bureau et petits réseaux contre les coupures de courant.</p>
+                        <ul class="specs-list">
+                            <li><strong>Capacité :</strong> 500 VA à 5 kVA</li>
+                            <li><strong>Interface :</strong> Écran LCD multifonction</li>
+                            <li><strong>Régulation :</strong> AVR intégrée</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Onduleur Tour (UPS)">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energie" data-subcategory="onduleurs">
+                    <div class="product-image">
+                        <img loading="lazy" src="assets/ups_industrial_1780099688482.png" alt="Onduleur Industriel Triphasé">
+                    </div>
+                    <div class="product-info">
+                        <h3>Onduleur Industriel Triphasé</h3>
+                        <p>Armoire d'alimentation sans interruption de grande puissance pour centres de données, usines et sites critiques nécessitant un secours robuste.</p>
+                        <ul class="specs-list">
+                            <li><strong>Capacité :</strong> 10 kVA à 500 kVA (Triphasé)</li>
+                            <li><strong>Redondance :</strong> Modules parallèles évolutifs</li>
+                            <li><strong>Rendement :</strong> Jusqu'à 98% (Mode Éco)</li>
+                        </ul>
+                        <button class="btn btn-outline btn-add-quote" data-product="Onduleur Industriel Triphasé">
+                            <i class="fas fa-cart-plus"></i> AJOUTER AU DEVIS
+                        </button>
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>
@@ -2909,6 +3175,16 @@
                             style="margin-left: 24px;"></span><a href="mailto:globalcustomersynergy@gmail.com"
                             style="color: inherit; text-decoration: none; transition: color 0.3s;"
                             class="hover-color-primary">globalcustomersynergy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contactez-nous</h4>
+                <ul style="list-style:none; padding:0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-top: 4px;"></i> <span>Abidjan, Marcory Hibiscus<br>Immeuble La Madone</span></li>
+                    <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> <a href="tel:+2250505058433" style="color: #cbd5e1; text-decoration: none;">+225 05 05 05 84 33</a></li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> <a href="tel:+2250707404184" style="color: #cbd5e1; text-decoration: none;">+225 07 07 40 41 84</a></li>
+                    <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: var(--primary);"></i> <a href="mailto:Contact@globalcustomersynergy.com" style="color: #cbd5e1; text-decoration: none; word-break: break-word;">Contact@globalcustomersynergy.com</a></li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: var(--primary);"></i> <a href="mailto:globalcustomersynergy@gmail.com" style="color: #cbd5e1; text-decoration: none; word-break: break-word;">globalcustomersynergy@gmail.com</a></li>
                 </ul>
             </div>
         </div>

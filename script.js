@@ -76,90 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // On bloque l'envoi classique
+        contactForm.addEventListener('submit', (e) => {
+            // e.preventDefault(); // Désactivé pour permettre l'activation native FormSubmit
             
             // Anti-Spam Honeypot Check
             const botCheck = document.getElementById('bot-check');
             if (botCheck && botCheck.value !== '') {
+                e.preventDefault();
                 console.warn('Bot detected. Submission blocked.');
-                return; // Silent failure for bots
+                return;
             }
 
             const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
             
-            // Loading state
+            // Loading state visuel (le navigateur va changer de page vers formsubmit.co)
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Envoi en cours...';
             btn.style.opacity = '0.8';
-            btn.disabled = true;
-
-            // Récupération des données
-            const formData = {
-                telephone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                type_besoin: document.getElementById('type-besoin').value,
-                type_batiment: document.getElementById('type-batiment').value,
-                emplacement: document.getElementById('emplacement').value,
-                details: document.getElementById('message').value
-            };
-
-            if (!supabaseClient) {
-                console.warn("Supabase n'est pas configuré. Le formulaire sera envoyé uniquement par email.");
-            } else {
-                try {
-                    // 1. Envoi à Supabase (Base de données) si configuré
-                    const { data, error } = await supabaseClient
-                        .from('soumissions')
-                        .insert([formData]);
-
-                    if (error) console.error("Erreur Supabase:", error);
-                } catch (e) {
-                    console.error("Erreur lors de l'insertion Supabase:", e);
-                }
-            }
-
-            try {
-                // 2. Envoi de l'email via FormSubmit (Notification par mail)
-                await fetch("https://formsubmit.co/ajax/globalcustomersynergy@gmail.com", {
-                    method: "POST",
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        _subject: "Nouvelle Demande de Soumission (Site Web)",
-                        _template: "table",
-                        ...formData // On inclut toutes les données du formulaire
-                    })
-                });
-
-                // Succès global
-                btn.innerHTML = '<i class="fas fa-check"></i> Demande envoyée !';
-                btn.style.backgroundColor = '#10B981'; // Vert
-                contactForm.reset();
-                
-                // Remise à l'état initial après 3s
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.style.opacity = '1';
-                    btn.disabled = false;
-                }, 3000);
-
-            } catch (error) {
-                console.error('Erreur lors de l\'envoi:', error);
-                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erreur. Réessayez.';
-                btn.style.backgroundColor = '#E31837'; // Rouge
-            }
-
-            // Reset du bouton après 3 secondes
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.backgroundColor = '';
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }, 3000);
         });
     }
 
@@ -314,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Accessoires pour détecteurs", desc: "Large gamme d'accessoires pour détecteurs : pompes d'échantillonnage, sondes...", link: "catalogue.html?item=Accessoires%20pour%20d%C3%A9tecteurs" },
         { title: "Tubes réactifs Dräger", desc: "Système éprouvé de mesure ponctuelle et rapide de gaz avec pompe de prélèvement...", link: "catalogue.html?item=Tubes%20r%C3%A9actifs%20Dr%C3%A4ger" },
         { title: "Extincteurs à eau", desc: "Extincteurs à eau pulvérisée, idéals pour les feux de classe A...", link: "catalogue.html?item=Extincteurs%20%C3%A0%20eau" },
+        { title: "Extincteur automatique pour tableau électrique", desc: "Système d'extinction automatique compact pour la protection des armoires et tableaux électriques...", link: "catalogue.html?item=Extincteur%20automatique%20pour%20tableau%20%C3%A9lectrique" },
         { title: "Extincteurs à eau + additif", desc: "Extincteurs à eau pulvérisée avec additif, redoutablement efficaces contre les feux A et B...", link: "catalogue.html?item=Extincteurs%20%C3%A0%20eau%20%2B%20additif" },
         { title: "Extincteurs à poudre", desc: "Extincteurs à poudre polyvalente ABC. Le plus polyvalent du marché, efficace sur presque tous les feux...", link: "catalogue.html?item=Extincteurs%20%C3%A0%20poudre" },
         { title: "Extincteurs à poudre BC", desc: "Extincteurs à poudre spécifiquement conçus pour les feux de liquides ou de solides liquéfiables (classe B)...", link: "catalogue.html?item=Extincteurs%20%C3%A0%20poudre%20BC" },

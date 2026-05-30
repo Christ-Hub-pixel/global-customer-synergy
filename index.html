@@ -118,6 +118,409 @@
         </div>
     </div>
 
+
+            <style>
+                /* Haute-Couture Editorial Video Section - Blue Glassmorphism */
+                .editorial-video-section {
+                    position: relative;
+                    padding: 8rem 0;
+                    background: #f8fafc;
+                    overflow: hidden;
+                }
+                /* Soft glowing blue orbs for transparent feel */
+                .editorial-video-section::before {
+                    content: '';
+                    position: absolute;
+                    top: 5%;
+                    left: 10%;
+                    width: 50vw;
+                    height: 50vw;
+                    background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0) 60%);
+                    border-radius: 50%;
+                    z-index: 0;
+                    pointer-events: none;
+                    filter: blur(40px);
+                }
+                .editorial-video-section::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10%;
+                    right: -5%;
+                    width: 45vw;
+                    height: 45vw;
+                    background: radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, rgba(14, 165, 233, 0) 60%);
+                    border-radius: 50%;
+                    z-index: 0;
+                    pointer-events: none;
+                    filter: blur(40px);
+                }
+                .editorial-bg-text {
+                    position: absolute;
+                    top: -20px;
+                    left: -2%;
+                    font-size: 20vw;
+                    font-weight: 900;
+                    color: rgba(37, 99, 235, 0.03); /* Faint transparent blue fill */
+                    -webkit-text-stroke: 2px rgba(37, 99, 235, 0.12); /* Classy transparent blue stroke */
+                    line-height: 1;
+                    letter-spacing: -2px;
+                    text-transform: uppercase;
+                    pointer-events: none;
+                    white-space: nowrap;
+                    z-index: 0;
+                    font-family: 'Outfit', sans-serif;
+                    filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.05));
+                }
+                .editorial-container {
+                    position: relative;
+                    z-index: 1;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    padding: 0 2rem;
+                }
+                .editorial-header {
+                    margin-bottom: 5rem;
+                }
+                .editorial-subtitle {
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    color: var(--primary-blue);
+                    margin-bottom: 1.5rem;
+                }
+                .editorial-subtitle::before {
+                    content: '';
+                    display: inline-block;
+                    width: 50px;
+                    height: 2px;
+                    background: var(--primary-blue);
+                    margin-right: 20px;
+                    transition: width 0.3s ease;
+                }
+                .editorial-header:hover .editorial-subtitle::before {
+                    width: 80px;
+                }
+                .editorial-title {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: clamp(3.5rem, 7vw, 6.5rem);
+                    font-weight: 800;
+                    color: var(--primary-dark);
+                    line-height: 1;
+                    margin: 0;
+                    letter-spacing: -2px;
+                }
+                .editorial-title i {
+                    font-family: 'Playfair Display', serif;
+                    font-style: italic;
+                    font-weight: 400;
+                    color: var(--primary-blue);
+                    padding-right: 15px;
+                }
+                .editorial-grid-top {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 3rem;
+                    margin-bottom: 6rem;
+                }
+                @media (min-width: 1024px) {
+                    .editorial-grid-top {
+                        grid-template-columns: 1.2fr 1fr;
+                        align-items: center;
+                        gap: 4rem;
+                    }
+                }
+                .editorial-main-visual {
+                    position: relative;
+                    z-index: 2;
+                }
+                /* Offset frame border effect in transparent blue */
+                .main-frame::before {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    right: -15px;
+                    bottom: -15px;
+                    border: 2px solid rgba(37, 99, 235, 0.25);
+                    z-index: -1;
+                    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+                }
+                .main-frame:hover::before {
+                    top: 10px;
+                    left: 10px;
+                    right: -10px;
+                    bottom: -10px;
+                    border-color: rgba(37, 99, 235, 0.6);
+                    background: rgba(37, 99, 235, 0.02);
+                }
+                
+                .video-frame {
+                    position: relative;
+                    box-shadow: 0 40px 80px rgba(8, 15, 52, 0.15);
+                    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    background: #000;
+                    z-index: 2;
+                }
+                .video-frame:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 50px 100px rgba(37, 99, 235, 0.15);
+                }
+                .video-frame .video-wrapper {
+                    margin: 0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    background: #000;
+                    position: relative;
+                }
+                
+                .video-frame video {
+                    border-radius: 0;
+                    transition: all 0.5s ease;
+                    display: block;
+                }
+                
+                .frame-caption {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 0.85rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: var(--primary-dark);
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .frame-caption span {
+                    display: flex;
+                    align-items: center;
+                }
+                .frame-caption span::before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 2px;
+                    background: var(--primary-blue);
+                    margin-right: 15px;
+                }
+                
+                /* Glassmorphism Text Content */
+                .editorial-content {
+                    position: relative;
+                    padding: 3rem;
+                    background: rgba(255, 255, 255, 0.85);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255, 255, 255, 0.9);
+                    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08);
+                    border-radius: 20px;
+                    z-index: 3;
+                }
+                
+                .editorial-lead {
+                    font-size: 1.15rem;
+                    line-height: 1.7;
+                    color: #475569;
+                    margin-bottom: 2rem;
+                    font-weight: 400;
+                    /* Removed left padding/border so it aligns perfectly with bullets and button */
+                }
+                .editorial-lead strong {
+                    font-weight: 700;
+                    color: var(--primary-dark);
+                }
+                
+                /* Marketing Elements */
+                .marketing-benefits {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0 0 2.5rem 0;
+                }
+                .marketing-benefits li {
+                    font-size: 1.05rem;
+                    color: #334155;
+                    margin-bottom: 1.2rem;
+                    display: flex;
+                    align-items: flex-start;
+                    font-weight: 500;
+                }
+                .marketing-benefits li i {
+                    color: var(--primary-blue);
+                    font-size: 1.2rem;
+                    margin-right: 15px;
+                    margin-top: 3px;
+                }
+                .marketing-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    background: linear-gradient(135deg, var(--primary-blue), #1e40af);
+                    color: #fff;
+                    padding: 1rem 2rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    border-radius: 50px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+                    transition: all 0.3s ease;
+                }
+                .marketing-btn i {
+                    margin-right: 10px;
+                }
+                .marketing-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
+                    color: #fff;
+                }
+                .marketing-cta-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5rem;
+                    flex-wrap: wrap;
+                }
+                .marketing-trust {
+                    font-size: 0.85rem;
+                    color: #64748b;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    display: flex;
+                    align-items: center;
+                }
+                .marketing-trust i {
+                    color: #10b981;
+                    margin-right: 8px;
+                    font-size: 1.1rem;
+                }
+                
+                /* Bottom 3-column grid */
+                .editorial-grid-bottom {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 3rem;
+                    position: relative;
+                    z-index: 2;
+                }
+                @media (min-width: 768px) {
+                    .editorial-grid-bottom {
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 2rem;
+                    }
+                    /* Cascading offset for the middle video */
+                    .editorial-grid-bottom > div:nth-child(2) {
+                        transform: translateY(-3rem);
+                    }
+                }
+                
+                .secondary-frame {
+                    box-shadow: 0 20px 40px rgba(8, 15, 52, 0.08);
+                }
+                .secondary-frame:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.12);
+                }
+                .secondary-caption {
+                    font-size: 0.8rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: var(--primary-dark);
+                    margin-top: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                }
+                .secondary-caption::before {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    background: var(--primary-blue);
+                    border-radius: 50%;
+                    margin-right: 12px;
+                }
+            </style>
+            
+            <section class="editorial-video-section">
+                <div class="editorial-bg-text">SYNERGIE</div>
+                <div class="editorial-container">
+                    
+                    <div class="editorial-header">
+                        <span class="editorial-subtitle">Garantissez la continuité de vos opérations</span>
+                        <h2 class="editorial-title">Protégez votre avenir.<br><i>L'Expertise GCS.</i></h2>
+                    </div>
+                    
+                    <div class="editorial-grid-top">
+                        <div class="editorial-main-visual">
+                            <div class="video-frame main-frame">
+                                <div class="video-wrapper">
+                                    <video controls poster="assets/hero-image.webp" preload="metadata">
+                                        <source src="videos/publicité.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="frame-caption">
+                                <span>DÉCOUVREZ GCS EN 2 MINUTES</span>
+                            </div>
+                        </div>
+                        
+                        <div class="editorial-content">
+                            <p class="editorial-lead">
+                                Ne laissez pas la sécurité de votre entreprise au hasard. Visionnez nos interventions pour comprendre pourquoi <strong>les leaders de l'industrie nous confient leur protection</strong> incendie et EPI.
+                            </p>
+                            
+                            <ul class="marketing-benefits">
+                                <li><i class="fas fa-check-circle"></i> Audit technique et installation sur-mesure</li>
+                                <li><i class="fas fa-check-circle"></i> Équipements certifiés aux normes internationales</li>
+                                <li><i class="fas fa-check-circle"></i> Interventions rapides et maintenance garantie</li>
+                            </ul>
+                            
+                            <div class="marketing-cta-wrapper">
+                                <a href="contact.html" class="marketing-btn"><i class="fas fa-envelope"></i> Demander un Devis</a>
+                                <span class="marketing-trust"><i class="fas fa-shield-check" style="font-family: 'Font Awesome 5 Free'; font-weight: 900;"></i> 100% FIABLE</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="editorial-grid-bottom">
+                        <div>
+                            <div class="video-frame secondary-frame">
+                                <div class="video-wrapper">
+                                    <video controls preload="metadata">
+                                        <source src="videos/v8.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="secondary-caption">L'Efficacité de nos Solutions</div>
+                        </div>
+                        <div>
+                            <div class="video-frame secondary-frame">
+                                <div class="video-wrapper">
+                                    <video controls preload="metadata">
+                                        <source src="videos/V9.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="secondary-caption">Nos Équipements de Pointe</div>
+                        </div>
+                        <div>
+                            <div class="video-frame secondary-frame">
+                                <div class="video-wrapper">
+                                    <video controls preload="metadata">
+                                        <source src="videos/V10.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="secondary-caption">Déploiement sur le Terrain</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
     <!-- Services Section -->
     <!-- Other sections removed -->
     <footer class="footer">
@@ -158,6 +561,16 @@
                     <li><a href="#" class="open-modal" data-modal="modal-alarme">Systèmes d'alarme</a></li>
                     <li><a href="#" class="open-modal" data-modal="modal-formations">Formations</a></li>
                     <li><a href="#" class="open-modal" data-modal="modal-courtage">Courtage d'affaires</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contactez-nous</h4>
+                <ul style="list-style:none; padding:0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-top: 4px;"></i> <span>Abidjan, Marcory Hibiscus<br>Immeuble La Madone</span></li>
+                    <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> <a href="tel:+2250505058433" style="color: #cbd5e1; text-decoration: none;">+225 05 05 05 84 33</a></li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> <a href="tel:+2250707404184" style="color: #cbd5e1; text-decoration: none;">+225 07 07 40 41 84</a></li>
+                    <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: var(--primary);"></i> <a href="mailto:Contact@globalcustomersynergy.com" style="color: #cbd5e1; text-decoration: none; word-break: break-word;">Contact@globalcustomersynergy.com</a></li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: var(--primary);"></i> <a href="mailto:globalcustomersynergy@gmail.com" style="color: #cbd5e1; text-decoration: none; word-break: break-word;">globalcustomersynergy@gmail.com</a></li>
                 </ul>
             </div>
         </div>
