@@ -883,7 +883,7 @@ ul {
     }
     
     .card-1 { left: -10px; }
-    .card-2 { right: -10px; }
+    .card-2 { right: -10px; bottom: -25px; }
     
     .footer-container {
         grid-template-columns: 1fr;
