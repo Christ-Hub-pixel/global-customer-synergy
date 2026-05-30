@@ -915,6 +915,7 @@ ul {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
+        height: calc(100svh - 70px);
         background: white;
         flex-direction: column;
         align-items: center;
@@ -925,10 +926,7 @@ ul {
         padding-bottom: 2rem;
     }
     
-    .cart-sidebar.active {
-        width: 100%;
-    }
-    
+
     .nav.active {
         left: 0;
     }
@@ -2651,8 +2649,9 @@ html {
 }
 
 img {
+    max-width: 100%;
+    height: auto;
     /* Évite les sauts de layout (CLS) en attendant le chargement */
-    content-visibility: auto; 
 }
 
 /* ==========================================================================
