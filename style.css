@@ -2040,6 +2040,29 @@ ul {
     .catalogue-sidebar {
         position: static;
         margin-bottom: 2rem;
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    .sidebar-block {
+        flex: 0 0 85vw;
+        margin-top: 0 !important;
+        scroll-snap-align: center;
+        max-height: 350px;
+        overflow-y: auto;
+    }
+    .catalogue-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    .filter-btn {
+        flex-shrink: 0;
     }
 }
 
