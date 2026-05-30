@@ -773,33 +773,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Protection Anti-Inspection Maximale
-document.addEventListener('DOMContentLoaded', () => {
-    // Désactiver le clic droit
-    document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-    });
-
-    // Désactiver les raccourcis clavier (F12, Ctrl+Shift+I, Ctrl+U, etc.)
-    document.addEventListener('keydown', (e) => {
-        // F12
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-        // Ctrl+Shift+I ou Ctrl+Shift+J ou Ctrl+U
-        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
-            e.preventDefault();
-        }
-        // Ctrl+U (Code source)
-        if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
-            e.preventDefault();
-        }
-        // Ctrl+S (Sauvegarder)
-        if (e.ctrlKey && (e.key === 'S' || e.key === 's')) {
-            e.preventDefault();
-        }
-    });
-});
 
 
 // ==========================================
