@@ -1536,6 +1536,40 @@ ul {
     transform: scale(1.2) rotate(-5deg);
 }
 
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    .product-card {
+        border-radius: 12px;
+    }
+    .product-image {
+        height: 130px;
+        padding: 0.4rem;
+    }
+    .product-info {
+        padding: 0.6rem;
+    }
+    .product-info h3 {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+    .product-info p {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        margin-bottom: 0.5rem;
+    }
+    .btn-add-quote {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.2rem;
+    }
+    .btn-add-quote i {
+        margin-right: 0.2rem;
+    }
+}
+
 /* Floating Cart */
 /* Floating Cart Widget Container */
 .floating-widget-container {
