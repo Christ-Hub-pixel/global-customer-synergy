@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const btn = contactForm.querySelector('button[type="submit"]');
             
-            // Loading state visuel (le navigateur va changer de page vers formsubmit.co)
+            // Loading state visuel (le navigateur va changer de page vers web3forms)
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Envoi en cours...';
             btn.style.opacity = '0.8';
         });

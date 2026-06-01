@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <!-- Sécurité Front-End -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://formsubmit.co; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
+        content="default-src 'self'; connect-src 'self' https://htjjgpceefldmcwnwxvm.supabase.co https://api.web3forms.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -122,11 +122,12 @@
                 </div>
             </div>
             <div class="contact-form-wrapper" id="soumission" data-reveal="right">
-                <form id="contact-form" class="contact-form" action="https://formsubmit.co/globalcustomersynergy@gmail.com" method="POST">
-                    <!-- Configuration FormSubmit -->
-                    <input type="hidden" name="_subject" value="Nouvelle Demande de Soumission (Site Web)">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Configuration Web3Forms -->
+                    <input type="hidden" name="access_key" value="03079bc6-d3ac-4c59-93ca-3d95f3faf36b">
+                    <input type="hidden" name="subject" value="Nouvelle Demande de Soumission (Site Web)">
+                    <input type="hidden" name="from_name" value="Site Web GCS">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
                     <h3>Demande de Soumission</h3>
 
