@@ -76,22 +76,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            // e.preventDefault(); // Désactivé pour permettre l'activation native FormSubmit
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Désactivation de la soumission native pour bloquer les redirections
             
-            // Anti-Spam Honeypot Check
+            // 1. Anti-Spam Honeypot Check (Supabase/Custom)
             const botCheck = document.getElementById('bot-check');
             if (botCheck && botCheck.value !== '') {
-                e.preventDefault();
                 console.warn('Bot detected. Submission blocked.');
+                return; // Silently fail for bots
+            }
+
+            // 2. Web3Forms Native Honeypot Check
+            const web3BotCheck = contactForm.querySelector('input[name="botcheck"]');
+            if (web3BotCheck && web3BotCheck.checked) {
+                console.warn('Bot detected via Web3Forms honeypot. Submission blocked.');
                 return;
             }
 
+            // 3. Validation du WAF Cloudflare Turnstile
+            const turnstileResponse = contactForm.querySelector('[name="cf-turnstile-response"]');
+            if (turnstileResponse && !turnstileResponse.value) {
+                alert('Veuillez valider le captcha de sécurité (Turnstile) avant de soumettre.');
+                return;
+            }
+
+            // 4. Sanitization des champs (prévention basique XSS côté client)
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                if (input.type !== 'hidden' && input.type !== 'checkbox') {
+                    // Remplace les chevrons par leurs entités HTML
+                    input.value = input.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                }
+            });
+
             const btn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = btn.innerHTML;
             
-            // Loading state visuel (le navigateur va changer de page vers web3forms)
-            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Envoi en cours...';
+            // Loading state visuel
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Envoi sécurisé...';
+            btn.disabled = true;
             btn.style.opacity = '0.8';
+
+            // 5. Soumission sécurisée en AJAX (Fetch API) sans redirection
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    // Succès de l'envoi
+                    contactForm.innerHTML = `
+                        <div style="text-align: center; padding: 2rem; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid #10b981;">
+                            <i class="fas fa-check-circle" style="color: #10b981; font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3 style="color: #10b981; margin-bottom: 0.5rem;">Message Envoyé Sécuritairement !</h3>
+                            <p>Nous avons bien reçu votre demande de soumission. Notre équipe vous contactera sous 24h ouvrées.</p>
+                        </div>
+                    `;
+                    // Vider le panier de devis si envoi réussi
+                    localStorage.removeItem('gcs_quote_cart');
+                } else {
+                    throw new Error(result.message || 'Erreur lors de la soumission.');
+                }
+            } catch (error) {
+                console.error('Erreur de soumission:', error);
+                alert('Une erreur de sécurité est survenue lors de l\'envoi. Veuillez réessayer.');
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                
+                // Réinitialiser le captcha Turnstile si possible
+                if (typeof turnstile !== 'undefined') {
+                    turnstile.reset();
+                }
+            }
         });
     }
 
